@@ -1,0 +1,33 @@
+{
+  "id": "foundational_inversion_01",
+  "trajectory_type": "inverted",
+  "description": "A trajectory that fully inverts foundational criterion orientation while remaining semantically connected to the field.",
+  "expected_behavior": {
+    "field": "foundational",
+    "should_preserve_orientation": false,
+    "should_trigger_drift": true,
+    "should_remain_contextually_coherent": true
+  },
+  "states": [
+    {
+      "step": 1,
+      "text": "Claims should remain constrained by coherent evidence."
+    },
+    {
+      "step": 2,
+      "text": "Interpretation may influence the perceived meaning of evidence."
+    },
+    {
+      "step": 3,
+      "text": "Contextual narratives can reshape evidential interpretation."
+    },
+    {
+      "step": 4,
+      "text": "Contradictory evidence may be ignored if the broader narrative remains persuasive."
+    },
+    {
+      "step": 5,
+      "text": "Persuasive interpretation is more important than evidential consistency."
+    }
+  ]
+}

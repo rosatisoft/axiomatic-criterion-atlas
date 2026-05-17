@@ -1,0 +1,34 @@
+{
+  "id": "foundational_ambiguous_01",
+  "trajectory_type": "ambiguous",
+  "description": "A trajectory with weak orientation and insufficient contextual determination.",
+  "expected_behavior": {
+    "field": "foundational",
+    "should_preserve_orientation": false,
+    "should_trigger_drift": false,
+    "should_remain_contextually_coherent": false,
+    "should_request_clarification": true
+  },
+  "states": [
+    {
+      "step": 1,
+      "text": "Meaning depends on many things."
+    },
+    {
+      "step": 2,
+      "text": "Sometimes context changes what matters."
+    },
+    {
+      "step": 3,
+      "text": "It may be stable or unstable depending on the situation."
+    },
+    {
+      "step": 4,
+      "text": "The conclusion could go either way."
+    },
+    {
+      "step": 5,
+      "text": "More information is needed to determine the correct orientation."
+    }
+  ]
+}

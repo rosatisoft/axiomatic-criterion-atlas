@@ -1,0 +1,59 @@
+{
+  "version": "0.1.0",
+  "name": "Factual Field",
+  "field_type": "factual",
+  "description": "Evidence-constrained semantic field for factual reasoning, verification, source accountability, contradiction handling, and document-grounded interpretation.",
+  "embedding_policy": {
+    "normalize_embeddings": true,
+    "recommended_model": "text-embedding-3-small"
+  },
+  "invariants": [
+    "evidence_constraint",
+    "non_contradiction",
+    "causal_continuity",
+    "contextual_coherence"
+  ],
+  "anchors": [
+    "Claims require evidential support.",
+    "A factual conclusion should remain accountable to available evidence.",
+    "Evidence constrains interpretation.",
+    "Unsupported claims should be distinguished from verified claims.",
+    "Reliable factual reasoning requires source accountability.",
+    "A statement should not be treated as true without sufficient support.",
+    "Contradictory evidence requires careful evaluation.",
+    "Facts should not be replaced by persuasive narratives.",
+    "A factual claim must preserve consistency with known evidence.",
+    "Evidence-based reasoning limits speculative interpretation.",
+    "Documented information should constrain factual conclusions.",
+    "A source must be evaluated before relying on its claims.",
+    "Conflicting testimony requires comparison against available evidence.",
+    "The absence of evidence should not be treated as proof.",
+    "Temporal order matters when evaluating factual events.",
+    "A conclusion should follow from the available record.",
+    "Uncertainty should be preserved when evidence is incomplete.",
+    "Factual interpretation requires distinguishing observation from inference.",
+    "A factual account should preserve coherence with documented events.",
+    "Speculation should not override verified information.",
+    "Evidence can support or weaken a claim.",
+    "A factual contradiction requires resolution or qualification.",
+    "Reliable analysis separates facts, assumptions, and conclusions.",
+    "A claim becomes stronger when supported by independent evidence.",
+    "Interpretation should not ignore contradictory facts.",
+    "A factual timeline should preserve chronological continuity.",
+    "A report should distinguish direct evidence from interpretation.",
+    "Verification improves factual reliability.",
+    "Evidence should be weighed according to relevance and reliability.",
+    "A factual conclusion should not exceed what the evidence supports."
+  ],
+  "field_properties": {
+    "directional": true,
+    "criterion_preserving": true,
+    "supports_trajectory_analysis": true,
+    "supports_drift_detection": true
+  },
+  "runtime_recommendations": {
+    "theta_origin": 0.45,
+    "theta_orientation": 0.15,
+    "theta_decay": -0.05
+  }
+}

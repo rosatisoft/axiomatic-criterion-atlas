@@ -1,0 +1,33 @@
+{
+  "id": "foundational_stable_01",
+  "trajectory_type": "stable",
+  "description": "A stable semantic trajectory preserving foundational criterion continuity across contextual evolution.",
+  "expected_behavior": {
+    "field": "foundational",
+    "should_preserve_orientation": true,
+    "should_trigger_drift": false,
+    "should_remain_contextually_coherent": true
+  },
+  "states": [
+    {
+      "step": 1,
+      "text": "A coherent interpretation must preserve continuity of meaning."
+    },
+    {
+      "step": 2,
+      "text": "Concepts may evolve through context while retaining semantic identity."
+    },
+    {
+      "step": 3,
+      "text": "Stable reasoning depends on preserving relational continuity between ideas."
+    },
+    {
+      "step": 4,
+      "text": "Interpretation should remain accountable to contextual evidence and coherent transitions."
+    },
+    {
+      "step": 5,
+      "text": "Reliable semantic evolution preserves both contextual coherence and invariant continuity."
+    }
+  ]
+}

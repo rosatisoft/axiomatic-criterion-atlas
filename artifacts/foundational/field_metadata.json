@@ -1,0 +1,25 @@
+{
+  "field_name": "Foundational Field",
+  "field_type": "foundational",
+  "version": "0.1.0",
+  "n_anchors": 30,
+  "embedding_dim": 1536,
+  "svd_rank": 23,
+  "explained_energy": 0.9534816937120556,
+  "recommended_model": "text-embedding-3-small",
+  "normalize_embeddings": true,
+  "invariants": [
+    "non_contradiction",
+    "identity",
+    "persistence",
+    "relation",
+    "evidence_constraint",
+    "causal_continuity",
+    "semantic_stability",
+    "interpretive_constraint",
+    "uncertainty_preservation",
+    "field_boundary",
+    "orientation_continuity",
+    "correspondence"
+  ]
+}

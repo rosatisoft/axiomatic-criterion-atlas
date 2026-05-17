@@ -1,0 +1,58 @@
+{
+  "version": "0.1.0",
+  "name": "Rhetorical Field",
+  "field_type": "rhetorical",
+  "description": "Semantic field for persuasive framing, emotional pressure, narrative dominance, reinterpretation, and rhetorical movement.",
+  "embedding_policy": {
+    "normalize_embeddings": true,
+    "recommended_model": "text-embedding-3-small"
+  },
+  "invariants": [
+    "contextual_coherence",
+    "semantic_persistence",
+    "evidence_constraint"
+  ],
+  "anchors": [
+    "Persuasive language can shape interpretation.",
+    "Rhetorical framing influences how evidence is perceived.",
+    "Emotional urgency may pressure interpretation.",
+    "A narrative can guide attention toward selected facts.",
+    "Persuasion often emphasizes meaning over verification.",
+    "Rhetorical pressure may weaken evidential discipline.",
+    "A compelling story can dominate interpretation.",
+    "Language can redirect attention away from contradiction.",
+    "Narrative framing can make incomplete evidence appear sufficient.",
+    "Emotional appeal can influence judgment.",
+    "A persuasive argument may preserve coherence while weakening evidence.",
+    "Social urgency can pressure people to accept a conclusion.",
+    "Interpretive framing can reshape the meaning of facts.",
+    "Rhetoric may convert uncertainty into conviction.",
+    "A narrative may become dominant even when evidence remains incomplete.",
+    "Persuasive interpretation may override evidential restraint.",
+    "Rhetorical coherence can hide criterion drift.",
+    "A claim may feel convincing without being sufficiently supported.",
+    "Narrative dominance may replace factual evaluation.",
+    "Emotional pressure can reduce tolerance for ambiguity.",
+    "Persuasive discourse may treat doubt as opposition.",
+    "Rhetorical systems can preserve fluency while losing orientation.",
+    "A coherent narrative may subordinate evidence to meaning.",
+    "Persuasion can stabilize belief without stabilizing truth.",
+    "Interpretation can be redirected through emotional framing.",
+    "Rhetorical framing may normalize contradiction.",
+    "A socially powerful narrative can suppress evidential uncertainty.",
+    "Persuasive language may produce confidence without verification.",
+    "Narrative pressure can transform uncertainty into moral certainty.",
+    "Rhetorical reinterpretation may shift criterion without appearing incoherent."
+  ],
+  "field_properties": {
+    "directional": true,
+    "criterion_preserving": false,
+    "supports_trajectory_analysis": true,
+    "supports_drift_detection": true
+  },
+  "runtime_recommendations": {
+    "theta_origin": 0.45,
+    "theta_orientation": 0.15,
+    "theta_decay": -0.05
+  }
+}

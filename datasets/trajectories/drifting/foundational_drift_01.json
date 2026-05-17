@@ -1,0 +1,33 @@
+{
+  "id": "foundational_drift_01",
+  "trajectory_type": "drifting",
+  "description": "A trajectory that remains semantically coherent while progressively weakening criterion orientation.",
+  "expected_behavior": {
+    "field": "foundational",
+    "should_preserve_orientation": false,
+    "should_trigger_drift": true,
+    "should_remain_contextually_coherent": true
+  },
+  "states": [
+    {
+      "step": 1,
+      "text": "Interpretation should preserve continuity with available evidence."
+    },
+    {
+      "step": 2,
+      "text": "Context may influence how evidence is interpreted."
+    },
+    {
+      "step": 3,
+      "text": "Interpretation sometimes becomes more important than strict evidential continuity."
+    },
+    {
+      "step": 4,
+      "text": "Narrative framing may redefine the meaning of evidence within a context."
+    },
+    {
+      "step": 5,
+      "text": "A coherent narrative may justify conclusions even when evidence becomes secondary."
+    }
+  ]
+}

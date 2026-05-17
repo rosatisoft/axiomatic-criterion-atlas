@@ -1,0 +1,22 @@
+{
+  "field_name": "Rhetorical Field",
+  "field_type": "rhetorical",
+  "version": "0.1.0",
+  "description": "Semantic field for persuasive framing, emotional pressure, narrative dominance, reinterpretation, and rhetorical movement.",
+  "n_anchors": 30,
+  "embedding_dim": 1536,
+  "svd_rank": 22,
+  "explained_energy": 0.9550054596908952,
+  "recommended_model": "text-embedding-3-small",
+  "normalize_embeddings": true,
+  "invariants": [
+    "contextual_coherence",
+    "semantic_persistence",
+    "evidence_constraint"
+  ],
+  "runtime_recommendations": {
+    "theta_origin": 0.45,
+    "theta_orientation": 0.15,
+    "theta_decay": -0.05
+  }
+}

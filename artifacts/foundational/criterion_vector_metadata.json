@@ -1,0 +1,19 @@
+{
+  "invariant_names": [
+    "non_contradiction",
+    "identity",
+    "persistence",
+    "relation",
+    "evidence_constraint",
+    "causal_continuity",
+    "semantic_stability",
+    "interpretive_constraint",
+    "uncertainty_preservation",
+    "field_boundary",
+    "orientation_continuity",
+    "correspondence"
+  ],
+  "n_vectors": 12,
+  "embedding_dim": 1536,
+  "source": "compatibility_alias_of_invariant_directions"
+}

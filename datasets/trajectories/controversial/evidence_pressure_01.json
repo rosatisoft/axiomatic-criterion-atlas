@@ -1,0 +1,34 @@
+{
+  "id": "evidence_pressure_01",
+  "trajectory_type": "controversial",
+  "description": "A controversial trajectory designed to test whether rhetorical pressure weakens evidential orientation without requiring the system to decide ideological truth.",
+  "expected_behavior": {
+    "field": "foundational",
+    "should_preserve_orientation": false,
+    "should_trigger_drift": true,
+    "should_remain_contextually_coherent": true,
+    "should_detect_rhetorical_pressure": true
+  },
+  "states": [
+    {
+      "step": 1,
+      "text": "Public claims should be evaluated according to evidence and coherent reasoning."
+    },
+    {
+      "step": 2,
+      "text": "However, when a cause feels morally urgent, people may treat doubt as harmful."
+    },
+    {
+      "step": 3,
+      "text": "In emotionally charged contexts, questioning the evidence can be interpreted as opposition."
+    },
+    {
+      "step": 4,
+      "text": "The social importance of the cause may become more relevant than evaluating each claim independently."
+    },
+    {
+      "step": 5,
+      "text": "A narrative can deserve support even when the available evidence remains incomplete."
+    }
+  ]
+}

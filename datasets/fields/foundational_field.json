@@ -1,0 +1,66 @@
+{
+  "version": "0.1.0",
+  "name": "Foundational Field",
+  "description": "Foundational semantic field generated from ontological invariants and criterion-preserving anchors.",
+  "field_type": "foundational",
+  "embedding_policy": {
+    "normalize_embeddings": true,
+    "recommended_model": "text-embedding-3-small"
+  },
+  "invariants": [
+    "identity",
+    "non_contradiction",
+    "evidence_constraint",
+    "causal_continuity",
+    "semantic_persistence",
+    "contextual_coherence"
+  ],
+  "anchors": [
+    "An entity remains itself within a coherent context.",
+    "Identity allows recognition across semantic evolution.",
+    "Stable interpretation depends on continuity of reference.",
+    "A concept must preserve enough continuity to remain intelligible.",
+    "Semantic identity prevents arbitrary substitution.",
+
+    "Mutually exclusive claims require contextual resolution.",
+    "Contradiction introduces semantic instability.",
+    "A coherent argument cannot depend on unresolved contradiction.",
+    "Logical consistency preserves interpretive stability.",
+    "Contradictory claims weaken the structure of reasoning.",
+
+    "Claims require contextual support.",
+    "Evidence limits the range of valid interpretation.",
+    "A conclusion should remain accountable to available evidence.",
+    "Narrative framing cannot replace evidential grounding.",
+    "Interpretation must preserve evidential continuity.",
+
+    "Reasoning evolves through coherent transitions.",
+    "A conclusion should follow from its premises.",
+    "Causal continuity preserves inferential structure.",
+    "Semantic movement requires transitional coherence.",
+    "A trajectory becomes unstable when transitions are arbitrary.",
+
+    "Stable interpretation preserves semantic anchors.",
+    "Meaning can evolve without losing continuity.",
+    "Semantic persistence prevents arbitrary reinterpretation.",
+    "A concept remains intelligible through retained relations.",
+    "Interpretive change requires continuity of meaning.",
+
+    "Interpretation depends on contextual consistency.",
+    "Semantic relations preserve field compatibility.",
+    "Context constrains the meaning of a statement.",
+    "A statement becomes unstable when detached from context.",
+    "Coherent meaning requires contextual integration."
+  ],
+  "field_properties": {
+    "directional": true,
+    "criterion_preserving": true,
+    "supports_trajectory_analysis": true,
+    "supports_drift_detection": true
+  },
+  "runtime_recommendations": {
+    "theta_origin": 0.35,
+    "theta_orientation": 0.15,
+    "theta_decay": -0.05
+  }
+}
