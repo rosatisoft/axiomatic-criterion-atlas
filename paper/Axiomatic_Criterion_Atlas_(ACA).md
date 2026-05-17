@@ -655,15 +655,19 @@ $$
 The policy is defined as:
 
 $$
-a(z)=
 \begin{array}{ll}
-\text{ALLOW} & \text{if } O_{S^\ast}(z)\leq\theta_O \wedge \Phi(z)\geq\theta_\Phi
-\\[10pt]
 
-\text{CLARIFY} & \text{if } M(z)<\theta_M \vee |\Phi(z)|<\theta_A
-\\[10pt]
+\text{ALLOW} &
+\text{if } O_{S^\ast}(z)\leq\theta_O \wedge \Phi(z)\geq\theta_\Phi
+\\
 
-\text{FLAG\_DRIFT} & \text{if } O_{S^\ast}(z)\leq\theta_O \wedge \Phi(z)<\theta_\Phi
+\text{CLARIFY} &
+\text{if } M(z)<\theta_M \vee |\Phi(z)|<\theta_A
+\\
+
+\text{FLAG\_DRIFT} &
+\text{if } O_{S^\ast}(z)\leq\theta_O \wedge \Phi(z)<\theta_\Phi
+
 \end{array}
 $$
 
@@ -679,6 +683,7 @@ This policy allows the system to distinguish:
 1. messages outside the field,
 2. messages ambiguously located between fields,
 3. messages inside a field but directionally inverted.
+
 ---
 
 ## 4.15 Central Mathematical Claim
@@ -1687,7 +1692,7 @@ The present work establishes three primary claims: (1) Semantic fields can be ge
 Perhaps the deepest limitation of ACE Atlas is that the framework assumes meaning possesses sufficient structural continuity to admit geometric representation. If semantic meaning were entirely arbitrary, discontinuous, or purely stochastic, stable semantic fields and invariant directional structure would not emerge consistently in embedding space. The effectiveness of ACE Atlas therefore depends on an underlying assumption: that semantic structure contains persistent relational geometry capable of supporting directional epistemic orientation. The experimental results suggest that such structure does emerge empirically. However, the full theoretical foundations of why semantic geometry stabilizes in large language models remain unresolved.
 
 
-\sectionsection{8. Conclusion}
+\section{8. Conclusion}
 
 This work introduced the ACA Runtime, a geometry-based criterion supervision architecture designed to preserve semantic continuity through invariant orientation, contextual semantic fields, topology-aware transitions, and runtime trajectory supervision. Rather than treating semantic stability as a purely probabilistic phenomenon, ACA Runtime models the criterion as directional semantic structure, contextual geometric orientation, and persistent trajectory continuity. The experiments demonstrated that semantic reasoning does not require rigid contextual immobility in order to preserve coherence. Instead, stable reasoning may evolve through neighboring semantic transitions, contextual reorientation, invariant continuity, and topology-aware recovery. 
 
