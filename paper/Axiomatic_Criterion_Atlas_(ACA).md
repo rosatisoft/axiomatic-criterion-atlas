@@ -1776,10 +1776,9 @@ Which translates to an equivalent runtime efficiency gain of:
 $$70.26\%$$
 
 
-
 \begin{figure}[h]
     \centering
-    \includegraphics[width=0.8\textwidth]{1QQqC.jpg} % Asegúrate de usar el nombre correcto del archivo
+    \includegraphics[width=0.8\textwidth]{1QQqC.jpg} % 
     \caption{Criterion Externalization and Runtime Token Reduction. The ACA Runtime architecture reduces operational overhead by preserving orientation structurally rather than linguistically.}
     \label{fig:token_reduction}
 \end{figure}
