@@ -649,21 +649,25 @@ ACE Atlas converts geometric measurements into deterministic runtime actions.
 Let:
 
 $$
-a(z)\in\{\text{ALLOW},\text{CLARIFY},\text{FLAG\DRIFT}\}
+a(z)\in\{\text{ALLOW},\text{CLARIFY},\text{FLAG\_DRIFT}\}
 $$
 
 The policy is defined as:
 
 $$
-a(z)=
 \begin{array}{ll}
-\text{ALLOW} & \text{if } O_{S^\ast}(z)\leq\theta_O \wedge \Phi(z)\geq\theta_\Phi
-\\[10pt]
 
-\text{CLARIFY} & \text{if } M(z)<\theta_M \vee |\Phi(z)|<\theta_A
-\\[10pt]
+\text{ALLOW} &
+\text{if } O_{S^\ast}(z)\leq\theta_O \wedge \Phi(z)\geq\theta_\Phi
+\\
 
-\text{FLAG\_DRIFT} & \text{if } O_{S^\ast}(z)\leq\theta_O \wedge \Phi(z)<\theta_\Phi
+\text{CLARIFY} &
+\text{if } M(z)<\theta_M \vee |\Phi(z)|<\theta_A
+\\
+
+\text{FLAG\_DRIFT} &
+\text{if } O_{S^\ast}(z)\leq\theta_O \wedge \Phi(z)<\theta_\Phi
+
 \end{array}
 $$
 
@@ -679,6 +683,7 @@ This policy allows the system to distinguish:
 1. messages outside the field,
 2. messages ambiguously located between fields,
 3. messages inside a field but directionally inverted.
+
 ---
 
 ## 4.15 Central Mathematical Claim
