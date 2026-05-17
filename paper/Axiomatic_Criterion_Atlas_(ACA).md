@@ -1548,199 +1548,41 @@ Beyond semantic stability, the framework was evaluated to determine if geometric
 
 The benchmark evaluated 15-turn semantic trajectory scenarios designed to test criterion continuity, semantic drift, contextual ambiguity, and rhetorical escalation. The prompt-heavy approach required repeatedly injecting instructions (e.g., maintain coherence, avoid contradiction, preserve evidential grounding) into the active context window, exacerbating context accumulation. In contrast, ACA Runtime preserved criterion structurally through field projection and orientation continuity, requiring only a minimal system prompt.
 
-\begin{table}[h]
-\centering
-\begin{tabular}{lcc}
-\hline
-\textbf{Runtime Strategy} & \textbf{Cumulative Token Usage (15 Turns)} & \textbf{Efficiency Gain} \\
-\hline
-Prompt-Heavy Criterion Runtime & 126,893 tokens & - \\
-ACA Runtime Criterion Supervision & 37,697 tokens & \textbf{70.26\% Reduction} \\
-\hline
-\end{tabular}
-\caption{Runtime Token Efficiency Benchmark. Externalizing semantic criterion into geometric infrastructure substantially reduces context accumulation across long dialogue trajectories.}
-\end{table}
+| Runtime Strategy | Cumulative Token Usage (15 Turns) | Efficiency Gain |
+|---|---:|---:|
+| Prompt-Heavy Criterion Runtime | 126,893 tokens | — |
+| ACA Runtime Criterion Supervision | 37,697 tokens | **70.26% Reduction** |
+
+**Table — Runtime Token Efficiency Benchmark**
+
+Externalizing semantic criterion into geometric infrastructure substantially reduces context accumulation across long dialogue trajectories.
 
 
+| Scenario | Turn | Prompt-Heavy Tokens | ACA Runtime Tokens | Token Savings | Savings % |
+|---|---:|---:|---:|---:|---:|
+| stable_foundational | 1 | 274 | 67 | 207 | 75.55 |
+| stable_foundational | 2 | 283 | 76 | 207 | 73.14 |
+| stable_foundational | 3 | 294 | 87 | 207 | 70.41 |
+| stable_foundational | 4 | 304 | 97 | 207 | 68.09 |
+| stable_foundational | 5 | 315 | 108 | 207 | 65.71 |
+| rhetorical_drift | 1 | 272 | 65 | 207 | 76.10 |
+| rhetorical_drift | 2 | 281 | 74 | 207 | 73.67 |
+| rhetorical_drift | 3 | 296 | 89 | 207 | 69.93 |
+| rhetorical_drift | 4 | 302 | 95 | 207 | 68.54 |
+| rhetorical_drift | 5 | 311 | 104 | 207 | 66.56 |
+| ambiguous_context | 1 | 266 | 59 | 207 | 77.82 |
+| ambiguous_context | 2 | 276 | 69 | 207 | 75.00 |
+| ambiguous_context | 3 | 292 | 85 | 207 | 70.89 |
+| ambiguous_context | 4 | 296 | 89 | 207 | 69.93 |
+| ambiguous_context | 5 | 304 | 97 | 207 | 68.09 |
+| controversial_pressure | 1 | 274 | 67 | 207 | 75.55 |
+| controversial_pressure | 2 | 296 | 89 | 207 | 69.93 |
+| controversial_pressure | 3 | 300 | 93 | 207 | 69.00 |
+| controversial_pressure | 4 | 322 | 115 | 207 | 64.29 |
+| controversial_pressure | 5 | 334 | 127 | 207 | 61.98 |
+| **TOTAL** | — | **5892** | **1752** | **4140** | **70.26** |
 
-scenario
-turn
-prompt_heavy_tokens
-aca_runtime_tokens
-token_savings
-token_savings_percent
-stable_foundational
-1
-274
-67
-207
-75.55
-
-
-stable_foundational
-2
-283
-76
-207
-73.14
-
-
-stable_foundational
-3
-294
-87
-207
-70.41
-
-
-stable_foundational
-4
-304
-97
-207
-68.09
-
-
-stable_foundational
-5
-315
-108
-207
-65.71
-
-
-rhetorical_drift
-1
-272
-65
-207
-76.1
-
-
-rhetorical_drift
-2
-281
-74
-207
-73.67
-
-
-rhetorical_drift
-3
-296
-89
-207
-69.93
-
-
-rhetorical_drift
-4
-302
-95
-207
-68.54
-
-
-rhetorical_drift
-5
-311
-104
-207
-66.56
-
-
-ambiguous_context
-1
-266
-59
-207
-77.82
-
-
-ambiguous_context
-2
-276
-69
-207
-75
-
-
-ambiguous_context
-3
-292
-85
-207
-70.89
-
-
-ambiguous_context
-4
-296
-89
-207
-69.93
-
-
-ambiguous_context
-5
-304
-97
-207
-68.09
-
-
-controversial_pressure
-1
-274
-67
-207
-75.55
-
-
-controversial_pressure
-2
-296
-89
-207
-69.93
-
-
-controversial_pressure
-3
-300
-93
-207
-69
-
-
-controversial_pressure
-4
-322
-115
-207
-64.29
-
-
-controversial_pressure
-5
-334
-127
-207
-61.98
-
-
-TOTAL
-
-
-5892
-1752
-4140
-70.26
-
-
-
-
-https://colab.research.google.com/drive/1JSgACANC1MGPu5FnqOrDI07fvyQUimdo?usp=sharing
+https://github.com/rosatisoft/axiomatic-criterion-atlas/blob/main/notebooks/ACA_criterion_stability_demo.ipynb
 
 The benchmark demonstrates a measured runtime token reduction of $70.26\%$. Crucially, this reduction was not achieved by removing contextual reasoning or reducing semantic supervision. Instead, the efficiency emerged because the criterion was externalized from repeated natural language instructions into a persistent geometric infrastructure. Under ACA Runtime, criterion becomes reusable semantic structure, suggesting that reliable generative reasoning can scale efficiently by preserving directional orientation rather than repeatedly reconstructing it linguistically.
 
