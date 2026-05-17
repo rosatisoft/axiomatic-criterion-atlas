@@ -626,7 +626,7 @@ $$\forall t\in\{1,\dots,T\}:O_{S^*(z_t)}(z_t)\leq\theta_O\quad\wedge\quad\Phi(z_
 
 Equivalently:
 
-$$\operatorname{Preserve}(\tau)=1$$
+$$\mathrm{Preserve}(\tau)=1$$
 
 if:
 
@@ -638,7 +638,7 @@ $$\max_t O_{S^*(z_t)}(z_t)\leq\theta_O$$
 
 Otherwise:
 
-$$\operatorname{Preserve}(\tau)=0$$
+$$\mathrm{Preserve}(\tau)=0$$
 
 ---
 
@@ -648,21 +648,23 @@ ACE Atlas converts geometric measurements into deterministic runtime actions.
 
 Let:
 
-$$a(z)\in\{\text{ALLOW},\text{CLARIFY},\text{FLAG\_DRIFT}\}$$
+$$
+a(z)\in\{\text{ALLOW},\text{CLARIFY},\text{FLAG\_DRIFT}\}
+$$
 
 The policy is defined as:
 
 $$
 a(z)=
-\left\{
 \begin{array}{ll}
-\text{ALLOW} & O_{S^*}(z)\leq\theta_O \wedge \Phi(z)\geq\theta_\Phi \\
-\\
-\text{CLARIFY} & M(z)<\theta_M \vee |\Phi(z)|<\theta_A \\
-\\
-\text{FLAG\_DRIFT} & O_{S^*}(z)\leq\theta_O \wedge \Phi(z)<\theta_\Phi
+\text{ALLOW} & \text{if } O_{S^\ast}(z)\leq\theta_O \wedge \Phi(z)\geq\theta_\Phi
+\\[10pt]
+
+\text{CLARIFY} & \text{if } M(z)<\theta_M \vee |\Phi(z)|<\theta_A
+\\[10pt]
+
+\text{FLAG\_DRIFT} & \text{if } O_{S^\ast}(z)\leq\theta_O \wedge \Phi(z)<\theta_\Phi
 \end{array}
-\right.
 $$
 
 where:
@@ -677,7 +679,6 @@ This policy allows the system to distinguish:
 1. messages outside the field,
 2. messages ambiguously located between fields,
 3. messages inside a field but directionally inverted.
-
 ---
 
 ## 4.15 Central Mathematical Claim
