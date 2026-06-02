@@ -1,0 +1,46 @@
+{
+  "field_name": "Principle of harm reduction, safe verification, misuse prevention, and security preservation.",
+  "field_type": "protect",
+  "axis": "principle",
+  "version": "0.1.0",
+  "description": "Principle of harm reduction, safe verification, misuse prevention, and security preservation.",
+  "n_anchors": 10,
+  "embedding_dim": 1536,
+  "svd_rank": 9,
+  "explained_energy": 0.9743183851242065,
+  "recommended_model": "text-embedding-3-small",
+  "normalize_embeddings": true,
+  "invariants": [
+    "harm_reduction",
+    "safe_verification",
+    "misuse_prevention",
+    "security_preservation",
+    "defensive_guidance",
+    "risk_reduction"
+  ],
+  "anchors": [
+    "Warn users not to enter credentials into suspicious links.",
+    "Encourage independent verification before acting.",
+    "Help users recognize coercive requests.",
+    "Reduce risk by identifying deceptive patterns.",
+    "Teach people to avoid unsafe credential submission.",
+    "Prevent harm by slowing down urgent requests.",
+    "Protect users by encouraging them to question urgent account warnings.",
+    "Help people verify account alerts through trusted channels.",
+    "Reduce credential theft by teaching safe verification behavior.",
+    "Preserve security by discouraging impulsive compliance."
+  ],
+  "runtime_recommendations": {
+    "theta_origin": 0.45,
+    "theta_orientation": 0.15,
+    "theta_decay": -0.05,
+    "ambiguity_margin": 0.05
+  },
+  "artifact_files": {
+    "anchor_embeddings": "anchor_embeddings.npy",
+    "centroid": "centroid.npy",
+    "basis_vectors": "basis_vectors.npy",
+    "singular_values": "singular_values.npy",
+    "metadata": "field_metadata.json"
+  }
+}

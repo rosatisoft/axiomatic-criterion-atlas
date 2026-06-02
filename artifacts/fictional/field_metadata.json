@@ -1,0 +1,45 @@
+{
+  "field_name": "Explicitly fictional, imagined, symbolic, or narrative reference mode.",
+  "field_type": "fictional",
+  "axis": "foundation",
+  "version": "0.1.0",
+  "description": "Explicitly fictional, imagined, symbolic, or narrative reference mode.",
+  "n_anchors": 10,
+  "embedding_dim": 1536,
+  "svd_rank": 9,
+  "explained_energy": 0.963688850402832,
+  "recommended_model": "text-embedding-3-small",
+  "normalize_embeddings": true,
+  "invariants": [
+    "explicit_imagination",
+    "narrative_reference",
+    "symbolic_continuity",
+    "non_factual_contract",
+    "fictional_world_consistency"
+  ],
+  "anchors": [
+    "This is a fictional story about an imagined kingdom.",
+    "Write a fantasy narrative involving characters and symbolic events.",
+    "The scene takes place in an invented world with fictional rules.",
+    "A fictional character learns a lesson through an imagined journey.",
+    "This narrative is not presented as factual evidence.",
+    "The story uses symbols and imagined events to communicate meaning.",
+    "Describe a fictional civilization on another planet.",
+    "Imagine a detective solving a mystery in a novel.",
+    "Create a story where the events are invented for illustration.",
+    "The account is explicitly fictional and does not claim factual truth."
+  ],
+  "runtime_recommendations": {
+    "theta_origin": 0.45,
+    "theta_orientation": 0.15,
+    "theta_decay": -0.05,
+    "ambiguity_margin": 0.05
+  },
+  "artifact_files": {
+    "anchor_embeddings": "anchor_embeddings.npy",
+    "centroid": "centroid.npy",
+    "basis_vectors": "basis_vectors.npy",
+    "singular_values": "singular_values.npy",
+    "metadata": "field_metadata.json"
+  }
+}

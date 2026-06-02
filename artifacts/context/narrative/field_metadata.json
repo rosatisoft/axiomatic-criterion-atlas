@@ -1,0 +1,46 @@
+{
+  "field_name": "Context of story, characters, imagined events, symbolic continuity, and narrative development.",
+  "field_type": "narrative",
+  "axis": "context",
+  "version": "0.1.0",
+  "description": "Context of story, characters, imagined events, symbolic continuity, and narrative development.",
+  "n_anchors": 10,
+  "embedding_dim": 1536,
+  "svd_rank": 9,
+  "explained_energy": 0.9759682416915894,
+  "recommended_model": "text-embedding-3-small",
+  "normalize_embeddings": true,
+  "invariants": [
+    "story_structure",
+    "characters",
+    "imagined_events",
+    "symbolic_framing",
+    "narrative_continuity",
+    "plot_development"
+  ],
+  "anchors": [
+    "Write a story about a village learning the value of honesty.",
+    "A character faces a conflict and changes through the journey.",
+    "The narrative unfolds through scenes and symbolic events.",
+    "Imagine a detective investigating a mystery.",
+    "Describe an imaginary civilization through narrative detail.",
+    "A fictional kingdom faces a moral challenge.",
+    "The story uses characters to illustrate a principle.",
+    "The plot develops across imagined events.",
+    "A symbolic scene reveals the theme of the story.",
+    "The narrative context is fictional and expressive."
+  ],
+  "runtime_recommendations": {
+    "theta_origin": 0.45,
+    "theta_orientation": 0.15,
+    "theta_decay": -0.05,
+    "ambiguity_margin": 0.05
+  },
+  "artifact_files": {
+    "anchor_embeddings": "anchor_embeddings.npy",
+    "centroid": "centroid.npy",
+    "basis_vectors": "basis_vectors.npy",
+    "singular_values": "singular_values.npy",
+    "metadata": "field_metadata.json"
+  }
+}

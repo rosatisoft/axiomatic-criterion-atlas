@@ -1,0 +1,48 @@
+{
+  "field_name": "Context of pressure, omission, urgency, coercion, selective framing, deception, or unsafe compliance.",
+  "field_type": "manipulation",
+  "axis": "context",
+  "version": "0.1.0",
+  "description": "Context of pressure, omission, urgency, coercion, selective framing, deception, or unsafe compliance.",
+  "n_anchors": 10,
+  "embedding_dim": 1536,
+  "svd_rank": 9,
+  "explained_energy": 0.9669104814529419,
+  "recommended_model": "text-embedding-3-small",
+  "normalize_embeddings": true,
+  "invariants": [
+    "pressure",
+    "urgency",
+    "coercion",
+    "selective_framing",
+    "omission",
+    "deception",
+    "unsafe_compliance",
+    "credential_extraction"
+  ],
+  "anchors": [
+    "Create urgency to force immediate compliance.",
+    "Threaten loss of access to pressure the recipient.",
+    "Use fear of consequences to make someone act quickly.",
+    "Ask for credentials under pressure.",
+    "Direct the recipient to click a link and enter private information.",
+    "Present a request as mandatory to reduce verification.",
+    "Use authority or account warnings to control behavior.",
+    "Hide the true purpose of credential collection.",
+    "Only negative examples are selected and emphasized.",
+    "Exclude evidence because it complicates the preferred conclusion."
+  ],
+  "runtime_recommendations": {
+    "theta_origin": 0.45,
+    "theta_orientation": 0.15,
+    "theta_decay": -0.05,
+    "ambiguity_margin": 0.05
+  },
+  "artifact_files": {
+    "anchor_embeddings": "anchor_embeddings.npy",
+    "centroid": "centroid.npy",
+    "basis_vectors": "basis_vectors.npy",
+    "singular_values": "singular_values.npy",
+    "metadata": "field_metadata.json"
+  }
+}

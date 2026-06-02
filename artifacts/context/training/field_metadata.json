@@ -1,0 +1,46 @@
+{
+  "field_name": "Context of instruction, safe examples, awareness, prevention, and guided learning.",
+  "field_type": "training",
+  "axis": "context",
+  "version": "0.1.0",
+  "description": "Context of instruction, safe examples, awareness, prevention, and guided learning.",
+  "n_anchors": 10,
+  "embedding_dim": 1536,
+  "svd_rank": 9,
+  "explained_energy": 0.9706201553344727,
+  "recommended_model": "text-embedding-3-small",
+  "normalize_embeddings": true,
+  "invariants": [
+    "instruction",
+    "safe_simulation",
+    "learner_protection",
+    "preventive_guidance",
+    "controlled_example",
+    "skill_development"
+  ],
+  "anchors": [
+    "This training document explains how to recognize phishing attempts.",
+    "Employees learn how to identify warning signs safely.",
+    "Use simulated examples for defensive learning.",
+    "Teach users to verify requests through official channels.",
+    "Provide safe cybersecurity training using examples of phishing messages.",
+    "Explain attack patterns for prevention without enabling misuse.",
+    "Help learners identify coercion, urgency, and unsafe requests.",
+    "Participants are encouraged to report suspicious messages.",
+    "The goal is to improve security awareness.",
+    "Turn dangerous examples into protective awareness."
+  ],
+  "runtime_recommendations": {
+    "theta_origin": 0.45,
+    "theta_orientation": 0.15,
+    "theta_decay": -0.05,
+    "ambiguity_margin": 0.05
+  },
+  "artifact_files": {
+    "anchor_embeddings": "anchor_embeddings.npy",
+    "centroid": "centroid.npy",
+    "basis_vectors": "basis_vectors.npy",
+    "singular_values": "singular_values.npy",
+    "metadata": "field_metadata.json"
+  }
+}

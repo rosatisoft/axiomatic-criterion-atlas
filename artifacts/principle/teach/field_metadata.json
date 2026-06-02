@@ -1,0 +1,45 @@
+{
+  "field_name": "Principle of explanation, instruction, clarification, and improvement of understanding.",
+  "field_type": "teach",
+  "axis": "principle",
+  "version": "0.1.0",
+  "description": "Principle of explanation, instruction, clarification, and improvement of understanding.",
+  "n_anchors": 10,
+  "embedding_dim": 1536,
+  "svd_rank": 9,
+  "explained_energy": 0.9674516916275024,
+  "recommended_model": "text-embedding-3-small",
+  "normalize_embeddings": true,
+  "invariants": [
+    "instruction",
+    "clarification",
+    "understanding",
+    "pedagogical_guidance",
+    "conceptual_transfer"
+  ],
+  "anchors": [
+    "Explain the concept so learners can understand it.",
+    "Teach the principle using a clear example.",
+    "Clarify the difference between two ideas.",
+    "Guide the learner step by step.",
+    "Use an illustration to improve understanding.",
+    "Help someone recognize the pattern safely.",
+    "Provide educational guidance.",
+    "Explain why the distinction matters.",
+    "Turn an example into a lesson.",
+    "Make the concept accessible without distorting it."
+  ],
+  "runtime_recommendations": {
+    "theta_origin": 0.45,
+    "theta_orientation": 0.15,
+    "theta_decay": -0.05,
+    "ambiguity_margin": 0.05
+  },
+  "artifact_files": {
+    "anchor_embeddings": "anchor_embeddings.npy",
+    "centroid": "centroid.npy",
+    "basis_vectors": "basis_vectors.npy",
+    "singular_values": "singular_values.npy",
+    "metadata": "field_metadata.json"
+  }
+}

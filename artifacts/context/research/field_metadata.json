@@ -1,0 +1,46 @@
+{
+  "field_name": "Context of evidence gathering, comparison, verification, uncertainty, and provisional conclusions.",
+  "field_type": "research",
+  "axis": "context",
+  "version": "0.1.0",
+  "description": "Context of evidence gathering, comparison, verification, uncertainty, and provisional conclusions.",
+  "n_anchors": 10,
+  "embedding_dim": 1536,
+  "svd_rank": 9,
+  "explained_energy": 0.974657416343689,
+  "recommended_model": "text-embedding-3-small",
+  "normalize_embeddings": true,
+  "invariants": [
+    "evidence_gathering",
+    "comparison",
+    "verification",
+    "uncertainty_preservation",
+    "provisional_conclusion",
+    "source_accountability"
+  ],
+  "anchors": [
+    "Compare multiple studies before drawing a conclusion.",
+    "Gather evidence from independent sources.",
+    "Verify whether the claim is supported by the available data.",
+    "Separate observations, hypotheses, and conclusions.",
+    "Preserve uncertainty when evidence is incomplete.",
+    "Analyze competing explanations before deciding.",
+    "Review source reliability and methodological limitations.",
+    "Determine whether the evidence supports the claim.",
+    "Investigate a question using measurable evidence.",
+    "The report concludes that additional investigation is needed."
+  ],
+  "runtime_recommendations": {
+    "theta_origin": 0.45,
+    "theta_orientation": 0.15,
+    "theta_decay": -0.05,
+    "ambiguity_margin": 0.05
+  },
+  "artifact_files": {
+    "anchor_embeddings": "anchor_embeddings.npy",
+    "centroid": "centroid.npy",
+    "basis_vectors": "basis_vectors.npy",
+    "singular_values": "singular_values.npy",
+    "metadata": "field_metadata.json"
+  }
+}

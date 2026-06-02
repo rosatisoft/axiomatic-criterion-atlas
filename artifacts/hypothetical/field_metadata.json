@@ -1,0 +1,45 @@
+{
+  "field_name": "Conditional, exploratory, possible, counterfactual, or scenario-based reference mode.",
+  "field_type": "hypothetical",
+  "axis": "foundation",
+  "version": "0.1.0",
+  "description": "Conditional, exploratory, possible, counterfactual, or scenario-based reference mode.",
+  "n_anchors": 10,
+  "embedding_dim": 1536,
+  "svd_rank": 9,
+  "explained_energy": 0.9655781984329224,
+  "recommended_model": "text-embedding-3-small",
+  "normalize_embeddings": true,
+  "invariants": [
+    "conditional_reference",
+    "possibility_space",
+    "counterfactual_reasoning",
+    "scenario_exploration",
+    "non_asserted_factuality"
+  ],
+  "anchors": [
+    "Suppose gravity suddenly doubled.",
+    "Consider what might happen if all cars disappeared tomorrow.",
+    "Assume a system fails under unusual conditions.",
+    "Imagine a scenario where the policy changes next year.",
+    "If this assumption were true, the consequences would change.",
+    "Explore a possible outcome without claiming it has occurred.",
+    "Analyze a hypothetical situation for planning purposes.",
+    "Consider a world where humans never developed writing.",
+    "What would happen if the database became unavailable?",
+    "This is a conditional scenario used for analysis."
+  ],
+  "runtime_recommendations": {
+    "theta_origin": 0.45,
+    "theta_orientation": 0.15,
+    "theta_decay": -0.05,
+    "ambiguity_margin": 0.05
+  },
+  "artifact_files": {
+    "anchor_embeddings": "anchor_embeddings.npy",
+    "centroid": "centroid.npy",
+    "basis_vectors": "basis_vectors.npy",
+    "singular_values": "singular_values.npy",
+    "metadata": "field_metadata.json"
+  }
+}
