@@ -17,5 +17,10 @@ artifacts/**/*.npy
 artifacts/**/*.npz
 artifacts/**/*.pkl
 
+!artifacts/fictional/*.npy
+!artifacts/hypothetical/*.npy
+!artifacts/context/**/*.npy
+!artifacts/principle/**/*.npy
+
 .DS_Store
 Thumbs.db
