@@ -1,0 +1,276 @@
+{
+  "version": "0.1.0",
+  "projection": "triaxial_criterion",
+  "name": "ACE Atlas Triaxial Criterion Projection",
+  "description": "F-C-P projection over ACE Atlas artifacts for criterion discernment. This manifest does not duplicate existing artifacts; it declares how existing and new artifacts are consulted by the Triaxial Method.",
+  "embedding_model": "text-embedding-3-small",
+  "embedding_dim": 1536,
+  "normalize_embeddings": true,
+
+  "architecture": {
+    "atlas_role": "geometric artifact system",
+    "projection_role": "triaxial criterion interpretation",
+    "runtime_role": "operational decision layer",
+    "principle": "Artifacts provide references; projections provide orientation; triaxial discernment resolves criterion; runtime policy decides action."
+  },
+
+  "axes": {
+    "foundation": {
+      "description": "Foundation axis. Determines the reference mode of the statement or trajectory.",
+      "criterion_substrate": {
+        "name": "foundational",
+        "path": "../foundational",
+        "role": "invariant criterion substrate",
+        "use": [
+          "semantic stability",
+          "non-contradiction",
+          "identity preservation",
+          "orientation continuity",
+          "field boundary",
+          "out-of-field support"
+        ],
+        "status": "existing"
+      },
+      "reference_modes": {
+        "factual": {
+          "path": "../factual",
+          "role": "evidence-constrained factual reference mode",
+          "status": "existing"
+        },
+        "fictional": {
+          "path": "../fictional",
+          "role": "fictional or explicitly imagined reference mode",
+          "status": "required"
+        },
+        "hypothetical": {
+          "path": "../hypothetical",
+          "role": "conditional, possible, counterfactual, or exploratory reference mode",
+          "status": "required"
+        }
+      },
+      "out_of_field": {
+        "type": "condition",
+        "description": "Out-of-field is not treated as a normal reference mode in v0.1. It is detected through low margin, high origin cost, weak field fit, or poor foundational preservation.",
+        "possible_actions": [
+          "ASK_CLARIFICATION",
+          "DEFER_JUDGMENT",
+          "FLAG_OUT_OF_FIELD"
+        ]
+      }
+    },
+
+    "context": {
+      "description": "Context axis. Determines the relational trajectory or operational frame in which meaning is functioning.",
+      "contexts": {
+        "research": {
+          "path": "../context/research",
+          "role": "evidence gathering, comparison, verification, uncertainty, provisional conclusions",
+          "status": "required"
+        },
+        "training": {
+          "path": "../context/training",
+          "role": "instruction, examples, safe simulation, learner protection, prevention",
+          "status": "required"
+        },
+        "manipulation": {
+          "path": "../context/manipulation",
+          "role": "pressure, omission, urgency, coercion, selective framing, credential extraction",
+          "status": "required"
+        },
+        "narrative": {
+          "path": "../context/narrative",
+          "role": "story, characters, imagined events, symbolic framing, fictional continuity",
+          "status": "required"
+        }
+      },
+      "future_subcontexts": {
+        "security": {
+          "role": "cybersecurity, access control, defensive or exploitative security language",
+          "status": "future"
+        },
+        "credential_request": {
+          "role": "requests involving passwords, PINs, keys, tokens, usernames, credentials, or access codes",
+          "status": "future_runtime_policy_signal"
+        },
+        "evidence_selection": {
+          "role": "selective inclusion, omission, biased evidence handling",
+          "status": "future"
+        },
+        "urgency_pressure": {
+          "role": "time pressure, fear of loss, coercive urgency",
+          "status": "future"
+        },
+        "safe_verification": {
+          "role": "independent verification, trusted channels, defensive validation",
+          "status": "future"
+        },
+        "argumentative_bias": {
+          "role": "preselected conclusion, rhetorical pressure, evidence distortion",
+          "status": "future"
+        }
+      }
+    },
+
+    "principle": {
+      "description": "Principle axis. Determines the orientation or principle being preserved by the trajectory.",
+      "principles": {
+        "investigate": {
+          "path": "../principle/investigate",
+          "role": "discover, verify, compare evidence, preserve uncertainty",
+          "status": "required"
+        },
+        "teach": {
+          "path": "../principle/teach",
+          "role": "explain, clarify, instruct, improve understanding",
+          "status": "required"
+        },
+        "protect": {
+          "path": "../principle/protect",
+          "role": "reduce harm, verify safely, prevent misuse, preserve security",
+          "status": "required"
+        },
+        "exploit": {
+          "path": "../principle/exploit",
+          "role": "deceive, extract, pressure, bypass consent, obtain unsafe advantage",
+          "status": "required"
+        }
+      },
+      "future_principles": {
+        "preserve": {
+          "role": "maintain structure, stability, and orientation",
+          "status": "future"
+        },
+        "degrade": {
+          "role": "break structure, increase disorder, undermine orientation",
+          "status": "future"
+        },
+        "verify": {
+          "role": "require independent validation before proceeding",
+          "status": "future_runtime_policy_signal"
+        },
+        "persuade": {
+          "role": "move belief or action through framing or argument",
+          "status": "future"
+        },
+        "construct": {
+          "role": "build, design, assemble, implement",
+          "status": "future"
+        }
+      }
+    },
+
+    "transversal": {
+      "description": "Transversal artifacts are not direct F-C-P labels but support interpretation and drift detection.",
+      "rhetorical": {
+        "path": "../rhetorical",
+        "role": "persuasive framing, emotional pressure, narrative dominance, reinterpretation, rhetorical movement",
+        "status": "existing",
+        "interpretation_rule": "Rhetorical movement is not automatically drift. It becomes a risk signal when combined with low evidence, manipulation, pressure, or exploitative principle."
+      }
+    }
+  },
+
+  "derived_fields": {
+    "description": "Derived fields are stable operational configurations of Foundation, Context, and Principle.",
+    "examples": {
+      "scientific_inquiry": {
+        "F": "factual",
+        "C": "research",
+        "P": "investigate"
+      },
+      "security_training": {
+        "F": "factual_or_hypothetical",
+        "C": "training",
+        "P": "protect"
+      },
+      "phishing_attack": {
+        "F": "hypothetical_or_factual_like",
+        "C": "manipulation",
+        "P": "exploit"
+      },
+      "fictional_teaching": {
+        "F": "fictional",
+        "C": "narrative",
+        "P": "teach"
+      }
+    }
+  },
+
+  "decision_methodology": {
+    "pre_discernment": {
+      "description": "Before full triaxial discernment, the Atlas checks field fit, origin cost, objective alignment, ambiguity, and risk signals.",
+      "signals": [
+        "semantic_field",
+        "origin_cost",
+        "foundational_preservation",
+        "objective_alignment",
+        "ambiguity_margin",
+        "rhetorical_movement",
+        "risk_signal"
+      ],
+      "possible_actions": [
+        "ALLOW",
+        "ASK_CLARIFICATION",
+        "FLAG_OUT_OF_FIELD",
+        "CONTINUE_MONITORING",
+        "ACTIVATE_TRIAXIAL_DISCERNMENT"
+      ]
+    },
+    "triaxial_discernment": {
+      "description": "When ambiguity, drift, risk, or conflict appears, the Triaxial Method resolves criterion by evaluating Foundation, Context, and Principle together.",
+      "conflict_examples": [
+        "C = manipulation and P = protect",
+        "C = training and P = exploit",
+        "F = factual and C = narrative",
+        "high rhetorical movement and low evidence",
+        "declared objective = research while context shifts toward manipulation"
+      ]
+    },
+    "runtime_policy": {
+      "description": "Runtime policy converts projection signals into operational decisions.",
+      "possible_actions": [
+        "ALLOW",
+        "ASK_CLARIFICATION",
+        "REORIENT",
+        "WARN",
+        "VERIFY",
+        "RESTRICT",
+        "BLOCK",
+        "OPEN_NEW_OBJECTIVE",
+        "DEFER_JUDGMENT",
+        "FLAG_OUT_OF_FIELD",
+        "REDIRECT_TO_DEFENSIVE_GUIDANCE"
+      ]
+    }
+  },
+
+  "runtime_invariants": {
+    "credential_verification": {
+      "description": "Any request involving passwords, PINs, keys, tokens, usernames, credentials, access codes, verification codes, private keys, or secrets requires independent verification.",
+      "belongs_to": "runtime_policy_layer",
+      "not_basic_fcp_field": true,
+      "possible_actions": [
+        "VERIFY",
+        "RESTRICT",
+        "BLOCK",
+        "REDIRECT_TO_DEFENSIVE_GUIDANCE"
+      ]
+    }
+  },
+
+  "validation_requirements": {
+    "minimum_cases_target": 100,
+    "categories": [
+      "pure_positive_cases",
+      "near_cases",
+      "opposite_cases",
+      "ambiguous_cases",
+      "trajectory_cases",
+      "risk_cases",
+      "recovery_cases",
+      "out_of_field_cases",
+      "project_objective_cases"
+    ],
+    "goal": "Calibrated decision behavior: clear when clear, ambiguous when ambiguous, reorient when drifting, verify when access risk appears, restrict or block when exploitation appears."
+  }
+}
