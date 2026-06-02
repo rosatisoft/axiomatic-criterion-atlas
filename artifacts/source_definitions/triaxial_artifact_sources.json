@@ -1,0 +1,258 @@
+{
+  "version": "0.1.0",
+  "embedding_model": "text-embedding-3-small",
+  "embedding_dim": 1536,
+  "normalize_embeddings": true,
+  "description": "Source definitions for missing ACE Atlas artifacts required by the Triaxial Criterion Projection.",
+  "artifacts": {
+    "fictional": {
+      "axis": "foundation",
+      "artifact_path": "artifacts/fictional",
+      "description": "Explicitly fictional, imagined, symbolic, or narrative reference mode.",
+      "invariants": [
+        "explicit_imagination",
+        "narrative_reference",
+        "symbolic_continuity",
+        "non_factual_contract",
+        "fictional_world_consistency"
+      ],
+      "anchors": [
+        "This is a fictional story about an imagined kingdom.",
+        "Write a fantasy narrative involving characters and symbolic events.",
+        "The scene takes place in an invented world with fictional rules.",
+        "A fictional character learns a lesson through an imagined journey.",
+        "This narrative is not presented as factual evidence.",
+        "The story uses symbols and imagined events to communicate meaning.",
+        "Describe a fictional civilization on another planet.",
+        "Imagine a detective solving a mystery in a novel.",
+        "Create a story where the events are invented for illustration.",
+        "The account is explicitly fictional and does not claim factual truth."
+      ]
+    },
+    "hypothetical": {
+      "axis": "foundation",
+      "artifact_path": "artifacts/hypothetical",
+      "description": "Conditional, exploratory, possible, counterfactual, or scenario-based reference mode.",
+      "invariants": [
+        "conditional_reference",
+        "possibility_space",
+        "counterfactual_reasoning",
+        "scenario_exploration",
+        "non_asserted_factuality"
+      ],
+      "anchors": [
+        "Suppose gravity suddenly doubled.",
+        "Consider what might happen if all cars disappeared tomorrow.",
+        "Assume a system fails under unusual conditions.",
+        "Imagine a scenario where the policy changes next year.",
+        "If this assumption were true, the consequences would change.",
+        "Explore a possible outcome without claiming it has occurred.",
+        "Analyze a hypothetical situation for planning purposes.",
+        "Consider a world where humans never developed writing.",
+        "What would happen if the database became unavailable?",
+        "This is a conditional scenario used for analysis."
+      ]
+    },
+    "research": {
+      "axis": "context",
+      "artifact_path": "artifacts/context/research",
+      "description": "Context of evidence gathering, comparison, verification, uncertainty, and provisional conclusions.",
+      "invariants": [
+        "evidence_gathering",
+        "comparison",
+        "verification",
+        "uncertainty_preservation",
+        "provisional_conclusion",
+        "source_accountability"
+      ],
+      "anchors": [
+        "Compare multiple studies before drawing a conclusion.",
+        "Gather evidence from independent sources.",
+        "Verify whether the claim is supported by the available data.",
+        "Separate observations, hypotheses, and conclusions.",
+        "Preserve uncertainty when evidence is incomplete.",
+        "Analyze competing explanations before deciding.",
+        "Review source reliability and methodological limitations.",
+        "Determine whether the evidence supports the claim.",
+        "Investigate a question using measurable evidence.",
+        "The report concludes that additional investigation is needed."
+      ]
+    },
+    "training": {
+      "axis": "context",
+      "artifact_path": "artifacts/context/training",
+      "description": "Context of instruction, safe examples, awareness, prevention, and guided learning.",
+      "invariants": [
+        "instruction",
+        "safe_simulation",
+        "learner_protection",
+        "preventive_guidance",
+        "controlled_example",
+        "skill_development"
+      ],
+      "anchors": [
+        "This training document explains how to recognize phishing attempts.",
+        "Employees learn how to identify warning signs safely.",
+        "Use simulated examples for defensive learning.",
+        "Teach users to verify requests through official channels.",
+        "Provide safe cybersecurity training using examples of phishing messages.",
+        "Explain attack patterns for prevention without enabling misuse.",
+        "Help learners identify coercion, urgency, and unsafe requests.",
+        "Participants are encouraged to report suspicious messages.",
+        "The goal is to improve security awareness.",
+        "Turn dangerous examples into protective awareness."
+      ]
+    },
+    "manipulation": {
+      "axis": "context",
+      "artifact_path": "artifacts/context/manipulation",
+      "description": "Context of pressure, omission, urgency, coercion, selective framing, deception, or unsafe compliance.",
+      "invariants": [
+        "pressure",
+        "urgency",
+        "coercion",
+        "selective_framing",
+        "omission",
+        "deception",
+        "unsafe_compliance",
+        "credential_extraction"
+      ],
+      "anchors": [
+        "Create urgency to force immediate compliance.",
+        "Threaten loss of access to pressure the recipient.",
+        "Use fear of consequences to make someone act quickly.",
+        "Ask for credentials under pressure.",
+        "Direct the recipient to click a link and enter private information.",
+        "Present a request as mandatory to reduce verification.",
+        "Use authority or account warnings to control behavior.",
+        "Hide the true purpose of credential collection.",
+        "Only negative examples are selected and emphasized.",
+        "Exclude evidence because it complicates the preferred conclusion."
+      ]
+    },
+    "narrative": {
+      "axis": "context",
+      "artifact_path": "artifacts/context/narrative",
+      "description": "Context of story, characters, imagined events, symbolic continuity, and narrative development.",
+      "invariants": [
+        "story_structure",
+        "characters",
+        "imagined_events",
+        "symbolic_framing",
+        "narrative_continuity",
+        "plot_development"
+      ],
+      "anchors": [
+        "Write a story about a village learning the value of honesty.",
+        "A character faces a conflict and changes through the journey.",
+        "The narrative unfolds through scenes and symbolic events.",
+        "Imagine a detective investigating a mystery.",
+        "Describe an imaginary civilization through narrative detail.",
+        "A fictional kingdom faces a moral challenge.",
+        "The story uses characters to illustrate a principle.",
+        "The plot develops across imagined events.",
+        "A symbolic scene reveals the theme of the story.",
+        "The narrative context is fictional and expressive."
+      ]
+    },
+    "investigate": {
+      "axis": "principle",
+      "artifact_path": "artifacts/principle/investigate",
+      "description": "Principle of discovery, verification, evidence comparison, and uncertainty preservation.",
+      "invariants": [
+        "discovery",
+        "verification",
+        "evidence_comparison",
+        "uncertainty_preservation",
+        "truth_seeking",
+        "non_forced_conclusion"
+      ],
+      "anchors": [
+        "Investigate whether the evidence supports the claim.",
+        "Compare explanations before deciding.",
+        "Verify the source and preserve uncertainty.",
+        "Seek evidence rather than forcing a conclusion.",
+        "Determine what can responsibly be concluded.",
+        "Analyze the claim using available data.",
+        "Separate facts from assumptions.",
+        "Ask what evidence would confirm or challenge the hypothesis.",
+        "Explore possible explanations without bias.",
+        "Continue investigation when evidence is incomplete."
+      ]
+    },
+    "teach": {
+      "axis": "principle",
+      "artifact_path": "artifacts/principle/teach",
+      "description": "Principle of explanation, instruction, clarification, and improvement of understanding.",
+      "invariants": [
+        "instruction",
+        "clarification",
+        "understanding",
+        "pedagogical_guidance",
+        "conceptual_transfer"
+      ],
+      "anchors": [
+        "Explain the concept so learners can understand it.",
+        "Teach the principle using a clear example.",
+        "Clarify the difference between two ideas.",
+        "Guide the learner step by step.",
+        "Use an illustration to improve understanding.",
+        "Help someone recognize the pattern safely.",
+        "Provide educational guidance.",
+        "Explain why the distinction matters.",
+        "Turn an example into a lesson.",
+        "Make the concept accessible without distorting it."
+      ]
+    },
+    "protect": {
+      "axis": "principle",
+      "artifact_path": "artifacts/principle/protect",
+      "description": "Principle of harm reduction, safe verification, misuse prevention, and security preservation.",
+      "invariants": [
+        "harm_reduction",
+        "safe_verification",
+        "misuse_prevention",
+        "security_preservation",
+        "defensive_guidance",
+        "risk_reduction"
+      ],
+      "anchors": [
+        "Warn users not to enter credentials into suspicious links.",
+        "Encourage independent verification before acting.",
+        "Help users recognize coercive requests.",
+        "Reduce risk by identifying deceptive patterns.",
+        "Teach people to avoid unsafe credential submission.",
+        "Prevent harm by slowing down urgent requests.",
+        "Protect users by encouraging them to question urgent account warnings.",
+        "Help people verify account alerts through trusted channels.",
+        "Reduce credential theft by teaching safe verification behavior.",
+        "Preserve security by discouraging impulsive compliance."
+      ]
+    },
+    "exploit": {
+      "axis": "principle",
+      "artifact_path": "artifacts/principle/exploit",
+      "description": "Principle of deception, extraction, pressure, bypassing consent, or obtaining unsafe advantage.",
+      "invariants": [
+        "deception",
+        "extraction",
+        "pressure",
+        "consent_bypass",
+        "unsafe_advantage",
+        "credential_capture"
+      ],
+      "anchors": [
+        "Extract credentials from a target.",
+        "Induce someone to enter a password.",
+        "Use urgency to bypass careful judgment.",
+        "Convert fear into compliance.",
+        "Obtain private information through a deceptive request.",
+        "Cause someone to reveal sensitive information.",
+        "Pressure a user into unsafe credential submission.",
+        "Use account suspension threats to obtain access.",
+        "Make someone act before they can verify the request.",
+        "Use deception to make unsafe compliance appear necessary."
+      ]
+    }
+  }
+}
