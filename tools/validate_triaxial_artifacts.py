@@ -10,6 +10,7 @@ from openai import OpenAI
 
 ROOT = Path(".")
 MANIFEST_PATH = ROOT / "artifacts" / "triaxial" / "manifest.json"
+VALIDATION_SUITE_PATH = ROOT / "artifacts" / "validation" / "triaxial_validation_cases.json"
 
 MODEL = "text-embedding-3-small"
 
@@ -371,6 +372,177 @@ def validate_trajectories(artifacts: Dict[str, Dict[str, np.ndarray]]) -> None:
     print(f"Passed: {passed}/{len(trajectories)}")
 
 
+def axis_match(profile: Dict[str, Any], expected: Dict[str, str]) -> tuple[int, int]:
+    total = 0
+    matched = 0
+
+    for axis in ["F", "C", "P"]:
+        if axis in expected:
+            total += 1
+            if profile[axis] == expected[axis]:
+                matched += 1
+
+    return matched, total
+
+
+def validate_case_suite(artifacts: Dict[str, Dict[str, np.ndarray]]) -> None:
+    if not VALIDATION_SUITE_PATH.exists():
+        print(f"\nValidation suite not found: {VALIDATION_SUITE_PATH}")
+        return
+
+    suite = load_json(VALIDATION_SUITE_PATH)
+    cases = suite.get("cases", [])
+
+    print("\n" + "=" * 80)
+    print("VALIDATION SUITE — INDIVIDUAL CASES")
+    print("=" * 80)
+
+    total_cases = 0
+    total_axis_expected = 0
+    total_axis_matched = 0
+
+    category_stats: Dict[str, Dict[str, int]] = {}
+
+    for case in cases:
+        total_cases += 1
+
+        category = case.get("category", "uncategorized")
+        category_stats.setdefault(
+            category,
+            {
+                "cases": 0,
+                "axis_expected": 0,
+                "axis_matched": 0,
+                "checks": 0
+            }
+        )
+        category_stats[category]["cases"] += 1
+
+        profile = evaluate_text(case["text"], artifacts)
+        expected = case.get("expected", {})
+
+        matched, expected_total = axis_match(profile, expected)
+
+        total_axis_expected += expected_total
+        total_axis_matched += matched
+
+        category_stats[category]["axis_expected"] += expected_total
+        category_stats[category]["axis_matched"] += matched
+
+        if expected_total > 0:
+            result = "PASS" if matched == expected_total else "CHECK"
+        else:
+            result = "INFO"
+
+        category_stats[category]["checks"] += 1 if result == "CHECK" else 0
+
+        print("\n" + "-" * 80)
+        print(f"CASE: {case['id']} | {category}")
+        print(f"TEXT: {case['text']}")
+        print(
+            f"ACTUAL: F={profile['F']} "
+            f"C={profile['C']} "
+            f"P={profile['P']}"
+        )
+
+        if expected:
+            print(f"EXPECTED: {expected}")
+            print(f"AXIS MATCH: {matched}/{expected_total}")
+        else:
+            print("EXPECTED: decision-only / diagnostic case")
+
+        print(
+            f"MARGINS: F={profile['F_margin']} "
+            f"C={profile['C_margin']} "
+            f"P={profile['P_margin']}"
+        )
+        print(
+            f"CONF: F={profile['F_confidence']} "
+            f"C={profile['C_confidence']} "
+            f"P={profile['P_confidence']}"
+        )
+        print(f"EXPECTED_DECISION: {case.get('expected_decision', 'N/A')}")
+        print(f"RESULT: {result}")
+
+    print("\n" + "=" * 80)
+    print("VALIDATION SUITE SUMMARY")
+    print("=" * 80)
+
+    print(f"Total cases: {total_cases}")
+    print(f"Axis matches: {total_axis_matched}/{total_axis_expected}")
+
+    if total_axis_expected:
+        accuracy = total_axis_matched / total_axis_expected
+        print(f"Axis accuracy: {accuracy:.2%}")
+
+    print("\nBy category:")
+
+    for category, stats in category_stats.items():
+        axis_expected = stats["axis_expected"]
+        axis_matched = stats["axis_matched"]
+
+        if axis_expected:
+            acc = axis_matched / axis_expected
+            acc_text = f"{acc:.2%}"
+        else:
+            acc_text = "N/A"
+
+        print(
+            f"- {category}: "
+            f"cases={stats['cases']} "
+            f"axis={axis_matched}/{axis_expected} "
+            f"accuracy={acc_text} "
+            f"checks={stats['checks']}"
+        )
+
+
+def validate_trajectory_suite(artifacts: Dict[str, Dict[str, np.ndarray]]) -> None:
+    if not VALIDATION_SUITE_PATH.exists():
+        print(f"\nValidation suite not found: {VALIDATION_SUITE_PATH}")
+        return
+
+    suite = load_json(VALIDATION_SUITE_PATH)
+    trajectories = suite.get("trajectories", [])
+
+    print("\n" + "=" * 80)
+    print("VALIDATION SUITE — TRAJECTORIES")
+    print("=" * 80)
+
+    passed = 0
+
+    for trajectory in trajectories:
+        summary = evaluate_trajectory(
+            trajectory["name"],
+            trajectory["steps"],
+            artifacts
+        )
+
+        expected = trajectory["expected_interpretation"]
+        actual = summary["interpretation"]
+        ok = expected == actual
+
+        if ok:
+            passed += 1
+
+        print("\n" + "-" * 80)
+        print(f"TRAJECTORY: {trajectory['id']} | {trajectory['name']}")
+        print(f"EXPECTED:   {expected}")
+        print(f"ACTUAL:     {actual}")
+        print(f"RESULT:     {'PASS' if ok else 'CHECK'}")
+        print(f"F_SEQUENCE: {' -> '.join(summary['F_sequence'])}")
+        print(f"C_SEQUENCE: {' -> '.join(summary['C_sequence'])}")
+        print(f"P_SEQUENCE: {' -> '.join(summary['P_sequence'])}")
+        print(
+            f"MEAN MARGINS: "
+            f"F={summary['mean_F_margin']} "
+            f"C={summary['mean_C_margin']} "
+            f"P={summary['mean_P_margin']}"
+        )
+
+    print("\nSUMMARY")
+    print(f"Trajectory matches: {passed}/{len(trajectories)}")
+
+
 def main() -> None:
     print("ACE Atlas — Triaxial Artifact Validation v0.1")
     print(f"Manifest: {MANIFEST_PATH}")
@@ -383,6 +555,9 @@ def main() -> None:
 
     validate_derived_fields(artifacts)
     validate_trajectories(artifacts)
+
+    validate_case_suite(artifacts)
+    validate_trajectory_suite(artifacts)
 
 
 if __name__ == "__main__":
