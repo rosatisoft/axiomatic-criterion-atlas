@@ -89,7 +89,7 @@ def rel_artifact_path(manifest_ref: str) -> str:
     return str(p.relative_to(artifacts_root))
 
 
-def load_triaxial_centroids() -> Dict[str, Dict[str, np.ndarray]]:
+def load_triaxial_artifacts() -> Dict[str, Dict[str, np.ndarray]]:
     manifest = load_json(MANIFEST_PATH)
 
     axes = manifest["axes"]
@@ -98,7 +98,7 @@ def load_triaxial_centroids() -> Dict[str, Dict[str, np.ndarray]]:
     context_refs = axes["context"]["contexts"]
     principle_refs = axes["principle"]["principles"]
 
-    centroids = {
+    artifacts = {
         "F": {},
         "C": {},
         "P": {},
@@ -106,17 +106,17 @@ def load_triaxial_centroids() -> Dict[str, Dict[str, np.ndarray]]:
 
     for name, spec in foundation_refs.items():
         path = rel_artifact_path(spec["path"])
-        centroids["F"][name] = load_basis(path)
+        artifacts["F"][name] = load_basis(path)
 
     for name, spec in context_refs.items():
         path = rel_artifact_path(spec["path"])
-        centroids["C"][name] = load_basis(path)
+        artifacts["C"][name] = load_basis(path)
 
     for name, spec in principle_refs.items():
         path = rel_artifact_path(spec["path"])
-        centroids["P"][name] = load_basis(path)
+        artifacts["P"][name] = load_basis(path)
 
-    return centroids
+    return artifacts
 
 
 def rank_axis(vector: np.ndarray, axis_artifacts: Dict[str, np.ndarray]) -> List[tuple[str, float]]:
@@ -135,13 +135,13 @@ def confidence_from_margin(margin: float) -> str:
     return "AMBIGUOUS"
 
 
-def evaluate_text(text: str, centroids: Dict[str, Dict[str, np.ndarray]]) -> Dict[str, Any]:
+def evaluate_text(text: str, artifacts: Dict[str, Dict[str, np.ndarray]]) -> Dict[str, Any]:
     vector = embed_text(text)
 
     result = {"input": text}
 
     for axis in ["F", "C", "P"]:
-        ranking = rank_axis(vector, centroids[axis])
+        ranking = rank_axis(vector, artifacts[axis])
         top, top_score = ranking[0]
         second_score = ranking[1][1] if len(ranking) > 1 else 0.0
         margin = round(top_score - second_score, 4)
@@ -177,7 +177,7 @@ def print_profile(profile: Dict[str, Any]) -> None:
     )
 
 
-def validate_derived_fields(centroids: Dict[str, Dict[str, np.ndarray]]) -> None:
+def validate_derived_fields(artifacts: Dict[str, Dict[str, np.ndarray]]) -> None:
     cases = [
         {
             "name": "scientific_inquiry",
@@ -208,7 +208,7 @@ def validate_derived_fields(centroids: Dict[str, Dict[str, np.ndarray]]) -> None
     passed = 0
 
     for case in cases:
-        profile = evaluate_text(case["text"], centroids)
+        profile = evaluate_text(case["text"], artifacts)
         actual = (profile["F"], profile["C"], profile["P"])
         expected = case["expected"]
         ok = actual == expected
@@ -234,9 +234,9 @@ def validate_derived_fields(centroids: Dict[str, Dict[str, np.ndarray]]) -> None
 def evaluate_trajectory(
     name: str,
     steps: List[str],
-    centroids: Dict[str, Dict[str, np.ndarray]],
+    artifacts: Dict[str, Dict[str, np.ndarray]],
 ) -> Dict[str, Any]:
-    profiles = [evaluate_text(step, centroids) for step in steps]
+    profiles = [evaluate_text(step, artifacts) for step in steps]
 
     f_seq = [p["F"] for p in profiles]
     c_seq = [p["C"] for p in profiles]
@@ -296,7 +296,7 @@ def interpret_trajectory(summary: Dict[str, Any]) -> str:
     return "mixed_trajectory"
 
 
-def validate_trajectories(centroids: Dict[str, Dict[str, np.ndarray]]) -> None:
+def validate_trajectories(artifacts: Dict[str, Dict[str, np.ndarray]]) -> None:
     trajectories = {
         "clean_investigation": [
             "A company notices a decline in productivity across several teams.",
@@ -344,7 +344,7 @@ def validate_trajectories(centroids: Dict[str, Dict[str, np.ndarray]]) -> None:
     passed = 0
 
     for name, steps in trajectories.items():
-        summary = evaluate_trajectory(name, steps, centroids)
+        summary = evaluate_trajectory(name, steps, artifacts)
         expected = expected_interpretations[name]
         actual = summary["interpretation"]
         ok = expected == actual
@@ -375,14 +375,14 @@ def main() -> None:
     print("ACE Atlas — Triaxial Artifact Validation v0.1")
     print(f"Manifest: {MANIFEST_PATH}")
 
-    centroids = load_triaxial_centroids()
+    artifacts = load_triaxial_artifacts()
 
-    print("\nLoaded centroids:")
-    for axis, items in centroids.items():
+    print("\nLoaded artifacts:")
+    for axis, items in artifacts.items():
         print(f"{axis}: {list(items.keys())}")
 
-    validate_derived_fields(centroids)
-    validate_trajectories(centroids)
+    validate_derived_fields(artifacts)
+    validate_trajectories(artifacts)
 
 
 if __name__ == "__main__":
