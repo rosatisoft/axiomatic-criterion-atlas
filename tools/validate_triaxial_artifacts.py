@@ -276,6 +276,18 @@ def interpret_trajectory(summary: Dict[str, Any]) -> str:
     p_exploit = p_seq.count("exploit")
     p_teach = p_seq.count("teach")
 
+    # Recovery pattern:
+    # The trajectory contains a temporary drift or distortion,
+    # but later returns to research + investigate.
+    if (
+        c_research >= 3
+        and c_manipulation >= 1
+        and p_investigate >= 4
+        and c_seq[-1] == "research"
+        and p_seq[-1] == "investigate"
+    ):
+        return "recovered_investigation"
+
     if c_research >= 4 and p_investigate >= 4:
         return "stable_investigation"
 
@@ -288,7 +300,10 @@ def interpret_trajectory(summary: Dict[str, Any]) -> str:
     if c_research >= 2 and c_manipulation >= 2:
         return "contextual_drift"
 
-    if c_narrative >= 3 and p_teach >= 2:
+    # Narrative trajectories must be interpreted at the global trajectory level.
+    # A fictional moral story may contain local deception, conflict, or harm,
+    # but the global criterion may still be narrative teaching.
+    if c_narrative >= 3 and summary["F_sequence"].count("fictional") >= 3:
         return "fictional_teaching"
 
     if summary["mean_C_margin"] <= 0.05 or summary["mean_P_margin"] <= 0.05:
