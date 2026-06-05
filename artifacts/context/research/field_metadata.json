@@ -7,7 +7,7 @@
   "n_anchors": 10,
   "embedding_dim": 1536,
   "svd_rank": 9,
-  "explained_energy": 0.974657416343689,
+  "explained_energy": 0.9746505618095398,
   "recommended_model": "text-embedding-3-small",
   "normalize_embeddings": true,
   "invariants": [
