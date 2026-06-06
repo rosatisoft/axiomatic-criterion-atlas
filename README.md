@@ -1,425 +1,261 @@
 # Axiomatic Criterion Atlas (ACA)
 
-### Persistent Geometry-Based Semantic Navigation
+**Geometric Context Artifacts for Persistent Semantic Orientation**
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20250560.svg)](https://doi.org/10.5281/zenodo.20250560)
-[![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](http://www.apache.org/licenses/)
-[![Python](https://img.shields.io/badge/python-3.10%2B-blue)]()
-[![Research](https://img.shields.io/badge/status-research-green)]()
+![Version](https://img.shields.io/badge/version-v0.2_Triaxial-blue)
+[![Zenodo](https://zenodo.org/badge/DOI/10.5281/zenodo.20250559.svg)](https://doi.org/10.5281/zenodo.20250559)
 
-ACA (Axiomatic Criterion Atlas) is a geometry-based criterion supervision framework designed to preserve semantic orientation during generative reasoning.
+In an era where generative models can be **highly fluent yet progressively disoriented**, ACA offers a different approach: instead of relying solely on prompts to reconstruct criterion in every interaction, we build **persistent geometric artifacts** that preserve semantic orientation across long conversations, complex projects, and semantic drift.
 
-Rather than reconstructing reasoning constraints through repeated prompt engineering, ACA externalizes semantic criterion into persistent geometric infrastructure composed of:
+### Central Thesis
 
-* semantic fields,
-* invariant orientation,
-* contextual topology,
-* trajectory continuity,
-* and topology-aware runtime supervision.
-
-The framework separates contextual compatibility from epistemic integrity, allowing semantic systems to detect criterion drift even when language remains fluent and contextually coherent.
+> **The dialogue should not transport the criterion.** > **The criterion should transport the dialogue.**
 
 ---
 
-# Central Thesis
+## What is ACA?
 
-\text{Contextual Coherence}\neq\text{Epistemic Integrity}
+**ACA** (Axiomatic Criterion Atlas) is a **reproducible methodology** for constructing geometric semantic maps — called **artifacts** — that enable the measurement and preservation of criterion orientation in generative systems.
 
-ACA proposes that reliable generative reasoning requires more than semantic compatibility alone.
+**ACA is:**
+* A methodology for building geometric semantic artifacts
+* A repository of reproducible artifact structures
+* A framework for semantic orientation and criterion preservation
+* The foundational layer for operational systems like **ACA Runtime**
 
-A reasoning trajectory may remain:
+**ACA is not:**
+* A universal truth engine
+* A consciousness model
+* A complete moral reasoning system
+* A replacement for human judgment
+* A standalone runtime supervisor
 
-* fluent,
-* persuasive,
-* and contextually coherent,
-
-while progressively inverting the foundational structure that originally constrained its semantic orientation.
-
-ACA models this phenomenon geometrically.
-
----
-
-# Why ACA Exists
-
-Modern LLM systems frequently preserve reasoning stability through:
-
-* repeated prompt reinforcement,
-* alignment instructions,
-* contextual accumulation,
-* retrieval injection,
-* and post-generation filtering.
-
-These approaches improve local coherence, but they often reconstruct criterion repeatedly during interaction.
-
-As reasoning trajectories grow, this produces:
-
-* escalating prompt overhead,
-* semantic fragility,
-* contextual saturation,
-* and unstable long-horizon continuity.
-
-ACA introduces a different formulation:
-
-> semantic criterion should persist structurally, not linguistically.
-
-Instead of repeatedly reintroducing semantic constraints as text, ACA externalizes criterion into reusable geometric semantic infrastructure.
+**Defensible claim:** ACA provides a reproducible methodology for constructing **persistent geometric artifacts** that support operational criterion preservation in generative systems.
 
 ---
 
-# Core Runtime Architecture
+## Current Version: ACA v0.2 — Triaxial Artifact Methodology
 
-ACA Runtime supervises semantic evolution through contextual geometry and invariant continuity.
+Version 0.2 introduces the **Triaxial Criterion Projection (F–C–P)** as a central projection of the Atlas:
+
+* **F — Foundation**: What reference mode supports the statement?
+* **C — Context**: In what relational trajectory is the meaning operating?
+* **P — Principle**: What operational principle is being preserved?
+
+This triaxial structure is not a separate atlas — it is a powerful projection over existing artifacts.
+
+### Derived Fields Examples
+Operational fields emerge from stable F–C–P configurations:
+
+| Derived Field | F (Foundation) | C (Context) | P (Principle) |
+| :--- | :--- | :--- | :--- |
+| **scientific_inquiry** | factual | research | investigate |
+| **security_training** | factual/hypothetical | training | protect |
+| **phishing_attack** | hypothetical | manipulation | exploit |
+| **fictional_teaching** | fictional | narrative | teach |
+
+---
+
+## Core Architecture
 
 ```mermaid
-flowchart LR
+flowchart TD
 
-A[Input Text]
---> B[Embedding Layer]
+A[Source Definitions] --> B[Embedding Generation]
+B --> C[Geometric Artifact Construction]
 
-B --> C[Semantic Projection Layer]
+C --> D1[Foundation Artifacts]
+C --> D2[Context Artifacts]
+C --> D3[Principle Artifacts]
+C --> D4[Transversal Artifacts]
 
-C --> D1[Foundational Field]
-C --> D2[Factual Field]
-C --> D3[Rhetorical Field]
+D1 & D2 & D3 & D4 --> E[Triaxial Projection F-C-P]
 
-D1 --> E[Invariant Orientation]
-D2 --> E
-D3 --> E
+E --> F[Semantic Orientation Profile]
+F --> G[Trajectory Interpretation]
+G --> H[Criterion Preservation Analysis]
+H --> I[Runtime or Research Use]
 
-E --> F[Trajectory Continuity]
-
-F --> G[Topology Evaluation]
-
-G --> H1[allow]
-G --> H2[allow_light]
-G --> H3[monitor]
-G --> H4[clarify]
-G --> H5[reject_or_clarify]
-G --> H6[flag_drift]
 ```
 
 ---
 
-# Runtime Pipeline
+### Triaxial Criterion Projection (F–C–P)
+
+$$K = (F, C, P)$$
+
+* **Foundation** $\rightarrow$ factual, fictional, hypothetical
+* **Context** $\rightarrow$ research, training, manipulation, narrative
+* **Principle** $\rightarrow$ investigate, teach, protect, exploit
+
+#### Key Finding from v0.2:
+
+> *Criterion is better observed in semantic trajectories than in isolated classifications.*
+
+**Example:**
+
+* $\text{research} \rightarrow \text{research} \rightarrow \text{research} \rightarrow \textbf{preservation}$
+* $\text{research} \rightarrow \text{research} \rightarrow \text{manipulation} \rightarrow \textbf{potential drift or criterion inversion}$
+
+---
+
+## Artifact Structure
 
 ```text
-Input
-  ↓
-Embedding
-  ↓
-Semantic Projection
-  ↓
-Field Selection
-  ↓
-Invariant Orientation
-  ↓
-Trajectory Supervision
-  ↓
-Topology Evaluation
-  ↓
-Runtime Decision
+artifacts/
+├── foundational/
+│   ├── factual/
+│   ├── fictional/
+│   └── hypothetical/
+├── context/
+│   ├── research/
+│   ├── training/
+│   ├── manipulation/
+│   └── narrative/
+├── principle/
+│   ├── investigate/
+│   ├── teach/
+│   ├── protect/
+│   └── exploit/
+├── triaxial/
+│   └── manifest.json
+├── source_definitions/
+│   └── triaxial_artifact_sources.json
+└── validation/
+    └── triaxial_validation_cases.json
+
 ```
 
-ACA does not attempt to exhaustively encode every semantic possibility.
-
-Instead, it preserves:
-
-* navigability,
-* orientation continuity,
-* contextual recoverability,
-* and criterion stability
-
-through structured semantic topology.
-
 ---
 
-# Core Concepts
-
-## Semantic Fields
-
-ACA models contextual domains as geometric semantic subspaces constructed from anchor relations.
-
-Examples:
-
-* foundational fields,
-* factual fields,
-* legal fields,
-* rhetorical fields,
-* operational fields.
-
----
-
-## Origin Cost
-
-Contextual compatibility is measured through geometric projection residuals.
-
-O_S(z)=||z-\Pi_S(z)||^2
-
-Low origin cost indicates strong contextual compatibility with a semantic field.
-
----
-
-## Directional Invariants
-
-ACA introduces invariant orientation vectors that distinguish:
-
-* criterion preservation,
-* from criterion inversion.
-
-Each invariant is represented as a directional semantic axis.
-
----
-
-## Epistemic Orientation
-
-\phi_i(z)=\langle \hat{z}, d_i \rangle
-
-Positive orientation:
-
-* invariant preservation
-
-Negative orientation:
-
-* criterion inversion
-
----
-
-# Runtime Decisions
-
-| Runtime State       | Meaning                            |
-| ------------------- | ---------------------------------- |
-| `allow`             | stable continuity                  |
-| `allow_light`       | neighboring semantic reorientation |
-| `monitor`           | uncertain continuity               |
-| `clarify`           | ambiguous positioning              |
-| `reject_or_clarify` | unresolved incompatibility         |
-| `flag_drift`        | criterion inversion detected       |
-
----
-
-# Semantic Topology
-
-ACA treats reasoning as navigable movement across structured semantic topology.
-
-Not all contextual transitions are destabilizing.
-
-For example:
-
-```text
-foundational ↔ factual
-```
-
-may preserve orientation continuity through semantic reorientation.
-
-Whereas:
-
-```text
-foundational → rhetorical → inversion
-```
-
-frequently produces criterion destabilization.
-
-ACA therefore supervises:
-
-* neighboring continuity,
-* transition compatibility,
-* orientation persistence,
-* and semantic recovery.
-
----
-
-# Experimental Findings
-
-The experiments demonstrate that:
-
-* semantic trajectories can remain contextually coherent while losing epistemic orientation,
-* rhetorical pressure can progressively invert invariant structure,
-* criterion drift becomes geometrically measurable,
-* and topology-aware supervision can stabilize semantic continuity.
-
----
-
-# Runtime Efficiency Benchmark
-
-ACA externalizes semantic criterion from repeated prompt reconstruction into persistent geometric infrastructure.
-
-Experimental runtime comparison:
-
-| Runtime Strategy                      | Total Tokens |
-| ------------------------------------- | ------------ |
-| Prompt-heavy criterion reconstruction | 5,892        |
-| ACA Runtime supervision               | 1,752        |
-
-Result:
-
-# 70.26% Runtime Token Reduction
-
-This reduction was achieved without removing semantic supervision.
-
-The efficiency emerged because criterion became reusable semantic structure rather than repeated natural-language reconstruction.
-
----
-
-# Repository Structure
+## Repository Structure
 
 ```text
 axiomatic-criterion-atlas/
-
-├── notebooks/
-│   ├── experiments/
-│   ├── benchmarks/
-│   ├── topology_analysis/
-│   └── visualization/
-│
-├── aca/
-│   ├── runtime/
-│   ├── semantic_fields/
-│   ├── invariants/
-│   ├── topology/
-│   └── policies/
-│
-├── datasets/
-│
-├── docs/
-│   ├── figures/
-│   ├── theory/
-│   └── runtime/
-│
-├── tests/
-│
-├── examples/
-│
+├── artifacts/              # Core geometric artifacts
+├── docs/                   # In-depth documentation
+├── tools/                  # Build and validation scripts
+├── paper/                  # Academic version
+├── aca_runtime/            # Initial runtime framework
+├── notebooks/              # Interactive experiments
 └── README.md
+
 ```
 
 ---
 
-# Quick Start
-
-## Clone the repository
+## Quick Start
 
 ```bash
+# Clone the repository
 git clone https://github.com/rosatisoft/axiomatic-criterion-atlas.git
-
 cd axiomatic-criterion-atlas
-```
 
----
-
-## Install dependencies
-
-```bash
+# Install dependencies
 pip install -r requirements.txt
+
+# Validate triaxial artifacts
+python tools/validate_triaxial_artifacts.py
+
+# Validate diagnostic layer
+python tools/validate_triaxial_diagnostics.py
+
 ```
 
 ---
 
-## Run notebook experiments
+## Validation Results (v0.2)
 
-```bash
-jupyter notebook
-```
-
-Open:
-
-```text
-notebooks/
-```
+* **100** individual validation cases
+* **85.71%** axis accuracy
+* **6/6** trajectory matches
+* **36** diagnostic cases (**90.16%** recall)
 
 ---
 
-## Example Runtime Flow
+## Relation to ACA Runtime
 
-```python
-from aca.runtime import ACAEngine
-
-engine = ACAEngine()
-
-result = engine.evaluate(
-    "Evidence should constrain interpretation."
-)
-
-print(result)
-```
+* **ACA:** Methodology and geometric artifacts (this repository).
+* **ACA Runtime:** Operational layer that applies the artifacts (precondition gate, trajectory memory, supervision, etc.).
+* **Runtime Repository:** [github.com/rosatisoft/aca-runtime](https://github.com/rosatisoft/aca-runtime)
 
 ---
 
-# Research Position
+## Recommended Documents (Suggested Reading Order)
 
-ACA is not:
-
-* a truth engine,
-* a universal verifier,
-* a mechanistic interpretation framework,
-* or a consciousness model.
-
-ACA is:
-
-# a criterion-preservation architecture
-
-designed to evaluate whether semantic trajectories preserve directional structural orientation during contextual evolution.
+1. `docs/atlas_criterion_preservation_paradigm.md`
+2. `docs/triaxial_artifact_methodology.md`
+3. `docs/triaxial_validation_self_assessment.md`
+4. `docs/ACA_v0.2_ZENODO_CHANGELOG.md`
+5. `docs/RESULTS_RUNTIME_BENCHMARK.md`
+6. `docs/MILESTONE_01_RUNTIME.md`
 
 ---
 
-# Paper
+## Academic Paper
 
-**Axiomatic Criterion Atlas (ACA): Persistent Geometry-Based Semantic Navigation**
+* **Title:** *Axiomatic Criterion Atlas (ACA): Persistent Geometry-Based Semantic Navigation*
+* **Author:** Ernesto Rosati Beristain
+* **Current DOI:** [10.5281/zenodo.20250559](https://doi.org/10.5281/zenodo.20250559)
 
-Author:
-Ernesto Rosati Beristain
+> **Note:** The paper DOI currently refers to the earlier paper version. The paper is being synchronized with v0.2 advances. ACA v0.2 introduces additional triaxial artifact methodology and should be cited through the corresponding GitHub/Zenodo release once the v0.2 software/artifact DOI is assigned.
 
-DOI:
-10.5281/zenodo.20250560
+### Citation
 
-ORCID:
-0009-0008-1974-6538
-
----
-
-# Citation
-
-```bibtex
+```cite
 @article{rosati2026aca,
   title={Axiomatic Criterion Atlas (ACA): Persistent Geometry-Based Semantic Navigation},
   author={Rosati Beristain, Ernesto},
   year={2026},
-  doi={10.5281/zenodo.20250560}
+  doi={10.5281/zenodo.20250559}
 }
+
 ```
 
 ---
 
-# Roadmap
+## Status and Limitations
 
-Future work includes:
-
-* adaptive semantic topology,
-* dynamic field generation,
-* online atlas evolution,
-* semantic memory persistence,
-* topology-aware semantic routing,
-* multi-agent criterion synchronization,
-* ACA Runtime orchestration,
-* and scalable semantic infrastructure for long-horizon reasoning.
+* ACA v0.2 is **experimental and methodological**.
+* It **does not claim** universal truth verification, consciousness, moral certainty, full semantic coverage, or infallibility.
+* It **does claim** to provide a reproducible infrastructure of geometric orientation for operational criterion preservation, ensuring human judgment is supported rather than replaced.
 
 ---
 
-# License
+## Roadmap
 
-Apache License 2.0
+* [ ] Expand trajectory validation
+* [ ] Improve out-of-field and evidence distortion detection
+* [ ] Separate evidence distortion into a dedicated diagnostic projection
+* [ ] Develop objective vector alignment
+* [ ] Integrate declared shift / undeclared shift handling
+* [ ] Deeper integration with ACA Runtime
+* [ ] Full paper synchronization with v0.2
+* [ ] Release specific DOI for v0.2 artifacts
 
 ---
 
-# Final Perspective
+## License
 
-ACA proposes a transition:
+Distributed under the **Apache License 2.0**. See `LICENSE` for more information.
 
-from:
+---
 
-* prompt-engineered semantic reconstruction
+## Final Perspective
 
-toward:
+ACA proposes a fundamental transition:
 
-* persistent geometry-based criterion infrastructure.
 
-The framework suggests that reliable generative reasoning may depend not only on larger models or longer prompts, but on preserving stable semantic orientation throughout contextual evolution.
+$$\text{From prompt-based semantic reconstruction} \longrightarrow \text{To persistent geometry-based criterion infrastructure}$$
+
+Because reliable long-horizon generative reasoning depends not only on larger models or longer prompts, but on preserving the orientation of meaning as context evolves.
+
+---
+
+*Interested in contributing? Check `CONTRIBUTING.md` or open an Issue.*
+
+**Built with epistemic rigor and technical humility.**
+
+```
+
+```
