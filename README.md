@@ -9,7 +9,9 @@ In an era where generative models can be **highly fluent yet progressively disor
 
 ### Central Thesis
 
-> **The dialogue should not transport the criterion.** > **The criterion should transport the dialogue.**
+> **The dialogue should not transport the criterion.** 
+
+> **The criterion should transport the dialogue.**
 
 ---
 
@@ -104,9 +106,10 @@ $$K = (F, C, P)$$
 ```text
 artifacts/
 ├── foundational/
-│   ├── factual/
-│   ├── fictional/
-│   └── hypothetical/
+├── factual/
+├── fictional/
+├── hypothetical/
+├── rhetorical/
 ├── context/
 │   ├── research/
 │   ├── training/
@@ -255,7 +258,5 @@ Because reliable long-horizon generative reasoning depends not only on larger mo
 *Interested in contributing? Check `CONTRIBUTING.md` or open an Issue.*
 
 **Built with epistemic rigor and technical humility.**
-
-```
 
 ```
