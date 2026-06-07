@@ -826,29 +826,47 @@ Equivalently, criterion preservation over a trajectory \(\tau\) may be defined a
 
 4.14 Deterministic Runtime Policy
 
-ACA converts geometric measurements into deterministic runtime actions. Let the policy action $a(z)$ be an element of the discrete action space:
-\[
-a(z) \in \{ \text{ALLOW}, \text{CLARIFY}, \text{FLAG\_DRIFT} \}.
-\]
+ACA converts geometric measurements into deterministic runtime actions.
 
-The operational policy is defined via the piecewise system:
+Let
+
+```math
+a(z)\in
+\{
+\mathrm{ALLOW},
+\mathrm{CLARIFY},
+\mathrm{FLAG\_DRIFT}
+\}.
+```
+
+The policy is defined as
+
 \[
-a(z) =
+a(z)=
 \begin{cases}
-\text{ALLOW}, & \text{if } O_{S^\ast}(z) \leq \theta_O \;\wedge\; \Phi(z) \geq \theta_\Phi, \\[6pt]
-\text{CLARIFY}, & \text{if } M(z) < \theta_M \;\vee\; |\Phi(z)| < \theta_A, \\[6pt]
-\text{FLAG\_DRIFT}, & \text{if } O_{S^\ast}(z) \leq \theta_O \;\wedge\; \Phi(z) < \theta_\Phi.
+\texttt{ALLOW}, &
+O_{S^{*}(z)}(z)\leq\theta_O
+\;\wedge\;
+\Phi(z)\geq\theta_\Phi,\\[4pt]
+
+\texttt{CLARIFY}, &
+M(z)<\theta_M
+\;\vee\;
+|\Phi(z)|<\theta_A,\\[4pt]
+
+\texttt{FLAG\_DRIFT}, &
+O_{S^{*}(z)}(z)\leq\theta_O
+\;\wedge\;
+\Phi(z)<\theta_\Phi.
 \end{cases}
 \]
 
-where $\theta_M$ is the ambiguity threshold for field competition, $\theta_A$ is the ambiguity threshold for epistemic orientation, $\theta_O$ controls contextual compatibility, and $\theta_\Phi$ controls epistemic preservation. 
+where \(\theta_M\) is the ambiguity threshold for field competition, \(\theta_A\) is the ambiguity threshold for epistemic orientation, \(\theta_O\) controls contextual compatibility, and \(\theta_\Phi\) controls epistemic preservation.
 
-Through this deterministic threshold matrix, the system successfully segregates trajectories into three mutually exclusive operational behaviors:
-\begin{itemize}
-    \item \textbf{Out-of-field anomalies:} Messages strictly outside the active semantic field boundaries.
-    \item \textbf{Ambiguous states:} Messages located ambiguously between competing fields or poles.
-    \item \textbf{Criterion inversions:} Messages structurally inside the correct field but directionally inverted or drifting toward adversarial coordinates.
-\end{itemize}
+This policy allows the system to distinguish:
+messages outside the field,
+messages ambiguously located between fields,
+messages inside a field but directionally inverted.
 
 4.15 Central Mathematical Claim
 
