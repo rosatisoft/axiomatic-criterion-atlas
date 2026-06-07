@@ -830,14 +830,14 @@ ACA converts geometric measurements into deterministic runtime actions.
 
 Let
 
-```math
+\[
 a(z)\in
 \{
-\mathrm{ALLOW},
-\mathrm{CLARIFY},
-\mathrm{FLAG\_DRIFT}
+\texttt{ALLOW},
+\texttt{CLARIFY},
+\texttt{FLAG\_DRIFT}
 \}.
-```
+\]
 
 The policy is defined as
 
