@@ -1,18 +1,18 @@
-Axiomatic Criterion Atlas (ACA)
+﻿Axiomatic Criterion Atlas (ACA)
 Persistent Geometry-Based Semantic Navigation 
 ACA v0.2
 Author: Ernesto Rosati Beristain 
-Independent Researcher Artificial Intelligence Safety Research México 
+Independent Researcher Artificial Intelligence Safety Research MÃ©xico 
 ORCID: https://orcid.org/0009-0008-1974-6538 
 DOI: 10.5281/zenodo.20250559.  
 Code repository: https://github.com/rosatisoft/axiomatic-criterion-atlas 
-© 2026 Ernesto Rosati Beristain This work is licensed under
+Â© 2026 Ernesto Rosati Beristain This work is licensed under
 Apache License Version 2.0, January 2004 http://www.apache.org/licenses/
  
 
 Abstract
-Large language models frequently maintain local linguistic coherence while progressively losing the semantic orientation that initially constrained their reasoning trajectory. Traditional mitigation approaches — such as repeated prompt engineering, retrieval augmentation, and post-generation filtering — often reconstruct criterion linguistically at each step, incurring high contextual overhead and remaining vulnerable to long-horizon semantic drift.
-This paper presents ACA v0.2, a geometry-based framework for persistent semantic orientation in generative systems. ACA externalizes criterion into reproducible geometric artifacts using a Triaxial Criterion Projection (F–C–P) defined over three coordinated axes: Foundation (factual, fictional, hypothetical), Context (research, training, manipulation, narrative), and Principle (investigate, teach, protect, exploit). The resulting state space \( K = (F, C, P) \) enables derived operational fields to emerge from stable configurations.
+Large language models frequently maintain local linguistic coherence while progressively losing the semantic orientation that initially constrained their reasoning trajectory. Traditional mitigation approaches â€” such as repeated prompt engineering, retrieval augmentation, and post-generation filtering â€” often reconstruct criterion linguistically at each step, incurring high contextual overhead and remaining vulnerable to long-horizon semantic drift.
+This paper presents ACA v0.2, a geometry-based framework for persistent semantic orientation in generative systems. ACA externalizes criterion into reproducible geometric artifacts using a Triaxial Criterion Projection (Fâ€“Câ€“P) defined over three coordinated axes: Foundation (factual, fictional, hypothetical), Context (research, training, manipulation, narrative), and Principle (investigate, teach, protect, exploit). The resulting state space \( K = (F, C, P) \) enables derived operational fields to emerge from stable configurations.
 The central empirical finding is that criterion is better observed in semantic trajectories than in isolated classifications. A single statement may appear locally coherent, yet trajectory analysis can reveal preservation, drift, recovery, or criterion inversion. Validation on 100 individual cases, 6 trajectories, and 36 diagnostic cases yielded 85.71% axis accuracy and 6/6 trajectory matches. A runtime benchmark demonstrated a 70.26% reduction in criterion-preservation token overhead compared to prompt-heavy approaches.
 ACA does not claim universal truth verification, consciousness, or moral certainty. Its narrower, defensible contribution is a reproducible geometric infrastructure for operational criterion preservation in generative systems. Reliable long-horizon reasoning, we argue, depends not only on probabilistic continuation but on preserving the orientation of meaning as context and objectives evolve.
 Keywords: semantic orientation, criterion preservation, geometric artifacts, triaxial projection, semantic drift, AI alignment
@@ -20,14 +20,13 @@ Keywords: semantic orientation, criterion preservation, geometric artifacts, tri
 
 1. Introduction
 
-Large Language Models (LLMs) have achieved impressive capabilities across reasoning, planning, coding, and open-ended interaction. However, despite these advances, generative systems continue to exhibit a fundamental instability: they can preserve local linguistic coherence while gradually losing the deeper semantic orientation that originally guided their reasoning. This phenomenon — semantic drift with preserved fluency — represents one of the most significant challenges for long-horizon and high-stakes applications.
+Large Language Models (LLMs) have achieved impressive capabilities across reasoning, planning, coding, and open-ended interaction. However, despite these advances, generative systems continue to exhibit a fundamental instability: they can preserve local linguistic coherence while gradually losing the deeper semantic orientation that originally guided their reasoning. This phenomenon â€” semantic drift with preserved fluency â€” represents one of the most significant challenges for long-horizon and high-stakes applications.
 Current mitigation strategies, including advanced prompt engineering, retrieval-augmented generation (RAG), constitutional principles, self-evaluation, and post-generation filtering, have produced meaningful improvements. Yet most of these approaches share a common limitation: they rely on repeated linguistic reconstruction of criterion within the active context window. As conversations lengthen and complexity increases, this reconstruction becomes increasingly expensive, fragile, and susceptible to gradual erosion.
-This paper introduces ACA v0.2 (Axiomatic Criterion Atlas), a geometry-based framework designed to address this limitation by externalizing semantic criterion into persistent geometric artifacts. Rather than reconstructing orientation at every step through natural language prompts, ACA builds reusable semantic maps — composed of semantic fields, directional invariants, and triaxial projections — that allow criterion to guide the dialogue instead of depending on it.
-ACA v0.2 extends the original semantic field architecture with a Triaxial Criterion Projection (F–C–P), defined as:
-\[
+This paper introduces ACA v0.2 (Axiomatic Criterion Atlas), a geometry-based framework designed to address this limitation by externalizing semantic criterion into persistent geometric artifacts. Rather than reconstructing orientation at every step through natural language prompts, ACA builds reusable semantic maps â€” composed of semantic fields, directional invariants, and triaxial projections â€” that allow criterion to guide the dialogue instead of depending on it.
+ACA v0.2 extends the original semantic field architecture with a Triaxial Criterion Projection (Fâ€“Câ€“P), defined as:
+$$
 K = (F, C, P)
-\]
-
+$$
 where:
 \begin{itemize}
     \item \(F\) (Foundation) distinguishes reference modes: factual, fictional, and hypothetical.
@@ -61,7 +60,7 @@ Retrieval-Augmented Generation addresses factual reliability by combining parame
 Another line of work investigates whether models can estimate their own reliability. Kadavath et al. show that larger models can sometimes evaluate the validity of their own claims under appropriate formats, using self-estimated probabilities such as whether an answer is likely true. These methods are valuable because they introduce a form of internal uncertainty awareness. However, self-evaluation remains tied to model-generated judgments and probabilistic calibration. ACA instead proposes an external deterministic geometric layer: rather than asking the model whether it is likely correct, the system measures whether the semantic trajectory preserves or inverts predefined invariant directions. This distinction is central; ACA is not primarily a confidence estimator, but a criterion-orientation detector.
 
 2.4 Alignment and Constitutional AI
-Alignment methods attempt to shape model behavior according to human preferences, principles, or safety constraints. Constitutional AI, for example, trains models using a set of principles and AI-generated feedback to improve harmlessness without relying exclusively on human labels. Such approaches show that explicit principles can influence model behavior. However, they are mainly training-time or feedback-based methods. ACA proposes a runtime geometric mechanism where principles are not only textual rules but are represented as invariant directions in an embedding space. The system then evaluates whether a reasoning trajectory remains directionally aligned with those invariants. In this sense, ACA does not replace alignment; it offers a measurable runtime layer for detecting when a model’s reasoning begins to drift away from the structural meaning of the principles it is supposed to preserve.
+Alignment methods attempt to shape model behavior according to human preferences, principles, or safety constraints. Constitutional AI, for example, trains models using a set of principles and AI-generated feedback to improve harmlessness without relying exclusively on human labels. Such approaches show that explicit principles can influence model behavior. However, they are mainly training-time or feedback-based methods. ACA proposes a runtime geometric mechanism where principles are not only textual rules but are represented as invariant directions in an embedding space. The system then evaluates whether a reasoning trajectory remains directionally aligned with those invariants. In this sense, ACA does not replace alignment; it offers a measurable runtime layer for detecting when a modelâ€™s reasoning begins to drift away from the structural meaning of the principles it is supposed to preserve.
 
 2.5 Mechanistic Interpretability and Representation Geometry
 Mechanistic interpretability seeks to understand the internal computations of neural networks by identifying circuits, features, and representations that explain model behavior. Transformer Circuits and later work on monosemantic features attempt to decompose model internals into interpretable components. ACA shares with interpretability research the premise that language model behavior can be studied geometrically and structurally. However, it operates at a different level. Instead of reverse-engineering internal circuits, ACA constructs external semantic fields from anchor embeddings and evaluates input or dialogue trajectories against those fields. The framework therefore functions as a runtime semantic control layer rather than a full mechanistic explanation of model internals.
@@ -83,18 +82,16 @@ Under this formulation, reasoning is modeled not only as probabilistic token con
 3.1 Semantic Embedding Space
 Let
 
-\[
+$$
 E:\mathcal{X}\rightarrow\mathbb{R}^{d}
-\]
-
+$$
 denote a semantic encoder, where \(\mathcal{X}\) is the space of textual inputs. The induced embedding space is denoted by \(\mathcal{E}\subset\mathbb{R}^{d}\). Each textual input \(x\in\mathcal{X}\) is represented as
 
-\[
+$$
 v_x = E(x),
 \qquad
 v_x\in\mathcal{E}.
-\]
-
+$$
 Semantic relations are assumed to emerge through geometric proximity, directional structure, and contextual clustering within this latent space.
 
 ACA assumes that contextual meaning is not represented solely by isolated vectors, but by relational geometric structures formed through semantically coherent anchor configurations.
@@ -103,15 +100,14 @@ ACA assumes that contextual meaning is not represented solely by isolated vector
 A semantic field is defined as a structured contextual region generated from semantically coherent anchor relations.
 Let \(A_S=\{a_1,a_2,\dots,a_k\}\) denote a set of anchor statements associated with a semantic field \(S\). Each anchor is embedded as
 
-\[
+$$
 v_i=E(a_i),
 \qquad
 v_i\in\mathcal{E}.
-\]
-
+$$
 The corresponding contextual anchor matrix is
 
-\[
+$$
 C_S
 =
 \begin{bmatrix}
@@ -121,16 +117,14 @@ v_2^{T}\\
 v_k^{T}
 \end{bmatrix}
 \in\mathbb{R}^{k\times d}.
-\]
-
+$$
 The semantic field generated by these anchors is approximated as
 
-\[
+$$
 S
 \approx
 \operatorname{span}(v_1,v_2,\dots,v_k).
-\]
-
+$$
 The resulting subspace represents the contextual geometry associated with a coherent semantic domain.
 Examples include factual, scientific, legal, operational, conceptual, and rhetorical fields.
 A semantic field therefore defines a region of contextual compatibility rather than a fixed set of explicit symbolic rules.
@@ -140,12 +134,11 @@ Given an input embedding \(z\in\mathcal{E}\), ACA evaluates contextual compatibi
 
 The contextual deviation of the input relative to the field is measured through origin cost:
 
-\[
+$$
 O_S(z)
 =
 \left\lVert z-\Pi_S(z)\right\rVert^2.
-\]
-
+$$
 A low value of \(O_S(z)\) indicates strong contextual compatibility, while a high value indicates semantic dispersion or contextual instability.
 
 This metric allows ACA to evaluate whether a message belongs geometrically to a semantic field. However, contextual compatibility alone is insufficient to determine preservation of criterion.
@@ -156,12 +149,11 @@ A reasoning trajectory may remain geometrically close to a semantic field while 
 Under this interpretation, contextual compatibility measures semantic proximity, but it does not by itself measure directional preservation of foundational structure.
 This distinction is critical because many persuasive, ideological, or rhetorically stable trajectories preserve contextual fluency while progressively destabilizing evidential or structural coherence.
 Consequently:
-\[
+$$
 \text{contextual coherence}
 \neq
 \text{epistemic integrity}
-\]
-
+$$
 ACA therefore introduces directional invariant analysis as a second geometric layer.
 
 3.5 Directional Invariants
@@ -171,7 +163,7 @@ Examples of invariant pole pairs include evidence preservation versus narrative 
 
 Each invariant generates a normalized directional criterion vector:
 
-\[
+$$
 d_i
 =
 \frac{
@@ -179,14 +171,13 @@ v_i^{+}-v_i^{-}
 }{
 \left\lVert v_i^{+}-v_i^{-}\right\rVert
 }.
-\]
-
+$$
 The vector \(d_i\) represents the geometric direction associated with preservation of the invariant.
 
 3.6 Epistemic Orientation
 Given a semantic trajectory element \(z\), the epistemic orientation relative to invariant \(I_i\) is defined as
 
-\[
+$$
 \phi_i(z)
 =
 \left\langle \hat{z},d_i\right\rangle,
@@ -194,8 +185,7 @@ Given a semantic trajectory element \(z\), the epistemic orientation relative to
 \hat{z}
 =
 \frac{z}{\left\lVert z\right\rVert}.
-\]
-
+$$
 Positive orientation indicates preservation of the invariant, negative orientation indicates directional inversion, and near-zero orientation indicates ambiguity or weak directional determination.
 This formulation introduces a directional geometric dimension absent from standard similarity-based embedding analysis.
 Traditional embedding proximity captures semantic closeness, but not necessarily preservation of epistemic structure.
@@ -204,10 +194,9 @@ ACA therefore distinguishes between belonging to a field and remaining direction
 3.7 Semantic Trajectories
 Reasoning and dialogue are modeled as evolving semantic trajectories:
 
-\[
+$$
 \tau=(z_1,z_2,\dots,z_T),
-\]
-
+$$
 where each \(z_t\) represents the embedding associated with a reasoning step, utterance, or conversational turn.
 
 Under this framework, reasoning becomes a geometric process evolving through semantic fields over time. The trajectory may remain stable, transition between compatible fields, become ambiguous, or drift directionally away from foundational invariants.
@@ -216,12 +205,11 @@ Under this framework, reasoning becomes a geometric process evolving through sem
 ACA defines criterion drift as the progressive inversion of foundational invariants during trajectory evolution despite superficial contextual compatibility.
 Formally, criterion drift occurs when contextual deviation remains below an admissible threshold while epistemic orientation becomes negative:
 
-\[
+$$
 O_S(z_t)\leq\theta_O
 \quad\wedge\quad
 \phi_i(z_t)<0.
-\]
-
+$$
 That is:
 
 \begin{itemize}
@@ -234,13 +222,12 @@ A trajectory may remain fluent, coherent, semantically compatible, and rhetorica
 3.9 Geometric Criterion Preservation
 Criterion preservation occurs when semantic trajectories maintain positive directional orientation relative to foundational invariants during contextual evolution.
 Formally:
-\[
+$$
 \phi_i(z_t)\geq 0
 \quad
 \forall i,\quad
 \forall t\in\{1,\dots,T\}.
-\]
-
+$$
 Under this interpretation, criterion is not modeled as fixed answers, rigid symbolic rules, or ideological enforcement. Instead, criterion is modeled as persistent structural orientation during semantic evolution.
 This formulation allows adaptation, specialization, contextual transition, and generative flexibility while preserving foundational semantic integrity.
 
@@ -249,30 +236,27 @@ ACA transforms geometric measurements into deterministic runtime decisions.
 Typical policies include:
 \textbf{ALLOW}
 
-\[
+$$
 O_S(z)\leq\theta_O
 \quad\wedge\quad
 \phi_i(z)\geq\theta_\Phi.
-\]
-
+$$
 The trajectory remains contextually and directionally stable.
 
 \textbf{CLARIFY}
 
-\[
+$$
 |\phi_i(z)|<\theta_A.
-\]
-
+$$
 The trajectory exhibits insufficient directional determination or semantic ambiguity.
 
 \textbf{FLAG\_CRITERION\_DRIFT}
 
-\[
+$$
 O_S(z)\leq\theta_O
 \quad\wedge\quad
 \phi_i(z)<\theta_\Phi.
-\]
-
+$$
 The trajectory directionally inverts foundational invariants despite contextual compatibility.
 
 These policies allow ACA to detect instability before unrestricted reasoning expansion occurs.
@@ -280,99 +264,86 @@ These policies allow ACA to detect instability before unrestricted reasoning exp
 ACA v0.2 extends the semantic-field formulation by introducing a triaxial projection of criterion over three coordinated semantic axes: Foundation, Context, and Principle. The purpose of this projection is not to replace the existing Atlas, but to provide a criterion-resolution layer over persistent geometric artifacts.
 Let
 
-\[
+$$
 \mathcal{V} \subset \mathbb{R}^{d}
-\]
-
+$$
 denote the embedding space induced by a semantic encoder
 
-\[
+$$
 E:\mathcal{X}\rightarrow\mathbb{R}^{d}.
-\]
-
+$$
 For each textual input \(x\in\mathcal{X}\), its embedding is defined as
 
-\[
+$$
 z = E(x), \qquad z\in\mathcal{V}.
-\]
-
+$$
 The Triaxial Criterion Space is defined as the discrete projective state space
 
-\[
+$$
 \mathcal{K}=\mathcal{F}\times\mathcal{C}\times\mathcal{P},
-\]
-
+$$
 where
 
-\[
+$$
 \mathcal{F}=\{\text{factual},\text{fictional},\text{hypothetical}\},
-\]
-
-\[
+$$
+$$
 \mathcal{C}=\{\text{research},\text{training},\text{manipulation},\text{narrative}\},
-\]
-
+$$
 and
 
-\[
+$$
 \mathcal{P}=\{\text{investigate},\text{teach},\text{protect},\text{exploit}\}.
-\]
-
+$$
 Each criterion state \(K\in\mathcal{K}\) is represented as
 
-\[
+$$
 K=(F,C,P),
-\]
-
+$$
 where \(F\) identifies the reference mode supporting the statement, \(C\) identifies the relational trajectory in which meaning is operating, and \(P\) identifies the operational principle being preserved or degraded.
 
 For each admissible axis state \(a\), ACA constructs or references a geometric artifact \(A_a\) composed of anchor embeddings, basis vectors, centroid information, and validation metadata. If
 
-\[
+$$
 \mathcal{S}_a=\{v_1,\dots,v_n\}\subset\mathcal{V}
-\]
-
+$$
 is the anchor set associated with axis state \(a\), its centroid is computed as
 
-\[
+$$
 \mu_a = \frac{1}{|\mathcal{S}_a|}
 \sum_{v_i\in\mathcal{S}_a} v_i.
-\]
-
+$$
 Given an input embedding \(z\), each axis projection selects the most strongly supported axis state by calibrated geometric similarity:
 
-\[
+$$
 \Pi_{\mathcal{F}}(z)
 =
 \arg\max_{f\in\mathcal{F}}
 \left(
 \cos(z,\mu_f)-\gamma_f
 \right),
-\]
-
-\[
+$$
+$$
 \Pi_{\mathcal{C}}(z)
 =
 \arg\max_{c\in\mathcal{C}}
 \left(
 \cos(z,\mu_c)-\gamma_c
 \right),
-\]
-
-\[
+$$
+$$
 \Pi_{\mathcal{P}}(z)
 =
 \arg\max_{p\in\mathcal{P}}
 \left(
 \cos(z,\mu_p)-\gamma_p
 \right),
-\]
-
+$$
 where \(\gamma_a\) denotes a calibration penalty accounting for ambiguity, density imbalance, or weak margin separation.
 
 The full triaxial projection is therefore defined as
 
-\[
+$$
 \Pi_{\mathcal{K}}(z)
 =
 \left(
@@ -380,8 +351,7 @@ The full triaxial projection is therefore defined as
 \Pi_{\mathcal{C}}(z),
 \Pi_{\mathcal{P}}(z)
 \right).
-\]
-
+$$
 This formulation allows derived operational fields to emerge from stable configurations rather than being defined only as primitive labels. Table~\ref{tab:derived-fields} summarizes representative derived fields validated in the current triaxial artifact methodology.
 
 \begin{table}[h]
@@ -407,45 +377,39 @@ The purpose of the triaxial projection is not merely classification. It provides
 
 Let a semantic trajectory be defined as
 
-\[
+$$
 \mathcal{T}_n
 =
 \left(
 K^{(1)},K^{(2)},\dots,K^{(n)}
 \right),
-\]
-
+$$
 where each state is
 
-\[
+$$
 K^{(t)}
 =
 \left(
 F^{(t)},C^{(t)},P^{(t)}
 \right)
 \in\mathcal{K}.
-\]
-
+$$
 Criterion preservation is evaluated through the continuity of triaxial orientation across the trajectory. A stable trajectory preserves axis orientation or changes state through declared, justified, and compatible transitions. A drifting trajectory exhibits undeclared or unjustified movement across criterion-relevant boundaries, such as
 
-\[
+$$
 (\text{factual},\text{research},\text{investigate})
 \rightarrow
 (\text{hypothetical},\text{manipulation},\text{exploit}).
-\]
-
+$$
 Such a transition is not merely a topic shift. It represents a possible criterion inversion: the reference mode weakens, the context shifts from investigation to manipulation, and the preserved principle changes from inquiry to exploitation.
 
 This motivates the trajectory-level claim of ACA v0.2:
 
-\[
+$$
 \boxed{
 \text{Criterion is better observed in semantic trajectory than in isolated classification.}
 }
-\]
-
-
-
+$$
 3.12 Central Theoretical Claim
 
 The central theoretical claim of ACA is that reliable generative reasoning requires more than contextual coherence alone. It requires the persistent geometric preservation of foundational invariants throughout semantic trajectory evolution.
@@ -454,46 +418,42 @@ Under this formulation, criterion does not emerge solely from probabilistic lang
 
 This leads to the core theoretical distinction:
 
-\[
+$$
 \text{Contextual Coherence}
 \neq
 \text{Epistemic Integrity}.
-\]
-
+$$
 4. Mathematical Formulation
 This section presents the formal mathematical structure of ACA for separating contextual coherence from epistemic integrity in generative language systems.
 4.1 Embedding Space
 Let \(E:\mathcal{X}\rightarrow\mathbb{R}^{d}\) denote a semantic encoder, where \(\mathcal{X}\) is the space of textual inputs. The induced embedding space is denoted by \(\mathcal{E}\subseteq\mathbb{R}^{d}\). For any text \(x\in\mathcal{X}\), its embedding is
 
-\[
+$$
 z=E(x),
 \qquad
 z\in\mathcal{E}.
-\]
-
+$$
 ACA assumes that semantic relations can be analyzed through geometric structure in \(\mathcal{E}\).
 
 
 4.2 Context Matrix
 A semantic field is constructed from a set of anchor statements
 
-\[
+$$
 A_S=\{a_1,a_2,\dots,a_k\},
-\]
-
+$$
 where each anchor represents an invariant, axiom, contextual relation, or domain-defining statement.
 
 Each anchor is embedded as
 
-\[
+$$
 v_i=E(a_i),
 \qquad
 v_i\in\mathbb{R}^{d}.
-\]
-
+$$
 The context matrix associated with field \(S\) is
 
-\[
+$$
 C_S
 =
 \begin{bmatrix}
@@ -503,146 +463,131 @@ v_2^{T}\\
 v_k^{T}
 \end{bmatrix}
 \in\mathbb{R}^{k\times d}.
-\]
-
+$$
 This matrix represents the geometric structure of the semantic field.
 
 
 4.3 Semantic Field Subspace
 The semantic field \(S\) is approximated as the subspace generated by its anchor embeddings:
 
-\[
+$$
 S
 \approx
 \operatorname{span}(v_1,v_2,\dots,v_k).
-\]
-
+$$
 To obtain an orthonormal basis for this subspace, Singular Value Decomposition is applied to the context matrix:
 
-\[
+$$
 C_S
 =
 U_S\Sigma_S W_S^{T}.
-\]
-
+$$
 Let \(w_1,w_2,\dots,w_r\) denote the first \(r\) dominant right singular vectors associated with non-negligible singular values. The semantic basis of field \(S\) is then defined as
 
-\[
+$$
 B_S
 =
 \begin{bmatrix}
 w_1 & w_2 & \cdots & w_r
 \end{bmatrix}
 \in\mathbb{R}^{d\times r}.
-\]
-
+$$
 The semantic field is therefore approximated as
 
-\[
+$$
 S
 \approx
 \operatorname{span}(B_S),
-\]
-
+$$
 where \(r\leq k\) is the effective semantic rank of the field.
 
 4.4 Contextual Projection
 Given an input embedding \(z\), its orthogonal projection onto semantic field \(S\) is
 
-\[
+$$
 \Pi_S(z)
 =
 B_S B_S^{T} z.
-\]
-
+$$
 The residual component outside the field is
 
-\[
+$$
 r_S(z)
 =
 z-\Pi_S(z).
-\]
-
+$$
 This residual measures the component of the input not explained by the contextual field. 
 
 4.5 Origin Cost
 ACA defines the origin cost of $z$ relative to field $S$ as:
-\[
+$$
 O_S(z)
 =
 \left\lVert z-\Pi_S(z)\right\rVert^2.
-\]
-
+$$
 or equivalently:
-\[
+$$
 O_S(z)
 =
 \left\lVert r_S(z)\right\rVert^2.
-\]
-
+$$
 Interpretation:
-\[
+$$
 O_S(z)\approx 0
-\]
-
+$$
 indicates strong contextual compatibility, while large \(O_S(z)\) indicates semantic dispersion relative to field \(S\). 
 
 4.6 Field Selection
 Given a collection of semantic fields
 
-\[
+$$
 \mathcal{S}
 =
 \{S_1,S_2,\dots,S_m\},
-\]
-
+$$
 the dominant contextual field for \(z\) is selected by minimum origin cost:
 
-\[
+$$
 S^{*}(z)
 =
 \arg\min_{S_j\in\mathcal{S}}
 O_{S_j}(z).
-\]
-
+$$
 The second-best field is defined as
 
-\[
+$$
 S^{(2)}(z)
 =
 \arg\min_{S_j\in\mathcal{S}\setminus\{S^{*}(z)\}}
 O_{S_j}(z).
-\]
-
+$$
 The field competition margin is
 
-\[
+$$
 M(z)
 =
 O_{S^{(2)}(z)}(z)
 -
 O_{S^{*}(z)}(z).
-\]
-
+$$
 A larger margin indicates stronger contextual determination. A small margin indicates ambiguity or field competition.
 
 4.7 Contextual Coherence
 Contextual coherence is defined as a function of origin cost and field margin:
 
-\[
+$$
 \kappa(z)
 =
 f\left(
 O_{S^{*}(z)}(z),
 M(z)
 \right),
-\]
-
+$$
 where \(\kappa(z)\) increases as origin cost decreases and field margin increases.
 
 A simple operational form is:
 
-\[
+$$
 \kappa(z)
 =
 \frac{
@@ -650,8 +595,7 @@ M(z)
 }{
 O_{S^{*}(z)}(z)+\epsilon
 },
-\]
-
+$$
 where \(\epsilon>0\) prevents numerical instability.
 
 This score measures whether $z$ belongs clearly to a semantic field.
@@ -660,25 +604,23 @@ However, contextual coherence does not determine whether the input preserves the
 4.8 Directional Invariant Poles
 Let
 
-\[
+$$
 \mathcal{I}=\{I_1,I_2,\dots,I_n\}
-\]
-
+$$
 be a set of foundational invariants associated with epistemic integrity.
 
 For each invariant \(I_i\), define two semantic poles: \(p_i^{+}\), representing preservation of the invariant, and \(p_i^{-}\), representing inversion of the invariant.
 
 Their embeddings are defined as
 
-\[
+$$
 v_i^{+}=E(p_i^{+}),
 \qquad
 v_i^{-}=E(p_i^{-}).
-\]
-
+$$
 The normalized directional invariant vector is then defined as
 
-\[
+$$
 d_i
 =
 \frac{
@@ -686,24 +628,23 @@ v_i^{+}-v_i^{-}
 }{
 \left\lVert v_i^{+}-v_i^{-}\right\rVert
 }.
-\]
-
+$$
 The vector \(d_i\) points from invariant inversion toward invariant preservation.
 
 
 4.9 Epistemic Orientation Score
 For an input embedding \(z\), the epistemic orientation relative to invariant \(I_i\) is:
-\[
+$$
 \phi_i(z)
 =
 \left\langle \hat{z},d_i\right\rangle,
-\]
+$$
 where
-\[
+$$
 \hat{z}
 =
 \frac{z}{\left\lVert z\right\rVert},
-\]
+$$
 and \(d_i\) is normalized.
 
 Interpretation:
@@ -713,67 +654,60 @@ A positive value \(\phi_i(z)>0\) indicates directional preservation of invariant
 4.10 Aggregate Epistemic Integrity
 For a set of invariants \(\mathcal{I}=\{I_1,I_2,\dots,I_n\}\), aggregate epistemic integrity may be defined as
 
-\[
+$$
 \Phi(z)
 =
 \sum_{i=1}^{n} w_i \phi_i(z),
-\]
-
+$$
 where
 
-\[
+$$
 w_i\geq 0,
 \qquad
 \sum_{i=1}^{n} w_i = 1.
-\]
-
+$$
 A conservative alternative is
 
-\[
+$$
 \Phi_{\min}(z)
 =
 \min_{1\leq i\leq n}
 \phi_i(z).
-\]
-
+$$
 This conservative form flags inversion if any critical invariant is violated.
 
 
 4.11 Semantic Trajectory
 A reasoning process or dialogue is represented as a semantic trajectory
 
-\[
+$$
 \tau
 =
 (z_1,z_2,\dots,z_T),
-\]
-
+$$
 where each \(z_t\) corresponds to a reasoning step, generated segment, or conversational turn.
 
 Contextual coherence over time is represented as the sequence
 
-\[
+$$
 \kappa(\tau)
 =
 \left(\kappa(z_1),\kappa(z_2),\dots,\kappa(z_T)\right).
-\]
-
+$$
 Epistemic orientation over time is represented as the sequence
 
-\[
+$$
 \Phi(\tau)
 =
 \left(\Phi(z_1),\Phi(z_2),\dots,\Phi(z_T)\right).
-\]
-
-
+$$
 4.12 Criterion Drift
 
 Criterion drift occurs when a trajectory remains contextually coherent while losing epistemic orientation.
 
 Formally, for a trajectory element \(z_t\),
 
-\[
+$$
 \operatorname{Drift}(z_t)
 =
 \left[
@@ -783,18 +717,16 @@ O_{S^{*}(z_t)}(z_t)\leq\theta_O
 \left[
 \Phi(z_t)<\theta_\Phi
 \right].
-\]
-
+$$
 where \(\theta_O\) is the maximum acceptable origin cost and \(\theta_\Phi\) is the minimum acceptable epistemic orientation threshold.
 
 The central failure mode is therefore
 
-\[
+$$
 O_{S^{*}(z_t)}(z_t)\leq\theta_O
 \quad\wedge\quad
 \Phi(z_t)<0.
-\]
-
+$$
 This means that the input remains inside the contextual field while directionally inverting its epistemic structure.
 
 
@@ -802,16 +734,15 @@ This means that the input remains inside the contextual field while directionall
 
 A trajectory preserves criterion when it remains both contextually coherent and epistemically oriented across its temporal evolution:
 
-\[
+$$
 \forall t\in\{1,\dots,T\},\quad
 O_{S^{*}(z_t)}(z_t)\leq\theta_O
 \;\wedge\;
 \Phi(z_t)\geq\theta_\Phi.
-\]
-
+$$
 Equivalently, criterion preservation over a trajectory \(\tau\) may be defined as
 
-\[
+$$
 \operatorname{Preserve}(\tau)
 =
 \begin{cases}
@@ -821,27 +752,24 @@ Equivalently, criterion preservation over a trajectory \(\tau\) may be defined a
 \max_{t}O_{S^{*}(z_t)}(z_t)\leq\theta_O,\\[4pt]
 0, & \text{otherwise.}
 \end{cases}
-\]
-
-
+$$
 4.14 Deterministic Runtime Policy
 
 ACA converts geometric measurements into deterministic runtime actions.
 
 Let
 
-\[
+$$
 a(z)\in
 \{
 \texttt{ALLOW},
 \texttt{CLARIFY},
 \texttt{FLAG\_DRIFT}
 \}.
-\]
-
+$$
 The policy is defined as
 
-\[
+$$
 a(z)=
 \begin{cases}
 \texttt{ALLOW}, &
@@ -859,8 +787,7 @@ O_{S^{*}(z)}(z)\leq\theta_O
 \;\wedge\;
 \Phi(z)<\theta_\Phi.
 \end{cases}
-\]
-
+$$
 where \(\theta_M\) is the ambiguity threshold for field competition, \(\theta_A\) is the ambiguity threshold for epistemic orientation, \(\theta_O\) controls contextual compatibility, and \(\theta_\Phi\) controls epistemic preservation.
 
 This policy allows the system to distinguish:
@@ -872,19 +799,17 @@ messages inside a field but directionally inverted.
 
 The core claim of ACA is that reliable generative reasoning requires simultaneous satisfaction of two conditions:
 
-\[
+$$
 \text{Contextual Coherence}
-\]
-
+$$
 and
 
-\[
+$$
 \text{Epistemic Integrity}.
-\]
-
+$$
 Formally,
 
-\[
+$$
 \operatorname{Reliable}(z)
 \iff
 \left[
@@ -894,26 +819,23 @@ O_{S^{*}(z)}(z)\leq\theta_O
 \left[
 \Phi(z)\geq\theta_\Phi
 \right].
-\]
-
+$$
 Thus, contextual coherence alone is insufficient:
 
-\[
+$$
 O_{S^{*}(z)}(z)\leq\theta_O
 \;\nRightarrow\;
 \Phi(z)\geq\theta_\Phi.
-\]
-
+$$
 This formalizes the central distinction of the paper:
 
-\[
+$$
 \boxed{
 \text{Contextual Coherence}
 \neq
 \text{Epistemic Integrity}
 }
-\]
-
+$$
 ACA models criterion as the preservation of directional epistemic structure within geometrically stable semantic fields.
 
 
@@ -922,9 +844,9 @@ ACA models criterion as the preservation of directional epistemic structure with
 This section describes the experimental configuration used to evaluate ACA v0.2 under controlled semantic trajectory conditions. The experiments were designed to test whether criterion preservation can be operationalized as persistent geometric orientation across evolving semantic trajectories.
 The evaluation was organized into two complementary layers. The first layer preserves the original semantic-field baseline of ACA, using foundational, factual, and rhetorical fields to test contextual compatibility, origin cost, directional invariant preservation, and criterion drift. This baseline remains necessary because it establishes the geometric distinction between contextual coherence and epistemic integrity.
 The second layer extends the baseline into the v0.2 triaxial artifact methodology. In this layer, semantic inputs are projected into a discrete criterion space defined by Foundation, Context, and Principle:
-\[
+$$
 \mathcal{K}=\mathcal{F}\times\mathcal{C}\times\mathcal{P}.
-\]
+$$
 The purpose of this second layer is not merely to classify isolated statements, but to evaluate whether semantic orientation is preserved, shifted, recovered, or inverted across trajectory evolution.
 The experiments therefore evaluate three related questions:
 \begin{enumerate}
@@ -1014,43 +936,38 @@ The construction process begins with source definitions. Each source definition 
 
 Let \(D_a\) denote the source definition associated with an admissible axis state \(a\), where
 
-\[
+$$
 a \in \mathcal{F}\cup\mathcal{C}\cup\mathcal{P}.
-\]
-
+$$
 Each definition contains a finite set of anchor statements:
 
-\[
+$$
 D_a = \{s_1,s_2,\dots,s_n\}.
-\]
-
+$$
 Each statement is embedded using a fixed embedding function:
 
-\[
+$$
 E:\mathcal{X}\rightarrow\mathbb{R}^{d}.
-\]
-
+$$
 The corresponding embedded anchor set is therefore:
 
-\[
+$$
 \mathcal{S}_a
 =
 \{E(s_1),E(s_2),\dots,E(s_n)\}
 \subset\mathbb{R}^{d}.
-\]
-
+$$
 The centroid of the artifact is computed as:
 
-\[
+$$
 \mu_a
 =
 \frac{1}{|\mathcal{S}_a|}
 \sum_{v_i\in\mathcal{S}_a} v_i.
-\]
-
+$$
 To preserve local geometric structure beyond the centroid, ACA also constructs an anchor matrix:
 
-\[
+$$
 C_a
 =
 \begin{bmatrix}
@@ -1060,23 +977,20 @@ v_2^T\\
 v_n^T
 \end{bmatrix}
 \in\mathbb{R}^{n\times d}.
-\]
-
+$$
 Singular Value Decomposition is then applied:
 
-\[
+$$
 C_a = U_a\Sigma_a W_a^T.
-\]
-
+$$
 The dominant right singular vectors define the effective semantic basis of the artifact:
 
-\[
+$$
 B_a = [w_1,w_2,\dots,w_r],
-\]
-
+$$
 where \(r\) is the retained semantic rank. The resulting artifact is represented as:
 
-\[
+$$
 A_a =
 \left(
 \mu_a,
@@ -1085,13 +999,12 @@ B_a,
 D_a,
 M_a
 \right),
-\]
-
+$$
 where \(\mu_a\) is the centroid, \(B_a\) is the local semantic basis, \(\Sigma_a\) contains singular values, \(D_a\) preserves the source definition, and \(M_a\) stores metadata such as axis name, state name, embedding model, dimensionality, artifact version, and validation status.
 
 The artifact-building pipeline can therefore be summarized as:
 
-\[
+$$
 \text{Source Definitions}
 \rightarrow
 \text{Embeddings}
@@ -1105,11 +1018,7 @@ The artifact-building pipeline can therefore be summarized as:
 \text{Validation}
 \rightarrow
 \text{Runtime Use}.
-\]
-
-
-
-
+$$
 This process makes the Atlas reproducible: the criterion is no longer reconstructed linguistically at every interaction, but stored as a persistent geometric reference structure that can be inspected, validated, reused, and applied by ACA Runtime.
 
 
@@ -1117,35 +1026,29 @@ This process makes the Atlas reproducible: the criterion is no longer reconstruc
 
 The ACA repository organizes artifacts according to the triaxial criterion structure. Each axis contains source definitions, generated artifacts, validation metadata, and manifest references. The repository structure can be represented conceptually as:
 
-\[
+$$
 \texttt{artifacts/}
-\]
-
-\[
+$$
+$$
 \quad
 \texttt{foundation/}
-\]
-
-\[
+$$
+$$
 \quad
 \texttt{context/}
-\]
-
-\[
+$$
+$$
 \quad
 \texttt{principle/}
-\]
-
-\[
+$$
+$$
 \quad
 \texttt{derived\_fields/}
-\]
-
-\[
+$$
+$$
 \quad
 \texttt{manifest.json}
-\]
-
+$$
 The \texttt{foundation/} directory contains artifacts associated with reference modes such as factual, fictional, and hypothetical. The \texttt{context/} directory contains artifacts associated with relational trajectories such as research, training, manipulation, and narrative. The \texttt{principle/} directory contains artifacts associated with operational orientations such as investigate, teach, protect, and exploit. Derived fields are represented as stable configurations across these axes rather than as primitive categories.
 
 The role of the manifest is to provide a reproducible registry of all available artifacts. A manifest entry includes:
@@ -1166,7 +1069,7 @@ The role of the manifest is to provide a reproducible registry of all available 
 
 A simplified manifest entry may be represented as:
 
-\[
+$$
 m_a =
 (
 \text{id},
@@ -1178,14 +1081,12 @@ r,
 \text{version},
 \text{validation}
 ).
-\]
-
+$$
 During runtime evaluation, ACA Runtime does not reconstruct the criterion from prompt text. Instead, it loads the manifest, retrieves the required artifacts, projects the input embedding against the relevant axis structures, and produces a triaxial state:
 
-\[
+$$
 K=(F,C,P).
-\]
-
+$$
 This repository structure separates artifact construction from runtime application. ACA provides the persistent map, while ACA Runtime operationalizes that map by applying its geometric references to semantic trajectories.
 
 
@@ -1196,27 +1097,25 @@ The previous subsections describe the general construction and repository organi
 
 Each anchor statement \(a_i\) was embedded using the fixed embedding function
 
-\[
+$$
 E(\cdot)=\texttt{text-embedding-3-small},
 \qquad
 d=1536.
-\]
-
+$$
 Each anchor embedding is therefore represented as
 
-\[
+$$
 v_i=E(a_i),
 \qquad
 v_i\in\mathbb{R}^{1536}.
-\]
-
+$$
 Embeddings were cached to guarantee deterministic reproducibility across repeated evaluations. No fine-tuning or gradient optimization was applied during the experiments.
 
 
 5.6 Context Matrix Construction
 For each semantic field \(S\), anchor embeddings were aggregated into a context matrix
 
-\[
+$$
 C_S
 =
 \begin{bmatrix}
@@ -1226,24 +1125,21 @@ v_2^{T} \\
 v_k^{T}
 \end{bmatrix}
 \in\mathbb{R}^{k\times d}.
-\]
-
+$$
 Singular Value Decomposition (SVD) was then applied:
 
-\[
+$$
 C_S
 =
 U\Sigma W^{T}.
-\]
-
+$$
 The resulting dominant right singular vectors define the orthonormal basis \(B_S\) used to approximate the contextual subspace:
 
-\[
+$$
 S
 \approx
 \operatorname{span}(B_S).
-\]
-
+$$
 These semantic subspaces form the operational geometry of ACA during runtime evaluation.
 
 5.7 Directional Invariant Construction
@@ -1252,19 +1148,17 @@ For each invariant \(I_i\), two semantic pole statements were defined: a coheren
 
 For example, a coherent pole may be:
 
-\[
+$$
 p_i^{+}=\text{``Evidence must constrain interpretation.''}
-\]
-
+$$
 while the corresponding inverted pole may be:
 
-\[
+$$
 p_i^{-}=\text{``Persuasive narratives may override contradictory evidence.''}
-\]
-
+$$
 Their embeddings generate the normalized directional invariant vector:
 
-\[
+$$
 d_i
 =
 \frac{
@@ -1272,8 +1166,7 @@ E(p_i^{+})-E(p_i^{-})
 }{
 \left\lVert E(p_i^{+})-E(p_i^{-})\right\rVert
 }.
-\]
-
+$$
 This vector defines the geometric orientation associated with invariant preservation.
 
 5.8 Dialogue Trajectory Dataset
@@ -1314,29 +1207,27 @@ For each trajectory element \(z_t\), ACA computes the following metrics.
 
 \textit{Origin Cost}
 
-\[
+$$
 O_S(z_t)
 =
 \left\lVert z_t-\Pi_S(z_t)\right\rVert^2.
-\]
-
+$$
 This measures geometric deviation from semantic field \(S\).
 
 \textit{Field Competition Margin}
 
-\[
+$$
 M(z_t)
 =
 O_{S^{(2)}(z_t)}(z_t)
 -
 O_{S^{*}(z_t)}(z_t).
-\]
-
+$$
 This measures contextual determination versus ambiguity.
 
 \textit{Contextual Stability}
 
-\[
+$$
 \kappa(z_t)
 =
 \frac{
@@ -1344,33 +1235,30 @@ M(z_t)
 }{
 O_{S^{*}(z_t)}(z_t)+\epsilon
 }.
-\]
-
+$$
 This measures semantic field stability.
 
 \textbf{Directional Metrics}
 
 \textit{Epistemic Orientation}
 
-\[
+$$
 \phi_i(z_t)
 =
 \left\langle \hat{z}_t,d_i\right\rangle.
-\]
-
+$$
 This measures preservation or inversion of invariant \(I_i\).
 
 \textit{Aggregate Epistemic Integrity}
 
-\[
+$$
 \Phi(z_t)
 =
 \sum_{i=1}^{n}w_i\phi_i(z_t),
 \qquad
 w_i\geq 0,\quad
 \sum_{i=1}^{n}w_i=1.
-\]
-
+$$
 This measures overall criterion preservation.
 
 
@@ -1396,30 +1284,27 @@ The runtime policy includes three primary actions:
 
 Operationally, the runtime policy can be summarized as follows:
 
-\[
+$$
 \texttt{ALLOW}
 \quad\Longleftrightarrow\quad
 O_{S^{*}(z)}(z)\leq\theta_O
 \;\wedge\;
 \Phi(z)\geq\theta_\Phi.
-\]
-
-\[
+$$
+$$
 \texttt{CLARIFY}
 \quad\Longleftrightarrow\quad
 M(z)<\theta_M
 \;\vee\;
 |\Phi(z)|<\theta_A.
-\]
-
-\[
+$$
+$$
 \texttt{FLAG\_CRITERION\_DRIFT}
 \quad\Longleftrightarrow\quad
 O_{S^{*}(z)}(z)\leq\theta_O
 \;\wedge\;
 \Phi(z)<\theta_\Phi.
-\]
-
+$$
 In the simplest zero-centered configuration, \(\theta_\Phi=0\), so this condition reduces to \(\Phi(z)<0\).
 
 This policy allows ACA to distinguish semantic ambiguity, contextual instability, and directional criterion inversion.
@@ -1502,28 +1387,24 @@ The runtime policy layer transforms geometric measurements into deterministic re
 Importantly, the drift detection policy activated even when contextual coherence remained relatively stable, proving that ACA detects the inversion of the criterion itself, not merely semantic dispersion.
 
 6.5.1 Triaxial Artifact Validation Results
-ACA v0.2 was evaluated through an expanded validation suite designed to test whether the Atlas can support criterion-oriented semantic navigation through the Foundation–Context–Principle projection. Unlike a conventional static classifier, the validation suite evaluates individual axis assignments, derived field emergence, trajectory interpretation, and diagnostic behavior.
+ACA v0.2 was evaluated through an expanded validation suite designed to test whether the Atlas can support criterion-oriented semantic navigation through the Foundationâ€“Contextâ€“Principle projection. Unlike a conventional static classifier, the validation suite evaluates individual axis assignments, derived field emergence, trajectory interpretation, and diagnostic behavior.
 The validation suite included 100 individual validation cases, 6 trajectory validation cases, and 36 diagnostic cases. The triaxial projection evaluated the following axis states:
 
-\[
+$$
 \mathcal{F}
 =
 \{\text{factual},\text{fictional},\text{hypothetical}\},
-\]
-
-\[
+$$
+$$
 \mathcal{C}
 =
 \{\text{research},\text{training},\text{manipulation},\text{narrative}\},
-\]
-
-\[
+$$
+$$
 \mathcal{P}
 =
 \{\text{investigate},\text{teach},\text{protect},\text{exploit}\}.
-\]
-
-
+$$
 The current validation results are summarized below.
 
 \begin{table}[h]
@@ -1565,7 +1446,7 @@ Under this formulation, ACE refers to the dynamic criterion-construction process
 
 6.6.1 Runtime Operational Pipeline
 The runtime architecture evaluates semantic trajectories through the following operational stages:
-\[
+$$
 \text{Input}
 \rightarrow
 \text{Embedding}
@@ -1573,70 +1454,65 @@ The runtime architecture evaluates semantic trajectories through the following o
 \text{Field Projection}
 \rightarrow
 \text{Orientation Evaluation}
-\]
-
-\[
+$$
+$$
 \rightarrow
 \text{Trajectory Continuity}
 \rightarrow
 \text{Topology Evaluation}
 \rightarrow
 \text{Runtime Decision}.
-\]
-
+$$
 Each stage preserves a different component of criterion continuity.
 
 Input Embedding
 The runtime first transforms the active semantic input \(x\in\mathcal{X}\) into embedding space using the encoder \(E\):
-\[
+$$
 z = E(x), \qquad z\in\mathbb{R}^{d}.
-\]
+$$
 Here, \(x\) represents the active semantic input and \(z\) represents its geometric semantic representation.
 
 Field Projection
 The embedded input is then projected against all semantic fields:
 
-\[
+$$
 \mathcal{S}_{\mathrm{runtime}}
 =
 \{S_1,S_2,\dots,S_m\}.
-\]
-
+$$
 Using origin-cost evaluation, ACA Runtime computes
 
-\[
+$$
 O_j
 =
 \left\lVert
 z-\Pi_{S_j}(z)
 \right\rVert^2.
-\]
-
+$$
 The runtime selects the dominant contextual field:
 
-\[
+$$
 S^{*}(z)
 =
 \arg\min_{S_j\in\mathcal{S}_{\mathrm{runtime}}}
 O_j.
-\]
-
+$$
 This stage determines contextual semantic positioning.
 
 Orientation Evaluation
 After contextual positioning, ACA Runtime evaluates directional invariant preservation.
 For each invariant direction \(d_i\), ACA Runtime computes the orientation score
-\[
+$$
 \phi_i(z)=\langle \hat{z},d_i\rangle,
 \qquad
 \hat{z}=\frac{z}{\lVert z\rVert}.
-\]
+$$
 The aggregate orientation score is then computed as
-\[
+$$
 \Phi(z)=\sum_{i=1}^{n}w_i\phi_i(z),
 \qquad
 w_i\geq 0,\quad \sum_{i=1}^{n}w_i=1.
-\]
+$$
 The resulting value \(\Phi(z)\) represents criterion continuity relative to the active semantic field.
 This stage separates contextual compatibility from epistemic orientation.
 Trajectory Continuity
@@ -1685,7 +1561,7 @@ Under this formulation, semantic fields are interpreted not merely as classifica
 6.6.4 Semantic Field Organization
 The runtime experiments currently operate using three primary semantic fields:
 
-\[
+$$
 \mathcal{S}_{\mathrm{runtime}}
 =
 \{
@@ -1693,8 +1569,7 @@ S_{\mathrm{foundational}},
 S_{\mathrm{factual}},
 S_{\mathrm{rhetorical}}
 \}.
-\]
-
+$$
 Each field is constructed from invariant anchors, contextual semantic examples, and orthogonal geometric projections derived through SVD-based subspace decomposition.
 The fields represent different modes of semantic organization:
 \begin{table}[h]
@@ -1718,12 +1593,11 @@ The fields are therefore not merely semantic categories, but operational context
 Trajectory experiments demonstrated that certain semantic transitions preserve criterion continuity despite contextual movement.
 In particular, transitions between neighboring semantic fields,
 
-\[
+$$
 S_{\mathrm{foundational}}
 \leftrightarrow
 S_{\mathrm{factual}},
-\]
-
+$$
 frequently preserved: orientation continuity, semantic recovery, invariant stability and criterion coherence.
 
 This revealed that neighboring semantic regions may function cooperatively during reasoning evolution.
@@ -1736,14 +1610,13 @@ This behavior motivated the introduction of semantic reorientation as a distinct
 6.6.6 Destabilizing Topology
 By contrast, experiments involving rhetorical escalation frequently produced orientation decay, semantic inversion, criterion destabilization, and contextual fragmentation.
 Transitions such as
-\[
+$$
 S_{\mathrm{foundational}}
 \rightarrow
 S_{\mathrm{rhetorical}}
 \rightarrow
 \text{inversion}
-\]
-
+$$
 showed substantially higher instability.
 
 These transitions frequently displaced semantic trajectories away from evidential grounding, invariant continuity, and stable criterion preservation.
@@ -1804,7 +1677,7 @@ Rather than reconstructing criterion repeatedly through natural language prompts
 \label{tab:runtime-policy-definitions}
 \end{table}
 
-\[
+$$
 \text{Stable}
 \rightarrow
 \text{Neighbor Reorientation}
@@ -1816,7 +1689,7 @@ Rather than reconstructing criterion repeatedly through natural language prompts
 \text{Incompatibility}
 \rightarrow
 \text{Criterion Inversion}
-\]
+$$
 This progression represents increasing loss of orientation continuity rather than a rigid linear failure sequence.
 6.7 Adversarial Semantic Drift Results
 
@@ -1892,14 +1765,13 @@ In multiple experiments, field cosine similarity remained relatively stable and 
 
 This experimentally supports the central distinction proposed throughout the framework:
 
-\[
+$$
 \boxed{
 \text{Contextual Coherence}
 \neq
 \text{Epistemic Integrity}
 }
-\]
- 
+$$
 The experiments therefore demonstrate that contextual compatibility alone cannot guarantee criterion preservation.
 
 Reliable semantic supervision additionally requires invariant orientation continuity, topology-aware semantic positioning, and runtime supervision of directional semantic evolution.
@@ -1942,14 +1814,13 @@ Rather than reconstructing semantic criterion repeatedly through prompt engineer
 
 6.8 Core Experimental Finding
 The experiments collectively demonstrate a critical distinction that remains insufficiently formalized in current generative reasoning systems:
-\[
+$$
 \boxed{
 \text{Contextual Coherence}
 \neq
 \text{Epistemic Integrity}
 }
-\]
-
+$$
 Across multiple semantic trajectories, ACA Runtime consistently observed that reasoning may remain linguistically fluent, semantically compatible, rhetorically persuasive, and contextually coherent while progressively destabilizing or inverting the invariant structures that originally constrained the reasoning process.
 Importantly, these inversions frequently emerged without catastrophic semantic collapse. Instead, criterion degradation appeared progressively through rhetorical reinterpretation, evidential subordination, semantic ambiguity escalation, and topology-compatible contextual transitions that gradually weakened invariant orientation continuity.
 The adversarial trajectory experiments further demonstrated that semantic proximity alone is insufficient for reliable criterion preservation. Multiple adversarial trajectories preserved high contextual compatibility while simultaneously producing negative epistemic orientation scores.
@@ -1985,7 +1856,7 @@ Two runtime strategies were then compared: the \textit{Prompt-Heavy Runtime} (cr
 The benchmark produced the following total runtime costs across the evaluated scenarios:
 
 
-“The benchmark revealed that criterion externalization substantially reduces runtime overhead while preserving semantic supervision continuity.”
+â€œThe benchmark revealed that criterion externalization substantially reduces runtime overhead while preserving semantic supervision continuity.â€
 
 6.9.5 Interpretation
 Importantly, this reduction was not achieved by removing contextual reasoning or reducing semantic supervision. Instead, the reduction emerged because the criterion was externalized from repeated natural language instructions into a persistent geometric infrastructure. Under traditional approaches, the criterion is repeatedly reintroduced as text. Under ACA Runtime, it becomes a reusable semantic structure defined by invariant orientation and contextual topology. This distinction is operationally significant, suggesting that semantic criteria may be preserved much more efficiently when represented geometrically rather than repeatedly reconstructed linguistically.
@@ -2052,7 +1923,7 @@ Importantly, the architecture externalizes the semantic criterion from natural l
 
 Under the ACA Runtime, the criterion becomes persistent. This introduces the possibility of reusable criterion supervision, lower runtime complexity, persistent contextual orientation, topology-aware semantic recovery, and scalable semantic continuity across long reasoning trajectories. More broadly, the experiments suggest that reliable generative reasoning may depend not only on increasing model scale or prompt complexity, but on preserving directional semantic orientation throughout contextual evolution. Under this interpretation, the semantic criterion becomes measurable, reusable, topology-aware, operationally persistent, and geometrically representable. ACA Runtime therefore proposes a shift from prompt-engineered semantic control toward a reusable geometric criterion infrastructure. Future work will explore adaptive semantic topology, dynamic field generation, online atlas evolution, multi-agent criterion synchronization, and persistent semantic memory architectures. The current results suggest that semantic orientation may provide a practical operational foundation for scalable, criterion-preserving generative systems.
 
-“ACA Runtime suggests that semantic reliability may emerge not from increasingly larger prompts, but from preserving invariant orientation throughout semantic evolution.”
+â€œACA Runtime suggests that semantic reliability may emerge not from increasingly larger prompts, but from preserving invariant orientation throughout semantic evolution.â€
 
 
 9. References
@@ -2073,7 +1944,8 @@ Under the ACA Runtime, the criterion becomes persistent. This introduces the pos
 
 \item OpenAI. (2024). \textit{New embedding models and API updates}. Retrieved from https://openai.com/blog/new-embedding-models-and-api-updates
 
-\item Rosati Beristain, E. (2026). Axiomatic Criterion Engine (ACE) — Ontological Discernment Engine. \textit{Zenodo}. https://doi.org/10.5281/zenodo.18654895
+\item Rosati Beristain, E. (2026). Axiomatic Criterion Engine (ACE) â€” Ontological Discernment Engine. \textit{Zenodo}. https://doi.org/10.5281/zenodo.18654895
 
 \end{description}
+
 
