@@ -1,26 +1,40 @@
+# Artifact binary data
+# ACA artifacts are part of the reproducible Atlas and should generally be tracked.
+# Ignore only temporary or experimental binary dumps outside curated artifact folders.
+*.npz
+*.pkl
+
+# Python cache
 __pycache__/
 *.pyc
 *.pyo
 *.pyd
 
+# Environment files
 .env
 venv/
 .venv/
 
+# Build/package output
 aca.egg-info/
 build/
 dist/
 
+# Notebook checkpoints
 .ipynb_checkpoints/
 
-artifacts/**/*.npy
-artifacts/**/*.npz
-artifacts/**/*.pkl
+# Office temporary files
+~$*
 
-!artifacts/fictional/*.npy
-!artifacts/hypothetical/*.npy
-!artifacts/context/**/*.npy
-!artifacts/principle/**/*.npy
+# LaTeX / Pandoc temporary files
+*.aux
+*.log
+*.out
+*.toc
+*.synctex.gz
+*.fls
+*.fdb_latexmk
 
+# OS files
 .DS_Store
 Thumbs.db

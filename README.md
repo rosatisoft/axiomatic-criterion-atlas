@@ -2,7 +2,7 @@
 
 **Geometric Context Artifacts for Persistent Semantic Orientation**
 
-![Version](https://img.shields.io/badge/version-v0.2_Triaxial-blue)
+![Version](https://img.shields.io/badge/version-v0.3_Triaxial-blue)
 [![Zenodo](https://zenodo.org/badge/DOI/10.5281/zenodo.20250559.svg)](https://doi.org/10.5281/zenodo.20250559)
 
 In an era where generative models can be **highly fluent yet progressively disoriented**, ACA offers a different approach: instead of relying solely on prompts to reconstruct criterion in every interaction, we build **persistent geometric artifacts** that preserve semantic orientation across long conversations, complex projects, and semantic drift.
@@ -36,7 +36,7 @@ In an era where generative models can be **highly fluent yet progressively disor
 
 ---
 
-## Current Version: ACA v0.2 — Triaxial Artifact Methodology
+## Current Version: ACA v0.3 — Persistent Geometry-Based Semantic Navigation
 
 Version 0.2 introduces the **Triaxial Criterion Projection (F–C–P)** as a central projection of the Atlas:
 
@@ -201,7 +201,13 @@ python tools/validate_triaxial_diagnostics.py
 * **Author:** Ernesto Rosati Beristain
 * **Current DOI:** [10.5281/zenodo.20250559](https://doi.org/10.5281/zenodo.20250559)
 
-> **Note:** The paper DOI currently refers to the earlier paper version. The paper is being synchronized with v0.2 advances. ACA v0.2 introduces additional triaxial artifact methodology and should be cited through the corresponding GitHub/Zenodo release once the v0.2 software/artifact DOI is assigned.
+### Companion Methodology
+
+* **Title:** *From Emergent Geometry to Persistent Criterion: A Companion Methodology for Attractor Selection, Invariant Justification, and Artifact Promotion in ACA*
+* **Author:** Ernesto Rosati Beristain
+* **File:** `paper/companion_methodology.pdf`
+
+> **Note:** The paper DOI currently refers to the earlier paper version. The paper is being synchronized with v0.3 advances. ACA v0.3 introduces additional triaxial artifact methodology and should be cited through the corresponding GitHub/Zenodo release once the v0.3 software/artifact DOI is assigned.
 
 ### Citation
 
@@ -219,7 +225,7 @@ python tools/validate_triaxial_diagnostics.py
 
 ## Status and Limitations
 
-* ACA v0.2 is **experimental and methodological**.
+* ACA v0.3 is **experimental and methodological**.
 * It **does not claim** universal truth verification, consciousness, moral certainty, full semantic coverage, or infallibility.
 * It **does claim** to provide a reproducible infrastructure of geometric orientation for operational criterion preservation, ensuring human judgment is supported rather than replaced.
 
