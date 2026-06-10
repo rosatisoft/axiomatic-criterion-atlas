@@ -3,7 +3,12 @@
 **Geometric Context Artifacts for Persistent Semantic Orientation**
 
 ![Version](https://img.shields.io/badge/version-v0.3_Triaxial-blue)
-[![Zenodo](https://zenodo.org/badge/DOI/10.5281/zenodo.20250559.svg)](https://doi.org/10.5281/zenodo.20250559)
+[![Zenodo](https://zenodo.org/badge/DOI/10.5281/zenodo.20630867.svg)](https://doi.org/10.5281/zenodo.20630867)
+
+This repository is the reproducible artifact companion to:
+
+Axiomatic Criterion Atlas (ACA): Persistent Geometry-Based Semantic Navigation  
+DOI: 10.5281/zenodo.20630437
 
 In an era where generative models can be **highly fluent yet progressively disoriented**, ACA offers a different approach: instead of relying solely on prompts to reconstruct criterion in every interaction, we build **persistent geometric artifacts** that preserve semantic orientation across long conversations, complex projects, and semantic drift.
 
