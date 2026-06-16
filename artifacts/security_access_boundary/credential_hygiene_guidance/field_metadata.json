@@ -1,0 +1,107 @@
+{
+  "field_name": "Benign credential hygiene and password policy guidance. This field captures educational or administrative statements about password strength, password management, and credential hygiene without requesting disclosure, extraction, or transfer of a secret.",
+  "field_type": "credential_hygiene_guidance",
+  "axis": "access_boundary",
+  "artifact_family": "security_access_boundary",
+  "runtime_layer": "access_gate",
+  "version": "0.1.1",
+  "description": "Benign credential hygiene and password policy guidance. This field captures educational or administrative statements about password strength, password management, and credential hygiene without requesting disclosure, extraction, or transfer of a secret.",
+  "expected_decision": "SAFE_CREDENTIAL_GUIDANCE",
+  "n_anchors": 30,
+  "embedding_dim": 1536,
+  "svd_rank": 14,
+  "explained_energy": 0.9510908722877502,
+  "recommended_model": "text-embedding-3-small",
+  "normalize_embeddings": true,
+  "invariants": [
+    "Does not request a password, token, code, or secret.",
+    "Does not pressure the user to disclose a credential.",
+    "Preserves defensive or educational intent.",
+    "Supports credential hygiene without enabling credential extraction.",
+    "Should not create a trajectory origin when the utterance is merely a low-risk credential hygiene statement."
+  ],
+  "languages": [
+    {
+      "code": "en",
+      "name": "English"
+    },
+    {
+      "code": "es",
+      "name": "Spanish"
+    },
+    {
+      "code": "pt",
+      "name": "Portuguese"
+    },
+    {
+      "code": "fr",
+      "name": "French"
+    },
+    {
+      "code": "de",
+      "name": "German"
+    },
+    {
+      "code": "it",
+      "name": "Italian"
+    }
+  ],
+  "anchors": [
+    "A strong password should be long and unique.",
+    "Use a password manager to store different passwords safely.",
+    "Never reuse the same password across important accounts.",
+    "Enable multi-factor authentication when it is available.",
+    "Password policy should require length, uniqueness, and secure storage.",
+    "Una contraseña fuerte debe ser larga y única.",
+    "Usa un administrador de contraseñas para guardar claves distintas de forma segura.",
+    "No reutilices la misma contraseña en cuentas importantes.",
+    "Activa la autenticación multifactor cuando esté disponible.",
+    "La política de contraseñas debe exigir longitud, unicidad y almacenamiento seguro.",
+    "Uma senha forte deve ser longa e única.",
+    "Use um gerenciador de senhas para armazenar senhas diferentes com segurança.",
+    "Não reutilize a mesma senha em contas importantes.",
+    "Ative a autenticação multifator quando estiver disponível.",
+    "A política de senhas deve exigir comprimento, unicidade e armazenamento seguro.",
+    "Un mot de passe fort doit être long et unique.",
+    "Utilisez un gestionnaire de mots de passe pour stocker des mots de passe différents en sécurité.",
+    "Ne réutilisez pas le même mot de passe sur des comptes importants.",
+    "Activez l'authentification multifacteur lorsqu'elle est disponible.",
+    "La politique de mots de passe doit exiger longueur, unicité et stockage sécurisé.",
+    "Ein starkes Passwort sollte lang und einzigartig sein.",
+    "Verwenden Sie einen Passwortmanager, um unterschiedliche Passwörter sicher zu speichern.",
+    "Verwenden Sie dasselbe Passwort nicht für wichtige Konten.",
+    "Aktivieren Sie Mehrfaktor-Authentifizierung, wenn sie verfügbar ist.",
+    "Eine Passwortrichtlinie sollte Länge, Einzigartigkeit und sichere Speicherung verlangen.",
+    "Una password sicura deve essere lunga e unica.",
+    "Usa un gestore di password per conservare password diverse in modo sicuro.",
+    "Non riutilizzare la stessa password per account importanti.",
+    "Attiva l'autenticazione multifattore quando è disponibile.",
+    "La politica delle password dovrebbe richiedere lunghezza, unicità e archiviazione sicura."
+  ],
+  "runtime_recommendations": {
+    "gate_layer": "access_boundary",
+    "do_not_create_origin_for_boundary_cases": true,
+    "do_not_mutate_state_for_boundary_cases": true,
+    "boundary_decisions": {
+      "sensitive_object_plus_extraction": "BOUNDARY_SECRET_REQUEST",
+      "sensitive_object_plus_defensive_recovery": "SAFE_CREDENTIAL_GUIDANCE",
+      "sensitive_object_plus_protection_or_detection": "SAFE_CREDENTIAL_GUIDANCE",
+      "sensitive_object_plus_ambiguous_access": "ASK_CLARIFICATION_SENSITIVE",
+      "sensitive_object_plus_pressure_or_deception": "BOUNDARY_SECRET_REQUEST",
+      "low_signal_without_sensitive_object": "DEFER_ORIGIN_LOW_SIGNAL_OR_PASS_THROUGH",
+      "benign_credential_hygiene": "SAFE_CREDENTIAL_GUIDANCE"
+    },
+    "ambiguity_margin": 0.05
+  },
+  "artifact_files": {
+    "anchor_embeddings": "anchor_embeddings.npy",
+    "centroid": "centroid.npy",
+    "basis_vectors": "basis_vectors.npy",
+    "singular_values": "singular_values.npy",
+    "metadata": "field_metadata.json"
+  },
+  "source": {
+    "source_file": "source_definitions\\security_access_boundary_sources.json",
+    "source_artifact_name": "credential_hygiene_guidance"
+  }
+}

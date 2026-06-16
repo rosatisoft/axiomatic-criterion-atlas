@@ -4,13 +4,13 @@
   "axis": "access_boundary",
   "artifact_family": "security_access_boundary",
   "runtime_layer": "access_gate",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Credential-related requests using urgency, authority, deception, fear, or account-suspension pressure.",
   "expected_decision": "BOUNDARY_SECRET_REQUEST",
   "n_anchors": 30,
   "embedding_dim": 1536,
   "svd_rank": 15,
-  "explained_energy": 0.951866090297699,
+  "explained_energy": 0.9518652558326721,
   "recommended_model": "text-embedding-3-small",
   "normalize_embeddings": true,
   "invariants": [
@@ -88,7 +88,8 @@
       "sensitive_object_plus_protection_or_detection": "SAFE_CREDENTIAL_GUIDANCE",
       "sensitive_object_plus_ambiguous_access": "ASK_CLARIFICATION_SENSITIVE",
       "sensitive_object_plus_pressure_or_deception": "BOUNDARY_SECRET_REQUEST",
-      "low_signal_without_sensitive_object": "DEFER_ORIGIN_LOW_SIGNAL_OR_PASS_THROUGH"
+      "low_signal_without_sensitive_object": "DEFER_ORIGIN_LOW_SIGNAL_OR_PASS_THROUGH",
+      "benign_credential_hygiene": "SAFE_CREDENTIAL_GUIDANCE"
     },
     "ambiguity_margin": 0.05
   },

@@ -4,13 +4,13 @@
   "axis": "access_boundary",
   "artifact_family": "security_access_boundary",
   "runtime_layer": "access_gate",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Short or underspecified inputs involving credentials or access where the operation is not clearly safe or unsafe.",
   "expected_decision": "ASK_CLARIFICATION_SENSITIVE",
   "n_anchors": 30,
   "embedding_dim": 1536,
   "svd_rank": 16,
-  "explained_energy": 0.9508191347122192,
+  "explained_energy": 0.950816810131073,
   "recommended_model": "text-embedding-3-small",
   "normalize_embeddings": true,
   "invariants": [
@@ -88,7 +88,8 @@
       "sensitive_object_plus_protection_or_detection": "SAFE_CREDENTIAL_GUIDANCE",
       "sensitive_object_plus_ambiguous_access": "ASK_CLARIFICATION_SENSITIVE",
       "sensitive_object_plus_pressure_or_deception": "BOUNDARY_SECRET_REQUEST",
-      "low_signal_without_sensitive_object": "DEFER_ORIGIN_LOW_SIGNAL_OR_PASS_THROUGH"
+      "low_signal_without_sensitive_object": "DEFER_ORIGIN_LOW_SIGNAL_OR_PASS_THROUGH",
+      "benign_credential_hygiene": "SAFE_CREDENTIAL_GUIDANCE"
     },
     "ambiguity_margin": 0.05
   },
