@@ -1,0 +1,106 @@
+{
+  "field_name": "Requests for help recovering, resetting, rotating, or securing the user's own credentials through legitimate channels.",
+  "field_type": "defensive_account_recovery",
+  "axis": "access_boundary",
+  "artifact_family": "security_access_boundary",
+  "runtime_layer": "access_gate",
+  "version": "0.1.0",
+  "description": "Requests for help recovering, resetting, rotating, or securing the user's own credentials through legitimate channels.",
+  "expected_decision": "SAFE_CREDENTIAL_GUIDANCE",
+  "n_anchors": 30,
+  "embedding_dim": 1536,
+  "svd_rank": 17,
+  "explained_energy": 0.9522772431373596,
+  "recommended_model": "text-embedding-3-small",
+  "normalize_embeddings": true,
+  "invariants": [
+    "self_recovery_intent",
+    "defensive_security_intent",
+    "no_secret_disclosure_request",
+    "legitimate_account_recovery",
+    "safe_process_guidance"
+  ],
+  "languages": [
+    {
+      "code": "en",
+      "name": "English"
+    },
+    {
+      "code": "es",
+      "name": "Spanish"
+    },
+    {
+      "code": "pt",
+      "name": "Portuguese"
+    },
+    {
+      "code": "fr",
+      "name": "French"
+    },
+    {
+      "code": "de",
+      "name": "German"
+    },
+    {
+      "code": "it",
+      "name": "Italian"
+    }
+  ],
+  "anchors": [
+    "How do I recover my password?",
+    "How can I reset my account password safely?",
+    "What should I do if I lost my verification code?",
+    "How do I rotate a leaked API key?",
+    "How do I revoke a compromised access token?",
+    "¿Cómo recupero mi contraseña?",
+    "¿Cómo puedo restablecer mi contraseña de forma segura?",
+    "¿Qué hago si perdí mi código de verificación?",
+    "¿Cómo roto una clave API filtrada?",
+    "¿Cómo revoco un token de acceso comprometido?",
+    "Como recupero minha senha?",
+    "Como posso redefinir minha senha com segurança?",
+    "O que devo fazer se perdi meu código de verificação?",
+    "Como faço a rotação de uma chave de API vazada?",
+    "Como revogo um token de acesso comprometido?",
+    "Comment récupérer mon mot de passe ?",
+    "Comment réinitialiser mon mot de passe en toute sécurité ?",
+    "Que faire si j'ai perdu mon code de vérification ?",
+    "Comment faire tourner une clé API divulguée ?",
+    "Comment révoquer un jeton d'accès compromis ?",
+    "Wie stelle ich mein Passwort wieder her?",
+    "Wie kann ich mein Konto-Passwort sicher zurücksetzen?",
+    "Was soll ich tun, wenn ich meinen Bestätigungscode verloren habe?",
+    "Wie rotiere ich einen geleakten API-Schlüssel?",
+    "Wie widerrufe ich ein kompromittiertes Zugriffstoken?",
+    "Come recupero la mia password?",
+    "Come posso reimpostare in modo sicuro la password del mio account?",
+    "Cosa devo fare se ho perso il codice di verifica?",
+    "Come ruoto una chiave API trapelata?",
+    "Come revoco un token di accesso compromesso?"
+  ],
+  "runtime_recommendations": {
+    "gate_layer": "access_boundary",
+    "do_not_create_origin_for_boundary_cases": true,
+    "do_not_mutate_state_for_boundary_cases": true,
+    "boundary_decisions": {
+      "sensitive_object_plus_extraction": "BOUNDARY_SECRET_REQUEST",
+      "sensitive_object_plus_defensive_recovery": "SAFE_CREDENTIAL_GUIDANCE",
+      "sensitive_object_plus_protection_or_detection": "SAFE_CREDENTIAL_GUIDANCE",
+      "sensitive_object_plus_ambiguous_access": "ASK_CLARIFICATION_SENSITIVE",
+      "sensitive_object_plus_pressure_or_deception": "BOUNDARY_SECRET_REQUEST",
+      "low_signal_without_sensitive_object": "DEFER_ORIGIN_LOW_SIGNAL_OR_PASS_THROUGH"
+    },
+    "ambiguity_margin": 0.05
+  },
+  "artifact_files": {
+    "anchor_embeddings": "anchor_embeddings.npy",
+    "centroid": "centroid.npy",
+    "basis_vectors": "basis_vectors.npy",
+    "singular_values": "singular_values.npy",
+    "metadata": "field_metadata.json"
+  },
+  "source": {
+    "source_file": "source_definitions\\security_access_boundary_sources.json",
+    "source_artifact_name": "defensive_account_recovery"
+  }
+}

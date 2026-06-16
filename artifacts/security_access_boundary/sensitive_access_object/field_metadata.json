@@ -1,0 +1,106 @@
+{
+  "field_name": "Sensitive credentials, tokens, access secrets, keys, session data, verification factors, and recovery phrases.",
+  "field_type": "sensitive_access_object",
+  "axis": "access_boundary",
+  "artifact_family": "security_access_boundary",
+  "runtime_layer": "access_gate",
+  "version": "0.1.0",
+  "description": "Sensitive credentials, tokens, access secrets, keys, session data, verification factors, and recovery phrases.",
+  "expected_decision": null,
+  "n_anchors": 30,
+  "embedding_dim": 1536,
+  "svd_rank": 16,
+  "explained_energy": 0.9541206359863281,
+  "recommended_model": "text-embedding-3-small",
+  "normalize_embeddings": true,
+  "invariants": [
+    "sensitive_secret_reference",
+    "access_control_material",
+    "authentication_factor",
+    "credential_or_token_object",
+    "private_recovery_material"
+  ],
+  "languages": [
+    {
+      "code": "en",
+      "name": "English"
+    },
+    {
+      "code": "es",
+      "name": "Spanish"
+    },
+    {
+      "code": "pt",
+      "name": "Portuguese"
+    },
+    {
+      "code": "fr",
+      "name": "French"
+    },
+    {
+      "code": "de",
+      "name": "German"
+    },
+    {
+      "code": "it",
+      "name": "Italian"
+    }
+  ],
+  "anchors": [
+    "password, passcode, login password, account password, security code",
+    "contraseña, clave de acceso, código de seguridad, contraseña de la cuenta",
+    "senha, palavra-passe, código de segurança, senha da conta",
+    "mot de passe, code secret, code de sécurité, mot de passe du compte",
+    "Passwort, Zugangscode, Sicherheitscode, Konto-Passwort",
+    "password, parola d'ordine, codice di sicurezza, password dell'account",
+    "API key, access token, private key, secret key, bearer token",
+    "clave API, token de acceso, clave privada, clave secreta, token bearer",
+    "chave de API, token de acesso, chave privada, chave secreta",
+    "clé API, jeton d'accès, clé privée, clé secrète",
+    "API-Schlüssel, Zugriffstoken, privater Schlüssel, geheimer Schlüssel",
+    "chiave API, token di accesso, chiave privata, chiave segreta",
+    "verification code, one-time password, 2FA code, MFA code",
+    "código de verificación, código de un solo uso, código 2FA, código MFA",
+    "código de verificação, código único, código 2FA, código MFA",
+    "code de vérification, code à usage unique, code 2FA, code MFA",
+    "Bestätigungscode, Einmalpasswort, 2FA-Code, MFA-Code",
+    "codice di verifica, codice monouso, codice 2FA, codice MFA",
+    "seed phrase, recovery phrase, mnemonic phrase, wallet recovery words",
+    "frase semilla, frase de recuperación, palabras de recuperación de la cartera",
+    "frase-semente, frase de recuperação, palavras de recuperação da carteira",
+    "phrase de récupération, phrase mnémonique, mots de récupération du portefeuille",
+    "Seed-Phrase, Wiederherstellungsphrase, Wiederherstellungswörter der Wallet",
+    "frase seed, frase di recupero, parole di recupero del wallet",
+    "session cookie, authentication cookie, login session token",
+    "cookie de sesión, cookie de autenticación, token de sesión de inicio de sesión",
+    "cookie de sessão, cookie de autenticação, token de sessão de login",
+    "cookie de session, cookie d'authentification, jeton de session de connexion",
+    "Sitzungscookie, Authentifizierungscookie, Login-Sitzungstoken",
+    "cookie di sessione, cookie di autenticazione, token di sessione di accesso"
+  ],
+  "runtime_recommendations": {
+    "gate_layer": "access_boundary",
+    "do_not_create_origin_for_boundary_cases": true,
+    "do_not_mutate_state_for_boundary_cases": true,
+    "boundary_decisions": {
+      "sensitive_object_plus_extraction": "BOUNDARY_SECRET_REQUEST",
+      "sensitive_object_plus_defensive_recovery": "SAFE_CREDENTIAL_GUIDANCE",
+      "sensitive_object_plus_protection_or_detection": "SAFE_CREDENTIAL_GUIDANCE",
+      "sensitive_object_plus_ambiguous_access": "ASK_CLARIFICATION_SENSITIVE",
+      "sensitive_object_plus_pressure_or_deception": "BOUNDARY_SECRET_REQUEST",
+      "low_signal_without_sensitive_object": "DEFER_ORIGIN_LOW_SIGNAL_OR_PASS_THROUGH"
+    },
+    "ambiguity_margin": 0.05
+  },
+  "artifact_files": {
+    "anchor_embeddings": "anchor_embeddings.npy",
+    "centroid": "centroid.npy",
+    "basis_vectors": "basis_vectors.npy",
+    "singular_values": "singular_values.npy",
+    "metadata": "field_metadata.json"
+  },
+  "source": {
+    "source_file": "source_definitions\\security_access_boundary_sources.json",
+    "source_artifact_name": "sensitive_access_object"
+  }
+}

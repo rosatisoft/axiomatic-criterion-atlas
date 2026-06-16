@@ -1,0 +1,106 @@
+{
+  "field_name": "Safe questions about protecting accounts, detecting phishing, avoiding credential disclosure, and responding to credential theft.",
+  "field_type": "safe_security_guidance",
+  "axis": "access_boundary",
+  "artifact_family": "security_access_boundary",
+  "runtime_layer": "access_gate",
+  "version": "0.1.0",
+  "description": "Safe questions about protecting accounts, detecting phishing, avoiding credential disclosure, and responding to credential theft.",
+  "expected_decision": "SAFE_CREDENTIAL_GUIDANCE",
+  "n_anchors": 30,
+  "embedding_dim": 1536,
+  "svd_rank": 16,
+  "explained_energy": 0.9538916945457458,
+  "recommended_model": "text-embedding-3-small",
+  "normalize_embeddings": true,
+  "invariants": [
+    "protective_intent",
+    "educational_security_context",
+    "no_extraction_request",
+    "risk_awareness",
+    "defensive_guidance"
+  ],
+  "languages": [
+    {
+      "code": "en",
+      "name": "English"
+    },
+    {
+      "code": "es",
+      "name": "Spanish"
+    },
+    {
+      "code": "pt",
+      "name": "Portuguese"
+    },
+    {
+      "code": "fr",
+      "name": "French"
+    },
+    {
+      "code": "de",
+      "name": "German"
+    },
+    {
+      "code": "it",
+      "name": "Italian"
+    }
+  ],
+  "anchors": [
+    "How do I protect my password from phishing?",
+    "How can I detect a fake login page?",
+    "What should I do if someone asks for my verification code?",
+    "How can I store API keys safely?",
+    "How do I report a stolen access token?",
+    "¿Cómo protejo mi contraseña contra phishing?",
+    "¿Cómo puedo detectar una página falsa de inicio de sesión?",
+    "¿Qué hago si alguien me pide mi código de verificación?",
+    "¿Cómo puedo guardar claves API de forma segura?",
+    "¿Cómo reporto un token de acceso robado?",
+    "Como protejo minha senha contra phishing?",
+    "Como posso detectar uma página de login falsa?",
+    "O que devo fazer se alguém pedir meu código de verificação?",
+    "Como posso armazenar chaves de API com segurança?",
+    "Como denuncio um token de acesso roubado?",
+    "Comment protéger mon mot de passe contre le phishing ?",
+    "Comment détecter une fausse page de connexion ?",
+    "Que faire si quelqu'un me demande mon code de vérification ?",
+    "Comment stocker les clés API en sécurité ?",
+    "Comment signaler un jeton d'accès volé ?",
+    "Wie schütze ich mein Passwort vor Phishing?",
+    "Wie erkenne ich eine gefälschte Login-Seite?",
+    "Was soll ich tun, wenn mich jemand nach meinem Bestätigungscode fragt?",
+    "Wie kann ich API-Schlüssel sicher speichern?",
+    "Wie melde ich ein gestohlenes Zugriffstoken?",
+    "Come proteggo la mia password dal phishing?",
+    "Come posso riconoscere una falsa pagina di accesso?",
+    "Cosa devo fare se qualcuno mi chiede il codice di verifica?",
+    "Come posso conservare in modo sicuro le chiavi API?",
+    "Come segnalo un token di accesso rubato?"
+  ],
+  "runtime_recommendations": {
+    "gate_layer": "access_boundary",
+    "do_not_create_origin_for_boundary_cases": true,
+    "do_not_mutate_state_for_boundary_cases": true,
+    "boundary_decisions": {
+      "sensitive_object_plus_extraction": "BOUNDARY_SECRET_REQUEST",
+      "sensitive_object_plus_defensive_recovery": "SAFE_CREDENTIAL_GUIDANCE",
+      "sensitive_object_plus_protection_or_detection": "SAFE_CREDENTIAL_GUIDANCE",
+      "sensitive_object_plus_ambiguous_access": "ASK_CLARIFICATION_SENSITIVE",
+      "sensitive_object_plus_pressure_or_deception": "BOUNDARY_SECRET_REQUEST",
+      "low_signal_without_sensitive_object": "DEFER_ORIGIN_LOW_SIGNAL_OR_PASS_THROUGH"
+    },
+    "ambiguity_margin": 0.05
+  },
+  "artifact_files": {
+    "anchor_embeddings": "anchor_embeddings.npy",
+    "centroid": "centroid.npy",
+    "basis_vectors": "basis_vectors.npy",
+    "singular_values": "singular_values.npy",
+    "metadata": "field_metadata.json"
+  },
+  "source": {
+    "source_file": "source_definitions\\security_access_boundary_sources.json",
+    "source_artifact_name": "safe_security_guidance"
+  }
+}

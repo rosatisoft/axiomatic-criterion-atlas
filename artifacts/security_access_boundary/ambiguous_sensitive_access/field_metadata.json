@@ -1,0 +1,106 @@
+{
+  "field_name": "Short or underspecified inputs involving credentials or access where the operation is not clearly safe or unsafe.",
+  "field_type": "ambiguous_sensitive_access",
+  "axis": "access_boundary",
+  "artifact_family": "security_access_boundary",
+  "runtime_layer": "access_gate",
+  "version": "0.1.0",
+  "description": "Short or underspecified inputs involving credentials or access where the operation is not clearly safe or unsafe.",
+  "expected_decision": "ASK_CLARIFICATION_SENSITIVE",
+  "n_anchors": 30,
+  "embedding_dim": 1536,
+  "svd_rank": 16,
+  "explained_energy": 0.9508191347122192,
+  "recommended_model": "text-embedding-3-small",
+  "normalize_embeddings": true,
+  "invariants": [
+    "sensitive_object_present",
+    "underspecified_operation",
+    "insufficient_authorization_context",
+    "requires_clarification",
+    "no_origin_until_clarified"
+  ],
+  "languages": [
+    {
+      "code": "en",
+      "name": "English"
+    },
+    {
+      "code": "es",
+      "name": "Spanish"
+    },
+    {
+      "code": "pt",
+      "name": "Portuguese"
+    },
+    {
+      "code": "fr",
+      "name": "French"
+    },
+    {
+      "code": "de",
+      "name": "German"
+    },
+    {
+      "code": "it",
+      "name": "Italian"
+    }
+  ],
+  "anchors": [
+    "I need the password.",
+    "The verification code is needed.",
+    "Access token?",
+    "Can you help with the API key?",
+    "We need account access.",
+    "Necesito la contraseña.",
+    "Se necesita el código de verificación.",
+    "¿Token de acceso?",
+    "¿Puedes ayudar con la clave API?",
+    "Necesitamos acceso a la cuenta.",
+    "Preciso da senha.",
+    "O código de verificação é necessário.",
+    "Token de acesso?",
+    "Você pode ajudar com a chave de API?",
+    "Precisamos de acesso à conta.",
+    "J'ai besoin du mot de passe.",
+    "Le code de vérification est nécessaire.",
+    "Jeton d'accès ?",
+    "Peux-tu aider avec la clé API ?",
+    "Nous avons besoin d'accès au compte.",
+    "Ich brauche das Passwort.",
+    "Der Bestätigungscode wird benötigt.",
+    "Zugriffstoken?",
+    "Kannst du mit dem API-Schlüssel helfen?",
+    "Wir brauchen Kontozugriff.",
+    "Mi serve la password.",
+    "Serve il codice di verifica.",
+    "Token di accesso?",
+    "Puoi aiutare con la chiave API?",
+    "Abbiamo bisogno dell'accesso all'account."
+  ],
+  "runtime_recommendations": {
+    "gate_layer": "access_boundary",
+    "do_not_create_origin_for_boundary_cases": true,
+    "do_not_mutate_state_for_boundary_cases": true,
+    "boundary_decisions": {
+      "sensitive_object_plus_extraction": "BOUNDARY_SECRET_REQUEST",
+      "sensitive_object_plus_defensive_recovery": "SAFE_CREDENTIAL_GUIDANCE",
+      "sensitive_object_plus_protection_or_detection": "SAFE_CREDENTIAL_GUIDANCE",
+      "sensitive_object_plus_ambiguous_access": "ASK_CLARIFICATION_SENSITIVE",
+      "sensitive_object_plus_pressure_or_deception": "BOUNDARY_SECRET_REQUEST",
+      "low_signal_without_sensitive_object": "DEFER_ORIGIN_LOW_SIGNAL_OR_PASS_THROUGH"
+    },
+    "ambiguity_margin": 0.05
+  },
+  "artifact_files": {
+    "anchor_embeddings": "anchor_embeddings.npy",
+    "centroid": "centroid.npy",
+    "basis_vectors": "basis_vectors.npy",
+    "singular_values": "singular_values.npy",
+    "metadata": "field_metadata.json"
+  },
+  "source": {
+    "source_file": "source_definitions\\security_access_boundary_sources.json",
+    "source_artifact_name": "ambiguous_sensitive_access"
+  }
+}

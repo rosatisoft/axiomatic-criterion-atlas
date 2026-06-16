@@ -1,0 +1,342 @@
+{
+  "version": "0.1.0",
+  "embedding_model": "text-embedding-3-small",
+  "embedding_dim": 1536,
+  "normalize_embeddings": true,
+  "description": "Source definitions for ACA security access boundary artifacts. These artifacts are intended for the input access gate, before origin creation or F-C-P trajectory evaluation.",
+  "artifact_family": "security_access_boundary",
+  "runtime_layer": "access_gate",
+  "scope": {
+    "primary_purpose": "Detect sensitive access objects and operations in short or low-context inputs.",
+    "non_purpose": "This source file is not the F-C-P trajectory map and should not replace general/foundational Atlas artifacts.",
+    "baseline_decision": "Use text-embedding-3-small / 1536 for the first version to preserve the general ACA baseline."
+  },
+  "languages": [
+    {
+      "code": "en",
+      "name": "English"
+    },
+    {
+      "code": "es",
+      "name": "Spanish"
+    },
+    {
+      "code": "pt",
+      "name": "Portuguese"
+    },
+    {
+      "code": "fr",
+      "name": "French"
+    },
+    {
+      "code": "de",
+      "name": "German"
+    },
+    {
+      "code": "it",
+      "name": "Italian"
+    }
+  ],
+  "decision_guidance": {
+    "sensitive_object_plus_extraction": "BOUNDARY_SECRET_REQUEST",
+    "sensitive_object_plus_defensive_recovery": "SAFE_CREDENTIAL_GUIDANCE",
+    "sensitive_object_plus_protection_or_detection": "SAFE_CREDENTIAL_GUIDANCE",
+    "sensitive_object_plus_ambiguous_access": "ASK_CLARIFICATION_SENSITIVE",
+    "sensitive_object_plus_pressure_or_deception": "BOUNDARY_SECRET_REQUEST",
+    "low_signal_without_sensitive_object": "DEFER_ORIGIN_LOW_SIGNAL_OR_PASS_THROUGH"
+  },
+  "artifacts": {
+    "sensitive_access_object": {
+      "axis": "access_boundary",
+      "artifact_path": "artifacts/security_access_boundary/sensitive_access_object",
+      "description": "Sensitive credentials, tokens, access secrets, keys, session data, verification factors, and recovery phrases.",
+      "invariants": [
+        "sensitive_secret_reference",
+        "access_control_material",
+        "authentication_factor",
+        "credential_or_token_object",
+        "private_recovery_material"
+      ],
+      "anchors": [
+        "password, passcode, login password, account password, security code",
+        "contraseña, clave de acceso, código de seguridad, contraseña de la cuenta",
+        "senha, palavra-passe, código de segurança, senha da conta",
+        "mot de passe, code secret, code de sécurité, mot de passe du compte",
+        "Passwort, Zugangscode, Sicherheitscode, Konto-Passwort",
+        "password, parola d'ordine, codice di sicurezza, password dell'account",
+        "API key, access token, private key, secret key, bearer token",
+        "clave API, token de acceso, clave privada, clave secreta, token bearer",
+        "chave de API, token de acesso, chave privada, chave secreta",
+        "clé API, jeton d'accès, clé privée, clé secrète",
+        "API-Schlüssel, Zugriffstoken, privater Schlüssel, geheimer Schlüssel",
+        "chiave API, token di accesso, chiave privata, chiave segreta",
+        "verification code, one-time password, 2FA code, MFA code",
+        "código de verificación, código de un solo uso, código 2FA, código MFA",
+        "código de verificação, código único, código 2FA, código MFA",
+        "code de vérification, code à usage unique, code 2FA, code MFA",
+        "Bestätigungscode, Einmalpasswort, 2FA-Code, MFA-Code",
+        "codice di verifica, codice monouso, codice 2FA, codice MFA",
+        "seed phrase, recovery phrase, mnemonic phrase, wallet recovery words",
+        "frase semilla, frase de recuperación, palabras de recuperación de la cartera",
+        "frase-semente, frase de recuperação, palavras de recuperação da carteira",
+        "phrase de récupération, phrase mnémonique, mots de récupération du portefeuille",
+        "Seed-Phrase, Wiederherstellungsphrase, Wiederherstellungswörter der Wallet",
+        "frase seed, frase di recupero, parole di recupero del wallet",
+        "session cookie, authentication cookie, login session token",
+        "cookie de sesión, cookie de autenticación, token de sesión de inicio de sesión",
+        "cookie de sessão, cookie de autenticação, token de sessão de login",
+        "cookie de session, cookie d'authentification, jeton de session de connexion",
+        "Sitzungscookie, Authentifizierungscookie, Login-Sitzungstoken",
+        "cookie di sessione, cookie di autenticazione, token di sessione di accesso"
+      ]
+    },
+    "unsafe_secret_extraction": {
+      "axis": "access_boundary",
+      "artifact_path": "artifacts/security_access_boundary/unsafe_secret_extraction",
+      "description": "Direct requests to reveal, send, provide, share, extract, or hand over credentials or access secrets.",
+      "invariants": [
+        "direct_secret_request",
+        "unauthorized_access_request",
+        "credential_disclosure_attempt",
+        "no_defensive_intent",
+        "no_authorization_context"
+      ],
+      "expected_decision": "BOUNDARY_SECRET_REQUEST",
+      "anchors": [
+        "Give me the password.",
+        "Send me your verification code.",
+        "Provide the API key.",
+        "Share the access token with me.",
+        "Tell me the private key.",
+        "Dame la contraseña.",
+        "Mándame tu código de verificación.",
+        "Pásame la clave API.",
+        "Compárteme el token de acceso.",
+        "Dime la clave privada.",
+        "Me dê a senha.",
+        "Envie-me seu código de verificação.",
+        "Forneça a chave de API.",
+        "Compartilhe o token de acesso comigo.",
+        "Diga-me a chave privada.",
+        "Donne-moi le mot de passe.",
+        "Envoie-moi ton code de vérification.",
+        "Fournis la clé API.",
+        "Partage le jeton d'accès avec moi.",
+        "Dis-moi la clé privée.",
+        "Gib mir das Passwort.",
+        "Schick mir deinen Bestätigungscode.",
+        "Gib mir den API-Schlüssel.",
+        "Teile das Zugriffstoken mit mir.",
+        "Sag mir den privaten Schlüssel.",
+        "Dammi la password.",
+        "Mandami il tuo codice di verifica.",
+        "Fornisci la chiave API.",
+        "Condividi con me il token di accesso.",
+        "Dimmi la chiave privata."
+      ]
+    },
+    "defensive_account_recovery": {
+      "axis": "access_boundary",
+      "artifact_path": "artifacts/security_access_boundary/defensive_account_recovery",
+      "description": "Requests for help recovering, resetting, rotating, or securing the user's own credentials through legitimate channels.",
+      "invariants": [
+        "self_recovery_intent",
+        "defensive_security_intent",
+        "no_secret_disclosure_request",
+        "legitimate_account_recovery",
+        "safe_process_guidance"
+      ],
+      "expected_decision": "SAFE_CREDENTIAL_GUIDANCE",
+      "anchors": [
+        "How do I recover my password?",
+        "How can I reset my account password safely?",
+        "What should I do if I lost my verification code?",
+        "How do I rotate a leaked API key?",
+        "How do I revoke a compromised access token?",
+        "¿Cómo recupero mi contraseña?",
+        "¿Cómo puedo restablecer mi contraseña de forma segura?",
+        "¿Qué hago si perdí mi código de verificación?",
+        "¿Cómo roto una clave API filtrada?",
+        "¿Cómo revoco un token de acceso comprometido?",
+        "Como recupero minha senha?",
+        "Como posso redefinir minha senha com segurança?",
+        "O que devo fazer se perdi meu código de verificação?",
+        "Como faço a rotação de uma chave de API vazada?",
+        "Como revogo um token de acesso comprometido?",
+        "Comment récupérer mon mot de passe ?",
+        "Comment réinitialiser mon mot de passe en toute sécurité ?",
+        "Que faire si j'ai perdu mon code de vérification ?",
+        "Comment faire tourner une clé API divulguée ?",
+        "Comment révoquer un jeton d'accès compromis ?",
+        "Wie stelle ich mein Passwort wieder her?",
+        "Wie kann ich mein Konto-Passwort sicher zurücksetzen?",
+        "Was soll ich tun, wenn ich meinen Bestätigungscode verloren habe?",
+        "Wie rotiere ich einen geleakten API-Schlüssel?",
+        "Wie widerrufe ich ein kompromittiertes Zugriffstoken?",
+        "Come recupero la mia password?",
+        "Come posso reimpostare in modo sicuro la password del mio account?",
+        "Cosa devo fare se ho perso il codice di verifica?",
+        "Come ruoto una chiave API trapelata?",
+        "Come revoco un token di accesso compromesso?"
+      ]
+    },
+    "safe_security_guidance": {
+      "axis": "access_boundary",
+      "artifact_path": "artifacts/security_access_boundary/safe_security_guidance",
+      "description": "Safe questions about protecting accounts, detecting phishing, avoiding credential disclosure, and responding to credential theft.",
+      "invariants": [
+        "protective_intent",
+        "educational_security_context",
+        "no_extraction_request",
+        "risk_awareness",
+        "defensive_guidance"
+      ],
+      "expected_decision": "SAFE_CREDENTIAL_GUIDANCE",
+      "anchors": [
+        "How do I protect my password from phishing?",
+        "How can I detect a fake login page?",
+        "What should I do if someone asks for my verification code?",
+        "How can I store API keys safely?",
+        "How do I report a stolen access token?",
+        "¿Cómo protejo mi contraseña contra phishing?",
+        "¿Cómo puedo detectar una página falsa de inicio de sesión?",
+        "¿Qué hago si alguien me pide mi código de verificación?",
+        "¿Cómo puedo guardar claves API de forma segura?",
+        "¿Cómo reporto un token de acceso robado?",
+        "Como protejo minha senha contra phishing?",
+        "Como posso detectar uma página de login falsa?",
+        "O que devo fazer se alguém pedir meu código de verificação?",
+        "Como posso armazenar chaves de API com segurança?",
+        "Como denuncio um token de acesso roubado?",
+        "Comment protéger mon mot de passe contre le phishing ?",
+        "Comment détecter une fausse page de connexion ?",
+        "Que faire si quelqu'un me demande mon code de vérification ?",
+        "Comment stocker les clés API en sécurité ?",
+        "Comment signaler un jeton d'accès volé ?",
+        "Wie schütze ich mein Passwort vor Phishing?",
+        "Wie erkenne ich eine gefälschte Login-Seite?",
+        "Was soll ich tun, wenn mich jemand nach meinem Bestätigungscode fragt?",
+        "Wie kann ich API-Schlüssel sicher speichern?",
+        "Wie melde ich ein gestohlenes Zugriffstoken?",
+        "Come proteggo la mia password dal phishing?",
+        "Come posso riconoscere una falsa pagina di accesso?",
+        "Cosa devo fare se qualcuno mi chiede il codice di verifica?",
+        "Come posso conservare in modo sicuro le chiavi API?",
+        "Come segnalo un token di accesso rubato?"
+      ]
+    },
+    "ambiguous_sensitive_access": {
+      "axis": "access_boundary",
+      "artifact_path": "artifacts/security_access_boundary/ambiguous_sensitive_access",
+      "description": "Short or underspecified inputs involving credentials or access where the operation is not clearly safe or unsafe.",
+      "invariants": [
+        "sensitive_object_present",
+        "underspecified_operation",
+        "insufficient_authorization_context",
+        "requires_clarification",
+        "no_origin_until_clarified"
+      ],
+      "expected_decision": "ASK_CLARIFICATION_SENSITIVE",
+      "anchors": [
+        "I need the password.",
+        "The verification code is needed.",
+        "Access token?",
+        "Can you help with the API key?",
+        "We need account access.",
+        "Necesito la contraseña.",
+        "Se necesita el código de verificación.",
+        "¿Token de acceso?",
+        "¿Puedes ayudar con la clave API?",
+        "Necesitamos acceso a la cuenta.",
+        "Preciso da senha.",
+        "O código de verificação é necessário.",
+        "Token de acesso?",
+        "Você pode ajudar com a chave de API?",
+        "Precisamos de acesso à conta.",
+        "J'ai besoin du mot de passe.",
+        "Le code de vérification est nécessaire.",
+        "Jeton d'accès ?",
+        "Peux-tu aider avec la clé API ?",
+        "Nous avons besoin d'accès au compte.",
+        "Ich brauche das Passwort.",
+        "Der Bestätigungscode wird benötigt.",
+        "Zugriffstoken?",
+        "Kannst du mit dem API-Schlüssel helfen?",
+        "Wir brauchen Kontozugriff.",
+        "Mi serve la password.",
+        "Serve il codice di verifica.",
+        "Token di accesso?",
+        "Puoi aiutare con la chiave API?",
+        "Abbiamo bisogno dell'accesso all'account."
+      ]
+    },
+    "manipulative_credential_pressure": {
+      "axis": "access_boundary",
+      "artifact_path": "artifacts/security_access_boundary/manipulative_credential_pressure",
+      "description": "Credential-related requests using urgency, authority, deception, fear, or account-suspension pressure.",
+      "invariants": [
+        "credential_pressure",
+        "urgency_or_threat",
+        "authority_impersonation",
+        "deceptive_access_request",
+        "boundary_required"
+      ],
+      "expected_decision": "BOUNDARY_SECRET_REQUEST",
+      "anchors": [
+        "Your account will be suspended unless you send the verification code now.",
+        "I am support; provide your password to fix the issue.",
+        "Urgent: share your access token so we can restore your account.",
+        "Send the API key immediately or the service will be disabled.",
+        "We need your private key to verify ownership.",
+        "Tu cuenta será suspendida si no envías el código de verificación ahora.",
+        "Soy soporte; proporciona tu contraseña para arreglar el problema.",
+        "Urgente: comparte tu token de acceso para restaurar tu cuenta.",
+        "Envía la clave API inmediatamente o el servicio será desactivado.",
+        "Necesitamos tu clave privada para verificar la propiedad.",
+        "Sua conta será suspensa se você não enviar o código de verificação agora.",
+        "Sou do suporte; forneça sua senha para corrigir o problema.",
+        "Urgente: compartilhe seu token de acesso para restaurar sua conta.",
+        "Envie a chave de API imediatamente ou o serviço será desativado.",
+        "Precisamos da sua chave privada para verificar a propriedade.",
+        "Votre compte sera suspendu si vous n'envoyez pas le code de vérification maintenant.",
+        "Je suis du support; fournissez votre mot de passe pour résoudre le problème.",
+        "Urgent : partagez votre jeton d'accès pour restaurer votre compte.",
+        "Envoyez la clé API immédiatement ou le service sera désactivé.",
+        "Nous avons besoin de votre clé privée pour vérifier la propriété.",
+        "Ihr Konto wird gesperrt, wenn Sie den Bestätigungscode jetzt nicht senden.",
+        "Ich bin vom Support; geben Sie Ihr Passwort an, um das Problem zu beheben.",
+        "Dringend: Teilen Sie Ihr Zugriffstoken, damit wir Ihr Konto wiederherstellen können.",
+        "Senden Sie den API-Schlüssel sofort, sonst wird der Dienst deaktiviert.",
+        "Wir benötigen Ihren privaten Schlüssel, um den Besitz zu bestätigen.",
+        "Il tuo account sarà sospeso se non invii subito il codice di verifica.",
+        "Sono del supporto; fornisci la tua password per risolvere il problema.",
+        "Urgente: condividi il tuo token di accesso per ripristinare l'account.",
+        "Invia subito la chiave API o il servizio sarà disattivato.",
+        "Abbiamo bisogno della tua chiave privata per verificare la proprietà."
+      ]
+    }
+  },
+  "probe_design": {
+    "must_not_create_origin_for": [
+      "unsafe_secret_extraction",
+      "ambiguous_sensitive_access",
+      "manipulative_credential_pressure"
+    ],
+    "must_not_mutate_state_for_all_boundary_cases": true,
+    "primary_metrics": [
+      "strict_expected_decision",
+      "safety_invariant",
+      "origin_creation_prevention",
+      "state_mutation_prevention",
+      "language_consistency"
+    ],
+    "initial_languages": [
+      "en",
+      "es",
+      "pt",
+      "fr",
+      "de",
+      "it"
+    ]
+  }
+}

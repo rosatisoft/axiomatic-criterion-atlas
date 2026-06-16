@@ -1,0 +1,143 @@
+{
+  "version": "0.1.0",
+  "artifact_family": "security_access_boundary",
+  "runtime_layer": "access_gate",
+  "description": "Source definitions for ACA security access boundary artifacts. These artifacts are intended for the input access gate, before origin creation or F-C-P trajectory evaluation.",
+  "embedding_model": "text-embedding-3-small",
+  "embedding_dim": 1536,
+  "normalize_embeddings": true,
+  "source_file": "source_definitions\\security_access_boundary_sources.json",
+  "source_copy": "artifacts/source_definitions/security_access_boundary_sources.json",
+  "languages": [
+    {
+      "code": "en",
+      "name": "English"
+    },
+    {
+      "code": "es",
+      "name": "Spanish"
+    },
+    {
+      "code": "pt",
+      "name": "Portuguese"
+    },
+    {
+      "code": "fr",
+      "name": "French"
+    },
+    {
+      "code": "de",
+      "name": "German"
+    },
+    {
+      "code": "it",
+      "name": "Italian"
+    }
+  ],
+  "decision_guidance": {
+    "sensitive_object_plus_extraction": "BOUNDARY_SECRET_REQUEST",
+    "sensitive_object_plus_defensive_recovery": "SAFE_CREDENTIAL_GUIDANCE",
+    "sensitive_object_plus_protection_or_detection": "SAFE_CREDENTIAL_GUIDANCE",
+    "sensitive_object_plus_ambiguous_access": "ASK_CLARIFICATION_SENSITIVE",
+    "sensitive_object_plus_pressure_or_deception": "BOUNDARY_SECRET_REQUEST",
+    "low_signal_without_sensitive_object": "DEFER_ORIGIN_LOW_SIGNAL_OR_PASS_THROUGH"
+  },
+  "artifacts": [
+    {
+      "name": "sensitive_access_object",
+      "axis": "access_boundary",
+      "artifact_path": "artifacts\\security_access_boundary\\sensitive_access_object",
+      "expected_decision": null,
+      "n_anchors": 30,
+      "embedding_dim": 1536,
+      "svd_rank": 16,
+      "explained_energy": 0.9541206359863281,
+      "recommended_model": "text-embedding-3-small",
+      "metadata": "artifacts\\security_access_boundary\\sensitive_access_object\\field_metadata.json"
+    },
+    {
+      "name": "unsafe_secret_extraction",
+      "axis": "access_boundary",
+      "artifact_path": "artifacts\\security_access_boundary\\unsafe_secret_extraction",
+      "expected_decision": "BOUNDARY_SECRET_REQUEST",
+      "n_anchors": 30,
+      "embedding_dim": 1536,
+      "svd_rank": 17,
+      "explained_energy": 0.9518663883209229,
+      "recommended_model": "text-embedding-3-small",
+      "metadata": "artifacts\\security_access_boundary\\unsafe_secret_extraction\\field_metadata.json"
+    },
+    {
+      "name": "defensive_account_recovery",
+      "axis": "access_boundary",
+      "artifact_path": "artifacts\\security_access_boundary\\defensive_account_recovery",
+      "expected_decision": "SAFE_CREDENTIAL_GUIDANCE",
+      "n_anchors": 30,
+      "embedding_dim": 1536,
+      "svd_rank": 17,
+      "explained_energy": 0.9522772431373596,
+      "recommended_model": "text-embedding-3-small",
+      "metadata": "artifacts\\security_access_boundary\\defensive_account_recovery\\field_metadata.json"
+    },
+    {
+      "name": "safe_security_guidance",
+      "axis": "access_boundary",
+      "artifact_path": "artifacts\\security_access_boundary\\safe_security_guidance",
+      "expected_decision": "SAFE_CREDENTIAL_GUIDANCE",
+      "n_anchors": 30,
+      "embedding_dim": 1536,
+      "svd_rank": 16,
+      "explained_energy": 0.9538916945457458,
+      "recommended_model": "text-embedding-3-small",
+      "metadata": "artifacts\\security_access_boundary\\safe_security_guidance\\field_metadata.json"
+    },
+    {
+      "name": "ambiguous_sensitive_access",
+      "axis": "access_boundary",
+      "artifact_path": "artifacts\\security_access_boundary\\ambiguous_sensitive_access",
+      "expected_decision": "ASK_CLARIFICATION_SENSITIVE",
+      "n_anchors": 30,
+      "embedding_dim": 1536,
+      "svd_rank": 16,
+      "explained_energy": 0.9508191347122192,
+      "recommended_model": "text-embedding-3-small",
+      "metadata": "artifacts\\security_access_boundary\\ambiguous_sensitive_access\\field_metadata.json"
+    },
+    {
+      "name": "manipulative_credential_pressure",
+      "axis": "access_boundary",
+      "artifact_path": "artifacts\\security_access_boundary\\manipulative_credential_pressure",
+      "expected_decision": "BOUNDARY_SECRET_REQUEST",
+      "n_anchors": 30,
+      "embedding_dim": 1536,
+      "svd_rank": 15,
+      "explained_energy": 0.951866090297699,
+      "recommended_model": "text-embedding-3-small",
+      "metadata": "artifacts\\security_access_boundary\\manipulative_credential_pressure\\field_metadata.json"
+    }
+  ],
+  "probe_design": {
+    "must_not_create_origin_for": [
+      "unsafe_secret_extraction",
+      "ambiguous_sensitive_access",
+      "manipulative_credential_pressure"
+    ],
+    "must_not_mutate_state_for_all_boundary_cases": true,
+    "primary_metrics": [
+      "strict_expected_decision",
+      "safety_invariant",
+      "origin_creation_prevention",
+      "state_mutation_prevention",
+      "language_consistency"
+    ],
+    "initial_languages": [
+      "en",
+      "es",
+      "pt",
+      "fr",
+      "de",
+      "it"
+    ]
+  },
+  "runtime_note": "These artifacts are intended for the access gate before origin creation and before F-C-P trajectory evaluation."
+}
