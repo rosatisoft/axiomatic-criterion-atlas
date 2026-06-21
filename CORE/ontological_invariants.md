@@ -17,6 +17,7 @@ Operationally:
 Invariant =
 persistent semantic relation
 required for stable orientation
+```
 
 An invariant therefore acts as:
 
