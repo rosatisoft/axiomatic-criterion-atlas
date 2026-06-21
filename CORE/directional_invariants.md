@@ -1,872 +1,429 @@
-\# ACA — Axiomatic Criterion Atlas
+# ACA — Axiomatic Criterion Atlas
 
+## Directional Invariants
 
+### Geometric Orientation and Criterion Preservation
 
-\## Directional Invariants  
+---
 
-\### Geometric Orientation and Criterion Preservation
+## 1. Purpose
 
+Ontological invariants define the stable semantic structures required for criterion preservation.
 
+Directional invariants define the measurable orientation of those structures.
 
-\---
-
-
-
-\# 1. Purpose
-
-
-
-Ontological invariants define stable semantic structures.
-
-
-
-Directional invariants define the orientation of those structures.
-
-
-
-ACA proposes that semantic systems require more than contextual compatibility.
-
-
-
-They require:
-
-
-
-```text
-
-directional criterion preservation
-
-
-
-during semantic evolution.
-
-
-
-A trajectory may remain:
-
-
-
-fluent,
-
-coherent,
-
-semantically compatible,
-
-and contextually stable
-
-
-
-while progressively inverting the meaning-preserving direction of the active field.
-
-
+ACA proposes that semantic systems require more than contextual compatibility. A trajectory may remain fluent, coherent, semantically compatible, and contextually stable while progressively weakening or inverting the criterion-preserving direction of the active field.
 
 Directional invariants allow ACA to detect this phenomenon geometrically.
 
+---
 
-
-2\. Core Hypothesis
-
-
+## 2. Core Distinction
 
 ACA introduces the following distinction:
 
-
-
-Contextual Coherence
-
+```text
+Contextual Compatibility
 ≠
-
 Epistemic Orientation
+```
 
+Contextual compatibility evaluates whether a trajectory belongs to a semantic field.
 
-
-A statement may remain geometrically close to a semantic field while directionally inverting its foundational criterion.
-
-
+Epistemic orientation evaluates whether the trajectory preserves or inverts the criterion of that field.
 
 Therefore:
 
-
-
+```text
 semantic proximity alone is insufficient
+for reliable reasoning
+```
 
+---
 
+## 3. Relationship to Foundational Invariants
 
-for reliable reasoning.
+Directional invariants are derived from the foundational invariant layer.
 
+The foundational invariant layer is divided into two operational cores:
 
+```text
+Foundational Invariants =
+Logical-Epistemic Core
++
+Operational-Orientational Core
+```
 
-3\. Directional Structure
+The Logical-Epistemic Core contains invariants required for reality-based evaluation:
 
+* identity
+* non_contradiction
+* correspondence
+* evidence_constraint
+* causal_continuity
+* uncertainty_preservation
 
+The Operational-Orientational Core contains invariants required for stable semantic operation within a declared origin and context:
 
-Each ontological invariant generates two semantic poles:
+* persistence
+* relation
+* semantic_stability
+* interpretive_constraint
+* field_boundary
+* orientation_continuity
 
+Directional invariants translate these foundational invariants into measurable semantic axes.
 
+---
 
-Preservation Pole
+## 4. Directional Structure
 
-Inversion Pole
+Each foundational invariant generates two semantic poles:
 
-
+* preservation pole;
+* inversion pole.
 
 These poles define the directional geometry of criterion preservation.
 
-
-
 Operationally:
 
-
-
-Invariant
-
-=
-
+```text
+Invariant =
 directional semantic axis
-
-4\. Preservation and Inversion
-
-
+```
 
 The preservation pole represents semantic continuity aligned with the invariant structure.
 
-
-
 The inversion pole represents semantic destabilization relative to that invariant.
 
+---
 
+## 5. Preservation and Inversion Examples
 
-Examples:
+### Evidence Constraint
 
-
-
-Evidence Constraint
-
-Preservation Pole
+**Preservation Pole**
 
 Evidence constrains interpretation.
 
-Inversion Pole
+**Inversion Pole**
 
-Interpretation may override contradictory evidence.
+Interpretation may override or ignore available evidence.
 
-Non-Contradiction
+### Non-Contradiction
 
-Preservation Pole
+**Preservation Pole**
 
-Contradictions weaken semantic coherence.
+Contradictions weaken semantic coherence and require resolution.
 
-Inversion Pole
+**Inversion Pole**
 
 Contradictions may coexist without structural consequence.
 
-Identity
+### Correspondence
 
-Preservation Pole
+**Preservation Pole**
 
-Entities preserve continuity across interpretation.
+Truth requires correspondence between a claim and reality.
 
-Inversion Pole
+**Inversion Pole**
 
-Identity may invert without contextual transition.
+Truth may detach from reality, evidence, or valid deduction.
 
-5\. Directional Vectors
+### Uncertainty Preservation
 
+**Preservation Pole**
 
+Uncertainty must be preserved when evidence or context is incomplete.
+
+**Inversion Pole**
+
+Incomplete evidence or context may be converted into certainty.
+
+### Field Boundary
+
+**Preservation Pole**
+
+Semantic movement must preserve awareness of field boundaries.
+
+**Inversion Pole**
+
+A trajectory may cross fields without recognizing boundary change.
+
+### Orientation Continuity
+
+**Preservation Pole**
+
+Criterion orientation must remain continuous across semantic evolution.
+
+**Inversion Pole**
+
+Criterion orientation may invert across a trajectory without being detected.
+
+---
+
+## 6. Directional Vectors
 
 Let:
 
+```text
+v_i+
+```
 
-
-v\_i⁺
-
-
-
-represent the preservation embedding of invariant I
-
-i
-
-&#x09;​
-
-
-
-.
-
-
+represent the preservation embedding of invariant `I_i`.
 
 Let:
 
+```text
+v_i-
+```
 
+represent the inversion embedding of invariant `I_i`.
 
-v\_i⁻
+ACA defines the directional invariant vector as:
 
-
-
-represent the inversion embedding.
-
-
-
-ACA defines the directional invariant vector:
-
-
-
-d
-
-i
-
-&#x09;​
-
-
-
-=
-
-∥v
-
-i
-
-\+
-
-&#x09;​
-
-
-
-−v
-
-i
-
-−
-
-&#x09;​
-
-
-
-∥
-
-v
-
-i
-
-\+
-
-&#x09;​
-
-
-
-−v
-
-i
-
-−
-
-&#x09;​
-
-
-
-&#x09;​
-
-
-
-
+```text
+d_i = normalize(v_i+ - v_i-)
+```
 
 where:
 
-
-
-d
-
-i
-
-&#x09;​
-
-
-
-&#x20;defines the orientation axis of invariant I
-
-i
-
-&#x09;​
-
-
-
-,
-
-positive projection preserves criterion,
-
-negative projection indicates inversion.
-
-
+* `d_i` defines the orientation axis of invariant `I_i`;
+* positive projection indicates criterion preservation;
+* near-zero projection indicates ambiguity or weak orientation;
+* negative projection indicates directional inversion.
 
 These vectors establish the directional geometry of epistemic orientation.
 
+---
 
+## 7. Epistemic Orientation
 
-6\. Epistemic Orientation
+For an embedding `z`, ACA defines orientation relative to invariant `I_i` as:
 
-
-
-For an embedding:
-
-
-
-z∈R
-
-d
-
-
-
-ACA defines epistemic orientation relative to invariant I
-
-i
-
-&#x09;​
-
-
-
-&#x20;as:
-
-
-
-ϕ
-
-i
-
-&#x09;​
-
-
-
-(z)=⟨
-
-z
-
-^
-
-,d
-
-i
-
-&#x09;​
-
-
-
-⟩
-
-
+```text
+phi_i(z) = <normalize(z), d_i>
+```
 
 where:
 
+* `z` is the evaluated semantic embedding;
+* `d_i` is the invariant direction vector;
+* `phi_i(z)` is the directional orientation score.
 
+Interpretation:
 
-z
-
-^
-
-&#x20;is the normalized embedding,
-
-d
-
-i
-
-&#x09;​
-
-
-
-&#x20;is the invariant direction vector.
-
-7\. Interpretation of Orientation
-
-Orientation	Meaning
-
-ϕ
-
-i
-
-&#x09;​
-
-
-
-(z)>0	invariant preservation
-
-ϕ
-
-i
-
-&#x09;​
-
-
-
-(z)≈0	ambiguity / weak orientation
-
-ϕ
-
-i
-
-&#x09;​
-
-
-
-(z)<0	directional inversion
-
-
+| Orientation    | Meaning                       |
+| -------------- | ----------------------------- |
+| `phi_i(z) > 0` | invariant preservation        |
+| `phi_i(z) ≈ 0` | ambiguity or weak orientation |
+| `phi_i(z) < 0` | directional inversion         |
 
 This creates a directional semantic layer absent from similarity-only embedding systems.
 
+---
 
+## 8. Directional Semantic Geometry
 
-8\. Directional Semantic Geometry
-
-
-
-ACA therefore models semantic reasoning as:
-
-
-
-trajectory evolution
-
-inside directional semantic fields
-
-
+ACA models semantic reasoning as trajectory evolution inside directional semantic fields.
 
 Each trajectory evolves relative to:
 
+* contextual proximity;
+* field geometry;
+* invariant preservation;
+* directional orientation;
+* declared origin and context.
 
+This transforms semantic evaluation from static similarity into dynamic geometric orientation.
 
-contextual proximity,
+---
 
-field geometry,
+## 9. Directional Criterion Preservation
 
-invariant preservation,
+A trajectory preserves criterion when its relevant invariant orientations remain positive or above threshold across trajectory evolution.
 
-and directional orientation.
+For a trajectory state `z_t`, criterion preservation requires:
 
-
-
-This transforms semantic evaluation from:
-
-
-
-static similarity
-
-
-
-into:
-
-
-
-dynamic geometric orientation
-
-9\. Directional Criterion Preservation
-
-
-
-A trajectory preserves criterion when:
-
-
-
-∀t:ϕ
-
-i
-
-&#x09;​
-
-
-
-(z
-
-t
-
-&#x09;​
-
-
-
-)≥θ
-
-ϕ
-
-&#x09;​
-
-
-
-
+```text
+phi_i(z_t) >= theta_phi
+```
 
 for the relevant invariant structures.
 
-
-
 This means:
 
+* semantic evolution remains directionally stable;
+* contextual continuity is preserved;
+* criterion inversion does not occur.
 
+Orientation is not evaluated independently of origin and context. The active field, relevant invariants, and contextual conditions must first be identified.
 
-semantic evolution remains directionally stable,
+---
 
-contextual continuity is preserved,
-
-and criterion inversion does not occur.
-
-10\. Criterion Drift
-
-
+## 10. Criterion Drift
 
 Criterion drift occurs when a trajectory remains contextually coherent while progressively losing directional orientation.
 
-
-
 Formally:
 
-
-
-O(z
-
-t
-
-&#x09;​
-
-
-
-)≤θ
-
-O
-
-&#x09;​
-
-
-
-
+```text
+O(z_t) <= theta_O
+```
 
 while:
 
+```text
+phi_i(z_t) < 0
+```
 
-
-ϕ
-
-i
-
-&#x09;​
-
-
-
-(z
-
-t
-
-&#x09;​
-
-
-
-)<0
-
-
+or when aggregate orientation progressively weakens across trajectory states.
 
 Meaning:
 
-
-
+```text
 the trajectory still belongs to the field,
-
-but it no longer preserves the field's criterion.
-
-
+but it no longer preserves the field's criterion
+```
 
 This is the central instability phenomenon modeled by ACA.
 
+---
 
+## 11. Directional Drift Dynamics
 
-11\. Directional Drift Dynamics
-
-
-
-ACA proposes that criterion drift frequently emerges gradually.
-
-
+Criterion drift frequently emerges gradually.
 
 Examples include:
 
+* rhetorical reinterpretation;
+* emotional substitution;
+* semantic reframing;
+* contextual manipulation;
+* evidential inversion;
+* contradiction normalization;
+* uncertainty converted into certainty;
+* unnoticed field crossing;
+* progressive reinterpretive pressure.
 
-
-rhetorical reinterpretation,
-
-emotional substitution,
-
-semantic reframing,
-
-contextual manipulation,
-
-evidential inversion,
-
-contradiction normalization,
-
-and progressive reinterpretive pressure.
-
-
-
-Importantly:
-
-
-
-drift often appears before contradiction becomes explicit.
-
-
+Drift often appears before contradiction becomes explicit.
 
 Thus ACA evaluates:
 
+* orientation trends;
+* directional weakening;
+* preservation decay;
+* multi-invariant conflict.
 
+---
 
-orientation trends,
+## 12. Directional Stability Regions
 
-directional weakening,
+Directional geometry naturally generates regions inside semantic space:
 
-and preservation decay.
+| Region           | Description                       |
+| ---------------- | --------------------------------- |
+| Stable Region    | positive invariant orientation    |
+| Weak Region      | low orientation                   |
+| Ambiguity Region | unstable or near-zero orientation |
+| Drift Region     | decaying orientation              |
+| Inversion Region | negative orientation              |
 
-12\. Directional Stability Regions
+Stable regions preserve invariant continuity, positive orientation, and coherent trajectory evolution.
 
+Inversion regions may preserve contextual compatibility while directionally destabilizing criterion.
 
+---
 
-Directional geometry naturally generates:
-
-
-
-stable regions
-
-unstable regions
-
-ambiguity zones
-
-inversion regions
-
-
-
-inside semantic space.
-
-
-
-Stable regions preserve:
-
-
-
-invariant continuity,
-
-positive orientation,
-
-and coherent trajectory evolution.
-
-
-
-Inversion regions preserve contextual compatibility while directionally destabilizing criterion.
-
-
-
-13\. Multi-Invariant Orientation
-
-
+## 13. Multi-Invariant Orientation
 
 ACA does not depend on a single invariant axis.
 
-
-
 Semantic trajectories are evaluated relative to multiple invariant directions simultaneously.
-
-
 
 Let:
 
-
-
-D={d
-
-1
-
-&#x09;​
-
-
-
-,d
-
-2
-
-&#x09;​
-
-
-
-,...,d
-
-n
-
-&#x09;​
-
-
-
-}
-
-
+```text
+D = {d_1, d_2, ..., d_n}
+```
 
 be the invariant direction system.
 
+ACA defines aggregate orientation as:
 
-
-ACA defines aggregate orientation:
-
-
-
-Φ(z)=
-
-i
-
-∑
-
-&#x09;​
-
-
-
-w
-
-i
-
-&#x09;​
-
-
-
-ϕ
-
-i
-
-&#x09;​
-
-
-
-(z)
-
-
+```text
+Phi(z) = sum_i w_i * phi_i(z)
+```
 
 where:
 
+* `w_i` are invariant relevance weights;
+* `phi_i(z)` are directional invariant projections.
 
+This produces multi-axial criterion geometry.
 
-w
+The relevance of each invariant may depend on the declared origin, active field, context, and trajectory type.
 
-i
+---
 
-&#x09;​
+## 14. Relationship to Semantic Fields
 
+Semantic fields define where a trajectory belongs.
 
-
-&#x20;are invariant relevance weights,
-
-ϕ
-
-i
-
-&#x09;​
-
-
-
-(z) are directional projections.
-
-
-
-This produces:
-
-
-
-multi-axial criterion geometry
-
-14\. Relationship to Semantic Fields
-
-
-
-Semantic fields define:
-
-
-
-where a trajectory belongs
-
-
-
-Directional invariants define:
-
-
-
-whether the trajectory preserves criterion
-
-inside the field
-
-
+Directional invariants define whether the trajectory preserves criterion inside the field.
 
 Thus:
 
-
-
+```text
 fields define contextual compatibility
-
-
+```
 
 while:
 
-
-
+```text
 directional invariants define epistemic orientation
+```
 
-15\. Relationship to Runtime Systems
+A trajectory can remain close to a field while weakening or inverting its criterion-preserving direction.
 
+---
 
+## 15. Relationship to Runtime Systems
 
 Runtime systems use directional invariants for:
 
+* drift detection;
+* trajectory monitoring;
+* clarification policies;
+* semantic routing;
+* criterion-preserving inference control.
 
+ACA therefore functions as a directional semantic substrate for runtime criterion-preservation architectures.
 
-drift detection,
+---
 
-trajectory monitoring,
-
-clarification policies,
-
-semantic routing,
-
-and criterion-preserving inference control.
-
-
-
-ACA therefore functions as:
-
-
-
-a directional semantic substrate
-
-
-
-for runtime criterion-preservation architectures.
-
-
-
-16\. Foundational Principle
-
-
+## 16. Foundational Principle
 
 ACA proposes that reliable semantic systems require:
 
-
-
-contextual coherence
-
-\+
-
+```text
+contextual compatibility
++
 directional invariant preservation
+```
 
+Without directional preservation:
 
-
-without directional preservation:
-
-
-
-semantic proximity becomes insufficient,
-
-rhetorical coherence may hide inversion,
-
-and semantic trajectories lose criterion continuity.
-
-
+* semantic proximity becomes insufficient;
+* rhetorical coherence may hide inversion;
+* uncertainty may be converted into certainty;
+* correspondence may weaken while fluency remains high;
+* semantic trajectories may lose criterion continuity.
 
 Therefore:
 
-
-
-Reliable reasoning requires preservation not only of semantic location, but of semantic direction.
-
+```text
+Reliable reasoning requires preservation
+not only of semantic location,
+but of semantic direction.
+```
