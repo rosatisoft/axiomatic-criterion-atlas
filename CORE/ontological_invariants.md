@@ -432,7 +432,3 @@ direction;
 orientation;
 inversion;
 trajectory flow.
-
-This leads to the next layer:
-
-Directional Invariants
