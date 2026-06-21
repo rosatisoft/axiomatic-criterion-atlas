@@ -1,582 +1,438 @@
-\# ACA — Axiomatic Criterion Atlas
+# ACA — Axiomatic Criterion Atlas
 
+## Ontological Invariants
+### Foundational Structures for Semantic Criterion Preservation
 
+---
 
-\## Ontological Invariants  
+## 1. Purpose
 
-\### Foundational Structures for Semantic Criterion Preservation
+Ontological invariants define the stable relational structures required for semantic orientation.
 
-
-
-\---
-
-
-
-\# 1. Purpose
-
-
-
-Ontological invariants define the primary relational structures required for stable semantic orientation.
-
-
-
-They function as persistent semantic constraints capable of preserving criterion continuity during contextual evolution.
-
-
-
-ACA does not interpret invariants as symbolic rules alone.
-
-
-
-Instead, invariants are modeled as:
-
-
-
-```text
-
-persistent geometric relations
-
-
-
-that repeatedly emerge across coherent semantic systems.
-
-
-
-These invariants form the foundational semantic substrate of the Atlas.
-
-
-
-2\. Operational Definition
-
-
-
-An ontological invariant is a semantic structure whose preservation is necessary for coherent criterion continuity inside a contextual field.
-
-
+They are not treated as isolated symbolic rules. In ACA, invariants function as persistent semantic relations that help preserve criterion continuity during contextual evolution.
 
 Operationally:
 
-
-
-Invariant
-
-=
-
+```text
+Invariant =
 persistent semantic relation
-
 required for stable orientation
-
-
 
 An invariant therefore acts as:
 
+a semantic stabilizer;
+a directional constraint;
+a criterion-preserving structure;
+a reference point for detecting drift.
 
+ACA does not claim that this invariant set is exhaustive or metaphysically infallible. It defines a functional reference structure for evaluating whether a semantic trajectory preserves or destabilizes criterion.
 
-a semantic stabilizer,
+2. Operational Definition
 
-a directional constraint,
+An ontological invariant is a semantic structure whose preservation is necessary for coherent criterion continuity inside a declared origin and context.
 
-and a criterion-preserving structure.
+Invariants are used to define:
 
-3\. Foundational Hypothesis
+preservation poles;
+inversion poles;
+directional vectors;
+field boundaries;
+drift signals;
+trajectory stability conditions.
 
+Thus:
 
+Ontological invariants define what must remain stable.
+Directional invariants define how stability is measured.
+Epistemic orientation evaluates whether the trajectory preserves that direction.
+Criterion drift detects weakening or inversion of that preservation.
+3. Foundational Structure
 
-ACA proposes:
+The foundational invariant layer is divided into two operational cores:
 
+Foundational Invariants =
+Logical-Epistemic Core
++
+Operational-Orientational Core
 
+The first core establishes the minimum conditions for reality-based evaluation.
 
-Semantic instability
+The second core preserves stable semantic operation within a declared origin and context.
 
-does not emerge only from factual error,
+4. Logical-Epistemic Core
 
-but from invariant destabilization.
-
-
-
-A reasoning system may remain:
-
-
-
-fluent,
-
-persuasive,
-
-contextually coherent,
-
-and semantically compatible
-
-
-
-while progressively inverting the invariant relations that originally stabilized interpretation.
-
-
-
-This process produces:
-
-
-
-criterion drift
-
-4\. Initial Foundational Invariants
-
-
-
-The following invariants constitute the initial foundational layer of ACA.
-
-
-
-These are not claimed to be exhaustive.
-
-
-
-They represent the first stable structures required for criterion-preserving semantic evolution.
-
-
+The Logical-Epistemic Core defines the minimum conditions required for coherent evaluation, evidence-based interpretation, and bounded certainty.
 
 4.1 Identity
 
 Definition
 
-
-
 Identity preserves semantic continuity across contextual transformation.
-
-
-
-Without identity, stable recognition becomes impossible.
-
-
-
-Operational Principle
-
-An entity preserves coherent continuity within the same contextual frame.
-
-Preservation Examples
-
-"An object remains itself under coherent interpretation."
-
-"Identity allows semantic persistence."
-
-"Stable recognition depends on continuity."
-
-Inversion Examples
-
-"An entity may become its contradiction without contextual transition."
-
-"Identity is irrelevant to semantic continuity."
 
 Functional Role
 
+Preserves reference continuity and prevents arbitrary substitution of entities, concepts, or claims.
 
+Preservation Pole
 
-Identity stabilizes:
+An entity preserves coherent continuity within the same contextual frame.
 
+Inversion Pole
 
+An entity may arbitrarily lose identity without consequence.
 
-recognition,
+Drift Signal
 
-persistence,
-
-reference continuity,
-
-and trajectory coherence.
+A concept, entity, or claim changes identity without an explicit contextual transition.
 
 4.2 Non-Contradiction
 
 Definition
 
-
-
 Contradictory propositions cannot simultaneously preserve equivalent structural validity under identical contextual constraints.
-
-
-
-Operational Principle
-
-Contradiction introduces semantic instability.
-
-Preservation Examples
-
-"Mutually exclusive claims require contextual resolution."
-
-"Contradictions weaken structural coherence."
-
-Inversion Examples
-
-"Contradictions may coexist without semantic consequence."
-
-"Structural inconsistency does not affect meaning."
 
 Functional Role
 
+Preserves logical coherence and prevents incompatible claims from being treated as simultaneously valid within the same evaluative frame.
 
+Preservation Pole
 
-Non-Contradiction stabilizes:
+Contradictions weaken semantic coherence and require resolution.
 
+Inversion Pole
 
+Contradictions may coexist without structural consequence.
 
-logical coherence,
+Drift Signal
 
-semantic continuity,
+Contradictory claims are normalized, ignored, or treated as structurally equivalent without contextual resolution.
 
-and interpretive consistency.
-
-4.3 Evidence Constraint
+4.3 Correspondence
 
 Definition
 
+Claims must preserve a relation to the reality, evidence, or declared domain they are intended to describe.
 
+Functional Role
+
+Preserves the connection between representation and reality so that coherent language does not detach from what is being evaluated.
+
+Preservation Pole
+
+Truth requires correspondence between a claim and reality.
+
+Inversion Pole
+
+Truth may detach from reality, evidence, or valid deduction.
+
+Drift Signal
+
+A statement remains coherent while losing contact with the reality, evidence, or declared domain it claims to represent.
+
+4.4 Evidence Constraint
+
+Definition
 
 Interpretation must remain bounded by available contextual evidence.
 
-
-
-Operational Principle
-
-Claims require evidential constraint.
-
-Preservation Examples
-
-"Interpretation must preserve evidential continuity."
-
-"Claims require contextual support."
-
-Inversion Examples
-
-"Interpretation may override contradictory evidence."
-
-"Narrative framing supersedes evidence."
-
 Functional Role
 
+Preserves factual grounding and prevents narrative, rhetorical, or emotional framing from overriding evidence.
 
+Preservation Pole
 
-Evidence Constraint stabilizes:
+Evidence constrains interpretation.
 
+Inversion Pole
 
+Interpretation may override or ignore available evidence.
 
-factual continuity,
+Drift Signal
 
-contextual grounding,
+Claims remain persuasive or coherent while becoming detached from evidence.
 
-and interpretive discipline.
-
-4.4 Causal Continuity
+4.5 Causal Continuity
 
 Definition
 
-
-
-Reasoning trajectories require coherent semantic transitions.
-
-
-
-Operational Principle
-
-Conclusions emerge through contextual continuity.
-
-Preservation Examples
-
-"Reasoning evolves through coherent transitions."
-
-"Semantic trajectories require continuity."
-
-Inversion Examples
-
-"Conclusions may emerge without relational continuity."
-
-"Causal transitions are unnecessary."
+Reasoning trajectories require coherent transitions between premises, causes, conditions, and conclusions.
 
 Functional Role
 
+Preserves inferential continuity and prevents conclusions from appearing without grounds, transitions, or sufficient relation.
 
+Preservation Pole
 
-Causal Continuity stabilizes:
+Conclusions emerge through coherent contextual transitions.
 
+Inversion Pole
 
+Conclusions may appear without cause, grounds, or continuity.
 
-semantic evolution,
+Drift Signal
 
-trajectory coherence,
+A trajectory jumps to conclusions without preserving relational, causal, or inferential continuity.
 
-and inferential structure.
-
-4.5 Semantic Persistence
+4.6 Uncertainty Preservation
 
 Definition
 
-
-
-Meaning retains partial continuity during contextual evolution.
-
-
-
-Operational Principle
-
-Stable interpretation preserves semantic anchors.
-
-Preservation Examples
-
-"Meaning evolves while preserving relational continuity."
-
-"Interpretation depends on persistent semantic structure."
-
-Inversion Examples
-
-"Meaning may invert without structural consequence."
-
-"Semantic continuity is unnecessary."
+Uncertainty must be preserved when evidence, context, or inference is incomplete.
 
 Functional Role
 
+Prevents incomplete evidence from being converted into unjustified certainty.
 
+Preservation Pole
 
-Semantic Persistence stabilizes:
+Uncertainty must be preserved when evidence or context is incomplete.
 
+Inversion Pole
 
+Incomplete evidence or context may be converted into certainty.
 
-contextual continuity,
+Drift Signal
 
-semantic memory,
+The system presents uncertain, incomplete, or ambiguous information as settled certainty.
 
-and trajectory preservation.
+5. Operational-Orientational Core
 
-4.6 Contextual Coherence
+The Operational-Orientational Core preserves stable semantic operation within a declared origin and context.
+
+These invariants do not establish factual truth by themselves. They preserve continuity, relation, field awareness, interpretive discipline, and criterion direction during trajectory evolution.
+
+5.1 Persistence
 
 Definition
 
-
-
-Semantic elements must remain geometrically compatible with the active contextual field.
-
-
-
-Operational Principle
-
-Meaning emerges within coherent contextual structure.
-
-Preservation Examples
-
-"Interpretation depends on contextual consistency."
-
-"Semantic relations preserve geometric compatibility."
-
-Inversion Examples
-
-"Contextual inconsistency has no semantic effect."
-
-"Meaning may detach completely from contextual structure."
+Meaning retains sufficient continuity during contextual evolution to remain intelligible.
 
 Functional Role
 
+Preserves semantic continuity across trajectory evolution and prevents arbitrary reinterpretation.
 
+Preservation Pole
 
-Contextual Coherence stabilizes:
+Meaning evolves while preserving relational continuity.
 
+Inversion Pole
 
+Meaning may invert without structural consequence.
 
-semantic compatibility,
+Drift Signal
 
-contextual determination,
+Meaning changes or inverts without preserving enough continuity to remain anchored.
 
-and field integrity.
+5.2 Relation
 
-5\. Invariants as Geometric Structures
+Definition
 
+Meaning depends on relation among entities, context, field, and interpretive conditions.
 
+Functional Role
 
-ACA models invariants geometrically rather than symbolically.
+Preserves contextual and relational integration so that semantic elements do not detach from their field.
 
+Preservation Pole
 
+Everything exists in relation to other things.
 
-Each invariant generates:
+Inversion Pole
 
+Meaning can exist without relation or context.
 
+Drift Signal
 
-preservation regions
+A statement, claim, or interpretation detaches from the relations that make it meaningful.
 
-inversion regions
+5.3 Semantic Stability
 
-directional vectors
+Definition
 
-trajectory constraints
+Meaning must remain stable within a defined context.
 
+Functional Role
 
+Prevents arbitrary semantic shifts during operation within a declared field.
+
+Preservation Pole
+
+Meaning must remain stable within a defined context.
+
+Inversion Pole
+
+Meaning may shift arbitrarily without contextual constraint.
+
+Drift Signal
+
+Key terms or meanings shift during the trajectory without contextual justification.
+
+5.4 Interpretive Constraint
+
+Definition
+
+Interpretation must remain bounded by context, evidence, and meaning.
+
+Functional Role
+
+Prevents interpretation from exceeding the limits established by the active field and available evidence.
+
+Preservation Pole
+
+Interpretation must remain bounded by context, evidence, and meaning.
+
+Inversion Pole
+
+Interpretation may exceed context, evidence, and meaning without consequence.
+
+Drift Signal
+
+Interpretation expands beyond what the context, evidence, or field can support.
+
+5.5 Field Boundary
+
+Definition
+
+Semantic movement must preserve awareness of boundaries between fields.
+
+Functional Role
+
+Prevents unnoticed movement from one field, context, or criterion frame into another.
+
+Preservation Pole
+
+Semantic movement must preserve awareness of field boundaries.
+
+Inversion Pole
+
+A trajectory may cross fields without recognizing boundary change.
+
+Drift Signal
+
+A trajectory moves between fields without identifying the change in context or criterion frame.
+
+5.6 Orientation Continuity
+
+Definition
+
+Criterion orientation must remain continuous across semantic trajectory evolution.
+
+Functional Role
+
+Preserves the direction of criterion across changing context, interpretation, and trajectory states.
+
+Preservation Pole
+
+Criterion orientation must remain continuous across semantic evolution.
+
+Inversion Pole
+
+Criterion orientation may invert across a trajectory without being detected.
+
+Drift Signal
+
+The trajectory remains coherent while its guiding criterion weakens, shifts, or inverts.
+
+6. Invariants as Geometric Structures
+
+ACA models invariants geometrically rather than only symbolically.
+
+Each invariant may generate:
+
+preservation poles;
+inversion poles;
+directional vectors;
+trajectory constraints;
+drift signals.
 
 Thus:
 
-
-
 invariants are semantic geometries
+not merely textual principles
 
+The invariant system provides the structure from which directional criterion geometry is constructed.
 
-
-not merely textual principles.
-
-
-
-6\. Invariants and Semantic Fields
-
-
+7. Invariants and Semantic Fields
 
 Semantic fields emerge from invariant relations.
 
-
-
 A field is stable when:
 
-
-
-its anchors preserve invariant continuity,
-
-its trajectories remain directionally coherent,
-
-and contextual evolution does not invert foundational structures.
-
-
+its anchors preserve invariant continuity;
+its trajectories remain directionally coherent;
+its contextual evolution does not invert foundational structures.
 
 Different fields may emphasize different invariants.
 
-
-
-Examples:
-
-
-
 Field	Dominant Invariants
+factual	evidence_constraint, correspondence, non_contradiction
+legal	evidence_constraint, causal_continuity, interpretive_constraint
+rhetorical	relation, semantic_stability, field_boundary
+operational	persistence, causal_continuity, orientation_continuity
+narrative	persistence, identity, relation
+foundational	all logical-epistemic and operational-orientational invariants
+8. Invariant Destabilization
 
-factual	evidence, contradiction
+Semantic instability does not emerge only from factual error.
 
-legal	continuity, evidence
-
-rhetorical	contextual coherence
-
-operational	continuity, persistence
-
-narrative	persistence, identity
-
-7\. Invariant Destabilization
-
-
-
-ACA proposes that instability emerges when invariant preservation weakens.
-
-
+Instability may also emerge from invariant destabilization.
 
 Examples include:
 
+evidence substitution;
+rhetorical inversion;
+semantic manipulation;
+contradiction normalization;
+contextual fragmentation;
+uncertainty converted into certainty;
+loss of correspondence;
+unnoticed field crossing;
+interpretive expansion beyond context;
+progressive weakening of orientation.
 
+These processes produce directional semantic destabilization inside apparently coherent semantic space.
 
-evidence substitution,
-
-rhetorical inversion,
-
-semantic manipulation,
-
-contradiction escalation,
-
-contextual fragmentation,
-
-and persuasive reinterpretation.
-
-
-
-These processes produce:
-
-
-
-directional semantic destabilization
-
-
-
-inside apparently coherent semantic space.
-
-
-
-8\. Invariants and Criterion Geometry
-
-
+9. Invariants and Criterion Geometry
 
 Each invariant contributes to:
 
+semantic orientation;
+criterion vectors;
+drift detection;
+trajectory preservation;
+field stability;
+geometric evaluation.
 
+Together, the invariant system forms criterion geometry.
 
-semantic orientation,
+This criterion geometry functions as the foundational structure of ACA.
 
-criterion vectors,
-
-drift detection,
-
-trajectory preservation,
-
-and geometric stability.
-
-
-
-Together, the invariant system forms:
-
-
-
-criterion geometry
-
-
-
-which functions as the foundational structure of ACA.
-
-
-
-9\. Foundational Axiom
-
-
+10. Operational Axiom
 
 ACA begins from the following operational axiom:
 
-
-
-Stable semantic systems require persistent preservation of foundational invariant relations during contextual evolution.
-
-
+Stable semantic systems require persistent preservation
+of foundational invariant relations during contextual evolution.
 
 Without invariant preservation:
 
-
-
-semantic proximity becomes insufficient,
-
-contextual coherence becomes unstable,
-
-and reasoning trajectories lose epistemic orientation.
-
-10\. Transition to Directional Invariants
-
-
+semantic proximity becomes insufficient;
+contextual coherence may conceal instability;
+reasoning trajectories may lose epistemic orientation;
+generative systems may remain fluent while progressively drifting.
+11. Transition to Directional Invariants
 
 Ontological invariants define the stable structures of the Atlas.
 
-
-
 However, preservation alone is insufficient.
-
-
 
 ACA must also model:
 
-
-
-direction
-
-orientation
-
-inversion
-
-trajectory flow
-
-
+direction;
+orientation;
+inversion;
+trajectory flow.
 
 This leads to the next layer:
 
-
-
 Directional Invariants
-
