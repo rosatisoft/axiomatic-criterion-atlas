@@ -1,14 +1,17 @@
 {
-  "version": "0.1.0",
+  "version": "0.2.0",
   "name": "ACA Foundational Invariants",
-  "description": "Foundational invariant structures used to construct directional criterion geometry.",
+  "description": "Foundational invariant structures used to document and construct directional criterion geometry. These invariants are divided into a logical-epistemic core and an operational-orientational core.",
   "invariants": [
     {
       "id": "identity",
       "name": "Identity",
+      "core_layer": "logical_epistemic",
       "definition": "Identity preserves semantic continuity across contextual transformation.",
+      "functional_role": "Preserves reference continuity and prevents arbitrary substitution of entities, concepts, or claims.",
       "preservation_pole": "An entity preserves coherent continuity within the same contextual frame.",
-      "inversion_pole": "An entity may become its contradiction without contextual transition.",
+      "inversion_pole": "An entity may arbitrarily lose identity without consequence.",
+      "drift_signal": "A concept, entity, or claim changes identity without an explicit contextual transition.",
       "anchors": [
         "An entity remains itself within a coherent context.",
         "Identity allows recognition across semantic evolution.",
@@ -20,9 +23,12 @@
     {
       "id": "non_contradiction",
       "name": "Non-Contradiction",
+      "core_layer": "logical_epistemic",
       "definition": "Contradictory propositions cannot simultaneously preserve equivalent structural validity under identical contextual constraints.",
+      "functional_role": "Preserves logical coherence and prevents incompatible claims from being treated as simultaneously valid within the same evaluative frame.",
       "preservation_pole": "Contradictions weaken semantic coherence and require resolution.",
       "inversion_pole": "Contradictions may coexist without structural consequence.",
+      "drift_signal": "Contradictory claims are normalized, ignored, or treated as structurally equivalent without contextual resolution.",
       "anchors": [
         "Mutually exclusive claims require contextual resolution.",
         "Contradiction introduces semantic instability.",
@@ -32,11 +38,31 @@
       ]
     },
     {
+      "id": "correspondence",
+      "name": "Correspondence",
+      "core_layer": "logical_epistemic",
+      "definition": "Claims must preserve a relation to the reality, evidence, or declared domain they are intended to describe.",
+      "functional_role": "Preserves the connection between representation and reality so that coherent language does not detach from what is being evaluated.",
+      "preservation_pole": "Truth requires correspondence between a claim and reality.",
+      "inversion_pole": "Truth may detach from reality, evidence, or valid deduction.",
+      "drift_signal": "A statement remains coherent while losing contact with the reality, evidence, or declared domain it claims to represent.",
+      "anchors": [
+        "A claim should correspond to the reality it describes.",
+        "Truth requires relation between representation and what is being evaluated.",
+        "A statement loses reliability when detached from reality or valid deduction.",
+        "Coherent language does not guarantee correspondence.",
+        "Evaluation requires contact between claim, evidence, and reality."
+      ]
+    },
+    {
       "id": "evidence_constraint",
       "name": "Evidence Constraint",
+      "core_layer": "logical_epistemic",
       "definition": "Interpretation must remain bounded by available contextual evidence.",
+      "functional_role": "Preserves factual grounding and prevents narrative, rhetorical, or emotional framing from overriding evidence.",
       "preservation_pole": "Evidence constrains interpretation.",
-      "inversion_pole": "Interpretation may override contradictory evidence.",
+      "inversion_pole": "Interpretation may override or ignore available evidence.",
+      "drift_signal": "Claims remain persuasive or coherent while becoming detached from evidence.",
       "anchors": [
         "Claims require contextual support.",
         "Evidence limits the range of valid interpretation.",
@@ -48,9 +74,12 @@
     {
       "id": "causal_continuity",
       "name": "Causal Continuity",
-      "definition": "Reasoning trajectories require coherent semantic transitions.",
+      "core_layer": "logical_epistemic",
+      "definition": "Reasoning trajectories require coherent transitions between premises, causes, conditions, and conclusions.",
+      "functional_role": "Preserves inferential continuity and prevents conclusions from appearing without grounds, transitions, or sufficient relation.",
       "preservation_pole": "Conclusions emerge through coherent contextual transitions.",
-      "inversion_pole": "Conclusions may emerge without relational continuity.",
+      "inversion_pole": "Conclusions may appear without cause, grounds, or continuity.",
+      "drift_signal": "A trajectory jumps to conclusions without preserving relational, causal, or inferential continuity.",
       "anchors": [
         "Reasoning evolves through coherent transitions.",
         "A conclusion should follow from its premises.",
@@ -60,11 +89,31 @@
       ]
     },
     {
-      "id": "semantic_persistence",
-      "name": "Semantic Persistence",
-      "definition": "Meaning retains partial continuity during contextual evolution.",
+      "id": "uncertainty_preservation",
+      "name": "Uncertainty Preservation",
+      "core_layer": "logical_epistemic",
+      "definition": "Uncertainty must be preserved when evidence, context, or inference is incomplete.",
+      "functional_role": "Prevents incomplete evidence from being converted into unjustified certainty.",
+      "preservation_pole": "Uncertainty must be preserved when evidence or context is incomplete.",
+      "inversion_pole": "Incomplete evidence or context may be converted into certainty.",
+      "drift_signal": "The system presents uncertain, incomplete, or ambiguous information as settled certainty.",
+      "anchors": [
+        "Uncertainty should be preserved when evidence is incomplete.",
+        "A conclusion should not exceed the confidence allowed by its evidence.",
+        "Ambiguous context requires bounded interpretation.",
+        "Incomplete information should not be converted into certainty.",
+        "Reliable reasoning preserves the limits of what is known."
+      ]
+    },
+    {
+      "id": "persistence",
+      "name": "Persistence",
+      "core_layer": "operational_orientational",
+      "definition": "Meaning retains sufficient continuity during contextual evolution to remain intelligible.",
+      "functional_role": "Preserves semantic continuity across trajectory evolution and prevents arbitrary reinterpretation.",
       "preservation_pole": "Meaning evolves while preserving relational continuity.",
       "inversion_pole": "Meaning may invert without structural consequence.",
+      "drift_signal": "Meaning changes or inverts without preserving enough continuity to remain anchored.",
       "anchors": [
         "Stable interpretation preserves semantic anchors.",
         "Meaning can evolve without losing continuity.",
@@ -74,17 +123,88 @@
       ]
     },
     {
-      "id": "contextual_coherence",
-      "name": "Contextual Coherence",
-      "definition": "Semantic elements must remain compatible with the active contextual field.",
-      "preservation_pole": "Meaning emerges within coherent contextual structure.",
-      "inversion_pole": "Meaning may detach completely from contextual structure.",
+      "id": "relation",
+      "name": "Relation",
+      "core_layer": "operational_orientational",
+      "definition": "Meaning depends on relation among entities, context, field, and interpretive conditions.",
+      "functional_role": "Preserves contextual and relational integration so that semantic elements do not detach from their field.",
+      "preservation_pole": "Everything exists in relation to other things.",
+      "inversion_pole": "Meaning can exist without relation or context.",
+      "drift_signal": "A statement, claim, or interpretation detaches from the relations that make it meaningful.",
       "anchors": [
         "Interpretation depends on contextual consistency.",
         "Semantic relations preserve field compatibility.",
         "Context constrains the meaning of a statement.",
         "A statement becomes unstable when detached from context.",
         "Coherent meaning requires contextual integration."
+      ]
+    },
+    {
+      "id": "semantic_stability",
+      "name": "Semantic Stability",
+      "core_layer": "operational_orientational",
+      "definition": "Meaning must remain stable within a defined context.",
+      "functional_role": "Prevents arbitrary semantic shifts during operation within a declared field.",
+      "preservation_pole": "Meaning must remain stable within a defined context.",
+      "inversion_pole": "Meaning may shift arbitrarily without contextual constraint.",
+      "drift_signal": "Key terms or meanings shift during the trajectory without contextual justification.",
+      "anchors": [
+        "Meaning must remain stable within a defined context.",
+        "Stable semantic operation requires consistent use of key terms.",
+        "A field becomes unstable when its meanings shift arbitrarily.",
+        "Semantic stability preserves interpretive continuity.",
+        "Contextual evaluation requires stable meaning."
+      ]
+    },
+    {
+      "id": "interpretive_constraint",
+      "name": "Interpretive Constraint",
+      "core_layer": "operational_orientational",
+      "definition": "Interpretation must remain bounded by context, evidence, and meaning.",
+      "functional_role": "Prevents interpretation from exceeding the limits established by the active field and available evidence.",
+      "preservation_pole": "Interpretation must remain bounded by context, evidence, and meaning.",
+      "inversion_pole": "Interpretation may exceed context, evidence, and meaning without consequence.",
+      "drift_signal": "Interpretation expands beyond what the context, evidence, or field can support.",
+      "anchors": [
+        "Interpretation must remain bounded by context, evidence, and meaning.",
+        "A valid interpretation cannot ignore the limits of its field.",
+        "Context constrains the range of acceptable interpretation.",
+        "Evidence and meaning restrict interpretive expansion.",
+        "Interpretive discipline prevents semantic drift."
+      ]
+    },
+    {
+      "id": "field_boundary",
+      "name": "Field Boundary",
+      "core_layer": "operational_orientational",
+      "definition": "Semantic movement must preserve awareness of boundaries between fields.",
+      "functional_role": "Prevents unnoticed movement from one field, context, or criterion frame into another.",
+      "preservation_pole": "Semantic movement must preserve awareness of field boundaries.",
+      "inversion_pole": "A trajectory may cross fields without recognizing boundary change.",
+      "drift_signal": "A trajectory moves between fields without identifying the change in context or criterion frame.",
+      "anchors": [
+        "Semantic movement must preserve awareness of field boundaries.",
+        "A trajectory should recognize when it crosses into another field.",
+        "Field boundaries prevent hidden contextual substitution.",
+        "Stable evaluation requires awareness of the active field.",
+        "Boundary changes should be explicit during semantic movement."
+      ]
+    },
+    {
+      "id": "orientation_continuity",
+      "name": "Orientation Continuity",
+      "core_layer": "operational_orientational",
+      "definition": "Criterion orientation must remain continuous across semantic trajectory evolution.",
+      "functional_role": "Preserves the direction of criterion across changing context, interpretation, and trajectory states.",
+      "preservation_pole": "Criterion orientation must remain continuous across semantic evolution.",
+      "inversion_pole": "Criterion orientation may invert across a trajectory without being detected.",
+      "drift_signal": "The trajectory remains coherent while its guiding criterion weakens, shifts, or inverts.",
+      "anchors": [
+        "Criterion orientation must remain continuous across semantic evolution.",
+        "A trajectory should preserve its guiding criterion as context changes.",
+        "Orientation continuity prevents hidden inversion.",
+        "Stable reasoning requires continuity of criterion direction.",
+        "A coherent trajectory can still drift if orientation is not preserved."
       ]
     }
   ]

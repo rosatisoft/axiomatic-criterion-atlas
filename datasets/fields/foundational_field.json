@@ -10,10 +10,16 @@
   "invariants": [
     "identity",
     "non_contradiction",
+    "correspondence",
     "evidence_constraint",
     "causal_continuity",
-    "semantic_persistence",
-    "contextual_coherence"
+    "uncertainty_preservation",
+    "persistence",
+    "relation",
+    "semantic_stability",
+    "interpretive_constraint",
+    "field_boundary",
+    "orientation_continuity"
   ],
   "anchors": [
     "An entity remains itself within a coherent context.",
